@@ -44,8 +44,10 @@ class SiteGenerator:
 
         # Full DB — used by the next pipeline run for accumulation (not browser-served)
         self._write(output_dir, "papers_db.json",   [p.to_dict() for p in db_papers])
-        # Frontend slice — what the browser actually loads
-        self._write(output_dir, "papers.json",      [p.to_dict() for p in frontend_papers])
+        # Frontend slice — slim version, strips heavy creator-content fields
+        self._write(output_dir, "papers.json",      [self._slim(p) for p in frontend_papers])
+        # Ultra-light search index — title/abstract snippet/authors/venue only
+        self._write(output_dir, "search_index.json",[self._search_entry(p) for p in db_papers])
 
         self._write(output_dir, "authors.json",     [a.to_dict() for a in authors])
         self._write(output_dir, "topics.json",      [t.to_dict() for t in topics])
@@ -59,6 +61,38 @@ class SiteGenerator:
         self._mirror_to_site(output_dir)
 
     # ── Helpers ───────────────────────────────────────────────────────────────
+
+    # Creator-content and internal fields never needed by the browser UI
+    _STRIP_FIELDS = {
+        "tweet_thread", "linkedin_post", "newsletter_blurb", "video_script_outline",
+        "plain_english_explanation", "technical_summary", "score_breakdown",
+        "research_gap_signals", "limitations", "future_work",
+        "canonical_id", "author_ids", "affiliations_raw", "lab_ids", "university_ids",
+        "cluster_id", "prerequisites", "fetched_at",
+    }
+
+    @classmethod
+    def _slim(cls, paper: Paper) -> dict:
+        """Return a browser-friendly dict — drops heavy fields not shown in the UI."""
+        d = paper.to_dict()
+        for f in cls._STRIP_FIELDS:
+            d.pop(f, None)
+        return d
+
+    @staticmethod
+    def _search_entry(paper: Paper) -> dict:
+        """Ultra-light record for the client-side search index."""
+        return {
+            "id":          paper.id,
+            "title":       paper.title,
+            "abstract":    (paper.abstract or "")[:300],
+            "authors":     paper.authors[:5],
+            "venue":       paper.venue,
+            "year":        paper.year,
+            "paper_score": round(paper.paper_score, 1),
+            "paper_url":   paper.paper_url,
+            "tags":        paper.tags[:5],
+        }
 
     @staticmethod
     def _write(directory: str, filename: str, data: object) -> None:

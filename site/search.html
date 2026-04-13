@@ -183,7 +183,7 @@
   const q = params.get('q') || '';
   if (q) {
     input.value = q;
-    const data = await loadSearchData();
+    const data = await loadSearchData();  // uses search_index.json
     renderResults(runSearch(q, data, 20), q);
   }
 

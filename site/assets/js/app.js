@@ -229,7 +229,7 @@ let _searchData = null;
 async function loadSearchData() {
   if (_searchData) return _searchData;
   const [papers, authors, topics] = await Promise.all([
-    fetch('data/papers.json').then(r => r.json()).catch(() => []),
+    fetch('data/search_index.json').then(r => r.json()).catch(() => []),
     fetch('data/authors.json').then(r => r.json()).catch(() => []),
     fetch('data/topics.json').then(r => r.json()).catch(() => []),
   ]);
