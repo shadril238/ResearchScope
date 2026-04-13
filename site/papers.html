@@ -193,7 +193,7 @@ function applyFilters() {
 const debouncedFilter = debounce(applyFilters, 200);
 
 (async () => {
-  const papers = await fetchData('/data/papers.json');
+  const papers = await fetchData('data/papers.json');
   if (!papers || !papers.length) {
     showEmpty('papers-body');
     return;

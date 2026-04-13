@@ -113,7 +113,7 @@ function applyFilters() {
 }
 
 (async () => {
-  const authors = await fetchData('/data/authors.json');
+  const authors = await fetchData('data/authors.json');
   if (!authors || !authors.length) {
     showEmpty('authors-grid');
     return;

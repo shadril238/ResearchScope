@@ -110,7 +110,7 @@ function applyFilters() {
 }
 
 (async () => {
-  const gaps = await fetchData('/data/gaps.json');
+  const gaps = await fetchData('data/gaps.json');
   if (!gaps || !gaps.length) {
     document.getElementById('gaps-container').innerHTML = `
       <div class="empty-state">

@@ -1,4 +1,10 @@
-"""ResearchScope CLI entry point."""
+"""ResearchScope CLI entry point.
+
+.. deprecated::
+    This CLI module is a legacy prototype.  The current ResearchScope product is a
+    static web dashboard (see ``src/`` and ``site/``).  ACL Anthology and arXiv are
+    the primary data sources; Semantic Scholar support here is unmaintained.
+"""
 
 from __future__ import annotations
 

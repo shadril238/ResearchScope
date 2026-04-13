@@ -73,6 +73,13 @@ jobs:
       - name: Pull latest changes
         run: git pull --rebase origin ${{ github.ref_name }} || true
 
+      - name: Copy data into site/data/
+        run: |
+          mkdir -p site/data
+          if [ -d data ] && ls data/*.json 1>/dev/null 2>&1; then
+            cp data/*.json site/data/
+          fi
+
       - name: Setup Pages
         uses: actions/configure-pages@v5
 
