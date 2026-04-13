@@ -343,6 +343,84 @@ function initSearch() {
   });
 }
 
+// ── Paper of the Day ──────────────────────────────────────────────────
+function pickPaperOfTheDay(papers, poolSize = 150) {
+  if (!papers || !papers.length) return null;
+  const pool = papers.slice(0, Math.min(poolSize, papers.length));
+  const today  = new Date();
+  const startOfYear = new Date(today.getFullYear(), 0, 0);
+  const dayOfYear = Math.floor((today - startOfYear) / 86400000);
+  return pool[dayOfYear % pool.length];
+}
+
+function tweetPaperUrl(paper) {
+  const venue   = [paper.venue, paper.year].filter(Boolean).join(' ');
+  const score   = paper.paper_score ? ` | ⭐ ${(+paper.paper_score).toFixed(1)}/10` : '';
+  const snippet = (paper.abstract || paper.summary || '').slice(0, 160);
+  const pageUrl = `https://kishormorol.github.io/ResearchScope/papers.html?q=${encodeURIComponent(paper.title || '')}`;
+  const text    = `📄 ${paper.title}\n${venue}${score}\n\n${snippet}…\n\n🔭 ResearchScope\n${pageUrl}\n\n#AIResearch #MachineLearning #ResearchScope`;
+  return `https://twitter.com/intent/tweet?text=${encodeURIComponent(text)}`;
+}
+
+function weekLabel() {
+  const now = new Date();
+  const dow = now.getDay();
+  const mon = new Date(now); mon.setDate(now.getDate() - ((dow + 6) % 7));
+  const sun = new Date(mon); sun.setDate(mon.getDate() + 6);
+  const fmt = d => d.toLocaleDateString('en-US', { month: 'short', day: 'numeric' });
+  return `${fmt(mon)} – ${fmt(sun)}, ${now.getFullYear()}`;
+}
+
+function renderPotdCard(paper) {
+  if (!paper) return '';
+  const url     = paper.paper_url || paper.url || '#';
+  const venue   = [paper.venue, paper.year].filter(Boolean).join(' · ');
+  const authors = (paper.authors || []).slice(0, 3).join(', ');
+  const extra   = (paper.authors || []).length > 3 ? ` +${paper.authors.length - 3}` : '';
+  const tags    = (paper.tags || []).slice(0, 3).map(t =>
+    `<span style="background:rgba(255,255,255,0.2);color:#fff;padding:2px 8px;border-radius:99px;font-size:0.7rem;font-weight:600">${escHtml(t)}</span>`
+  ).join('');
+
+  const tomorrowMs = new Date(new Date().setHours(24,0,0,0)) - Date.now();
+  const hoursLeft = Math.floor(tomorrowMs / 3600000);
+  const minsLeft  = Math.floor((tomorrowMs % 3600000) / 60000);
+  const nextLabel = hoursLeft > 0 ? `New paper in ${hoursLeft}h ${minsLeft}m` : `New paper in ${minsLeft}m`;
+
+  return `
+  <div class="potd-wrap">
+    <div class="potd-label">
+      ✨ Paper of the Day
+      <span style="font-size:0.65rem;opacity:0.6;font-weight:400">${new Date().toLocaleDateString('en-US',{weekday:'short',month:'short',day:'numeric'})}</span>
+    </div>
+    <div class="potd-title">
+      <a href="${escHtml(url)}" target="_blank" rel="noopener">${escHtml(paper.title)}</a>
+    </div>
+    <div class="potd-meta">
+      ${venue ? escHtml(venue) + (authors ? ' · ' : '') : ''}${escHtml(authors)}${escHtml(extra)}
+      ${paper.paper_score ? ` · ⭐ ${(+paper.paper_score).toFixed(1)}/10` : ''}
+    </div>
+    <div style="display:flex;flex-wrap:wrap;gap:0.3rem;margin-bottom:0.75rem">${tags}</div>
+    <p class="potd-abstract">${escHtml((paper.abstract || paper.summary || '').slice(0, 300))}</p>
+    <div class="potd-actions">
+      <a href="${escHtml(url)}" target="_blank" rel="noopener" class="potd-btn potd-btn-primary">Read Paper →</a>
+      <a href="${escHtml(tweetPaperUrl(paper))}" target="_blank" rel="noopener" class="potd-btn potd-btn-ghost">
+        <svg width="13" height="13" viewBox="0 0 24 24" fill="currentColor"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-4.714-6.231-5.401 6.231H2.744l7.738-8.835L1.254 2.25H8.08l4.259 5.631zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
+        Share
+      </a>
+      <button onclick="copyPotdLink('${escHtml(url)}',this)" class="potd-btn potd-btn-ghost">📋 Copy Link</button>
+      <span class="potd-next">${nextLabel}</span>
+    </div>
+  </div>`;
+}
+
+function copyPotdLink(url, btn) {
+  navigator.clipboard.writeText(url).then(() => {
+    const orig = btn.textContent;
+    btn.textContent = '✓ Copied!';
+    setTimeout(() => btn.textContent = orig, 2000);
+  });
+}
+
 // ── Init ───────────────────────────────────────────────────────────────
 document.addEventListener('DOMContentLoaded', () => {
   initTheme();

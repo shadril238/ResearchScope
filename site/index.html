@@ -4,6 +4,14 @@
   <meta charset="UTF-8"/>
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>ResearchScope – CS Research Intelligence Platform</title>
+  <meta name="description" content="Track top CS/AI papers daily. Papers scored by importance, authors tracked by momentum, research gaps surfaced automatically."/>
+  <meta property="og:title" content="ResearchScope – CS Research Intelligence"/>
+  <meta property="og:description" content="Track top CS/AI papers daily. Papers scored, authors ranked, research gaps surfaced. Updated every weekday via GitHub Actions."/>
+  <meta property="og:type" content="website"/>
+  <meta property="og:url" content="https://kishormorol.github.io/ResearchScope/"/>
+  <meta name="twitter:card" content="summary_large_image"/>
+  <meta name="twitter:title" content="ResearchScope – CS Research Intelligence"/>
+  <meta name="twitter:description" content="Track top CS/AI papers daily. Papers scored, authors ranked, research gaps surfaced. Updated every weekday via GitHub Actions."/>
   <script src="https://cdn.tailwindcss.com"></script>
   <link rel="stylesheet" href="assets/css/style.css"/>
 </head>
@@ -20,6 +28,7 @@
         <a href="index.html">Home</a>
         <a href="papers.html">Papers</a>
         <a href="topics.html">Topics</a>
+        <a href="digest.html">📬 Digest</a>
         <a href="conferences.html">Conferences</a>
         <a href="authors.html">Authors</a>
         <a href="labs.html">Labs &amp; Unis</a>
@@ -53,6 +62,7 @@
       <a href="index.html" class="mobile-nav-link">Home</a>
       <a href="papers.html" class="mobile-nav-link">Papers</a>
       <a href="topics.html" class="mobile-nav-link">Topics</a>
+      <a href="digest.html" class="mobile-nav-link">📬 Weekly Digest</a>
       <a href="conferences.html" class="mobile-nav-link">Conferences</a>
       <a href="authors.html" class="mobile-nav-link">Authors</a>
       <a href="labs.html" class="mobile-nav-link">Labs &amp; Unis</a>
@@ -94,6 +104,11 @@
     <div class="stat-card"><div class="stat-value" id="stat-topics">–</div><div class="stat-label">Topics</div></div>
     <div class="stat-card"><div class="stat-value" id="stat-gaps">–</div><div class="stat-label">Research Gaps</div></div>
   </div>
+</section>
+
+<!-- ── Paper of the Day ──────────────────────────────────────────────── -->
+<section class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mb-10">
+  <div id="potd-container"></div>
 </section>
 
 <!-- ── Editorial Queue ───────────────────────────────────────────────── -->
@@ -259,6 +274,13 @@ function renderEditorial(ed) {
     fetchData('data/gaps.json'),
     fetchData('data/editorial.json'),
   ]);
+
+  // Paper of the Day
+  if (papers && papers.length) {
+    const sorted = [...papers].sort((a,b) => (b.paper_score||0) - (a.paper_score||0));
+    const potd = pickPaperOfTheDay(sorted);
+    if (potd) document.getElementById('potd-container').innerHTML = renderPotdCard(potd);
+  }
 
   // Editorial
   document.getElementById('editorial-container').innerHTML = renderEditorial(editorial);
