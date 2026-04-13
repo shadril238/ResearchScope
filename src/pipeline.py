@@ -59,12 +59,17 @@ _SITE_DATA = Path(__file__).parent.parent / "site" / "data"
 
 
 def _load_existing_papers(max_age_days: int = 180) -> list[Paper]:
-    """Load previously collected papers from site/data/papers.json.
+    """Load previously collected papers from site/data/papers_db.json.
 
+    papers_db.json holds up to 10 000 papers (full accumulation store).
+    papers.json holds only the top 1 000 for the browser — not used here.
     Only returns papers within the rolling window so the dataset doesn't grow
     unboundedly.  New papers fetched this run take precedence in dedup.
     """
-    papers_file = _SITE_DATA / "papers.json"
+    papers_file = _SITE_DATA / "papers_db.json"
+    # Fall back to papers.json if db file doesn't exist yet (first run)
+    if not papers_file.exists():
+        papers_file = _SITE_DATA / "papers.json"
     if not papers_file.exists():
         return []
     try:

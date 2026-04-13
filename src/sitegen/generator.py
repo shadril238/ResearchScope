@@ -20,6 +20,11 @@ class SiteGenerator:
 
     SITE_DATA_DIR = Path(__file__).parent.parent.parent / "site" / "data"
 
+    # Max papers written to papers.json (served to browsers)
+    MAX_FRONTEND_PAPERS = 1000
+    # Max papers kept in papers_db.json (accumulation store, not served)
+    MAX_DB_PAPERS = 10_000
+
     def generate(
         self,
         papers: list[Paper],
@@ -33,7 +38,15 @@ class SiteGenerator:
     ) -> None:
         os.makedirs(output_dir, exist_ok=True)
 
-        self._write(output_dir, "papers.json",      [p.to_dict() for p in papers])
+        # papers are already sorted by paper_score descending from the pipeline
+        frontend_papers = papers[: self.MAX_FRONTEND_PAPERS]
+        db_papers       = papers[: self.MAX_DB_PAPERS]
+
+        # Full DB — used by the next pipeline run for accumulation (not browser-served)
+        self._write(output_dir, "papers_db.json",   [p.to_dict() for p in db_papers])
+        # Frontend slice — what the browser actually loads
+        self._write(output_dir, "papers.json",      [p.to_dict() for p in frontend_papers])
+
         self._write(output_dir, "authors.json",     [a.to_dict() for a in authors])
         self._write(output_dir, "topics.json",      [t.to_dict() for t in topics])
         self._write(output_dir, "gaps.json",        [g.to_dict() for g in gaps])
@@ -53,12 +66,20 @@ class SiteGenerator:
         with open(path, "w", encoding="utf-8") as fh:
             json.dump(data, fh, indent=2, ensure_ascii=False, default=str)
 
+    # Files kept in the pipeline output dir but NOT served to the browser
+    _DB_ONLY_FILES = {"papers_db.json"}
+
     def _mirror_to_site(self, output_dir: str) -> None:
         site_data = self.SITE_DATA_DIR
         site_data.mkdir(parents=True, exist_ok=True)
         src = Path(output_dir)
         for json_file in src.glob("*.json"):
-            shutil.copy2(json_file, site_data / json_file.name)
+            if json_file.name in self._DB_ONLY_FILES:
+                # Copy to site/data/ for accumulation (committed to git) but
+                # it is never fetched by the frontend JS.
+                shutil.copy2(json_file, site_data / json_file.name)
+            else:
+                shutil.copy2(json_file, site_data / json_file.name)
 
     @staticmethod
     def _stats(
