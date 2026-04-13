@@ -267,10 +267,10 @@ function renderEditorial(ed) {
 (async () => {
   await loadStats();
 
-  const [papers, topics, authors, gaps, editorial] = await Promise.all([
+  // Load critical data first — render immediately without blocking on authors (18MB+)
+  const [papers, topics, gaps, editorial] = await Promise.all([
     fetchData('data/papers.json'),
     fetchData('data/topics.json'),
-    fetchData('data/authors.json'),
     fetchData('data/gaps.json'),
     fetchData('data/editorial.json'),
   ]);
@@ -304,34 +304,6 @@ function renderEditorial(ed) {
     topicsEl.innerHTML = '<p style="color:var(--rs-muted)">No topics yet.</p>';
   }
 
-  // Rising researchers
-  const authorsEl = document.getElementById('authors-container');
-  if (authors && authors.length) {
-    const sorted = [...authors].sort((a,b)=>(b.momentum_score||0)-(a.momentum_score||0));
-    authorsEl.innerHTML = `<div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">` +
-      sorted.slice(0,6).map(a => `
-        <div class="rs-card p-4">
-          <div class="flex items-center gap-3 mb-2">
-            <div class="w-10 h-10 rounded-full flex items-center justify-center text-lg font-bold" style="background:var(--rs-primary);color:#fff">
-              ${escHtml((a.name||'?')[0].toUpperCase())}
-            </div>
-            <div>
-              <div class="font-semibold text-sm">${escHtml(a.name)}</div>
-              <div class="text-xs" style="color:var(--rs-muted)">${(a.paper_ids||[]).length} papers</div>
-            </div>
-          </div>
-          <div class="flex items-center gap-2 mb-2">
-            <span class="text-xs" style="color:var(--rs-muted)">Momentum</span>
-            <div class="momentum-bar flex-1"><div class="momentum-fill" style="width:${(a.momentum_score||0)*10}%"></div></div>
-            <span class="text-xs font-bold">${(+a.momentum_score||0).toFixed(1)}</span>
-          </div>
-          <div class="flex flex-wrap gap-1">${(a.topics||[]).slice(0,3).map(t=>`<span class="badge badge-tag">${escHtml(t)}</span>`).join('')}</div>
-        </div>`).join('') +
-      `</div>`;
-  } else {
-    showEmpty('authors-container');
-  }
-
   // Research gaps preview
   const gapsEl = document.getElementById('gaps-container');
   if (gaps && gaps.length) {
@@ -352,6 +324,36 @@ function renderEditorial(ed) {
   } else {
     gapsEl.innerHTML = '<p style="color:var(--rs-muted)">No gaps detected yet.</p>';
   }
+
+  // Rising researchers — load separately so it never blocks the page
+  fetchData('data/authors.json').then(authors => {
+    const authorsEl = document.getElementById('authors-container');
+    if (authors && authors.length) {
+      const sorted = [...authors].sort((a,b)=>(b.momentum_score||0)-(a.momentum_score||0));
+      authorsEl.innerHTML = `<div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">` +
+        sorted.slice(0,6).map(a => `
+          <div class="rs-card p-4">
+            <div class="flex items-center gap-3 mb-2">
+              <div class="w-10 h-10 rounded-full flex items-center justify-center text-lg font-bold" style="background:var(--rs-primary);color:#fff">
+                ${escHtml((a.name||'?')[0].toUpperCase())}
+              </div>
+              <div>
+                <div class="font-semibold text-sm">${escHtml(a.name)}</div>
+                <div class="text-xs" style="color:var(--rs-muted)">${(a.paper_ids||[]).length} papers</div>
+              </div>
+            </div>
+            <div class="flex items-center gap-2 mb-2">
+              <span class="text-xs" style="color:var(--rs-muted)">Momentum</span>
+              <div class="momentum-bar flex-1"><div class="momentum-fill" style="width:${(a.momentum_score||0)*10}%"></div></div>
+              <span class="text-xs font-bold">${(+a.momentum_score||0).toFixed(1)}</span>
+            </div>
+            <div class="flex flex-wrap gap-1">${(a.topics||[]).slice(0,3).map(t=>`<span class="badge badge-tag">${escHtml(t)}</span>`).join('')}</div>
+          </div>`).join('') +
+        `</div>`;
+    } else {
+      showEmpty('authors-container');
+    }
+  });
 })();
 </script>
 </body>
