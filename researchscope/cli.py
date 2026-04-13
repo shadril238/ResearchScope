@@ -17,6 +17,11 @@ app = typer.Typer(
 )
 console = Console()
 
+_NO_PAPERS_MSG = (
+    "[yellow]No papers saved yet. "
+    "Run [bold]researchscope search --save[/bold] first.[/yellow]"
+)
+
 
 @app.command()
 def search(
@@ -83,10 +88,6 @@ def list_papers(
         papers = store.all()
 
     if not papers:
-        _NO_PAPERS_MSG = (
-            "[yellow]No papers saved yet. "
-            "Run [bold]researchscope search --save[/bold] first.[/yellow]"
-        )
         console.print(_NO_PAPERS_MSG)
         return
 
@@ -122,10 +123,6 @@ def gaps(
         papers = store.all()
 
     if not papers:
-        _NO_PAPERS_MSG = (
-            "[yellow]No papers saved yet. "
-            "Run [bold]researchscope search --save[/bold] first.[/yellow]"
-        )
         console.print(_NO_PAPERS_MSG)
         return
 
