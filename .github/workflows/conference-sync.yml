@@ -12,9 +12,9 @@ on:
   workflow_dispatch:
     inputs:
       max_results:
-        description: 'Max papers per query per venue (default 100)'
+        description: 'Max papers per query for S2 only (AAAI/IJCAI/CHI). OpenReview/PMLR/CVF/ACL always fetch ALL papers regardless of this value.'
         required: false
-        default: '100'
+        default: '500'
 
 permissions:
   contents: write
@@ -40,7 +40,7 @@ jobs:
           OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
           ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
         run: |
-          MAX="${{ github.event.inputs.max_results || '100' }}"
+          MAX="${{ github.event.inputs.max_results || '500' }}"
           echo "Running: python src/pipeline.py --conferences-only --max-results $MAX"
           python src/pipeline.py --conferences-only --max-results $MAX
 
