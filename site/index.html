@@ -155,7 +155,7 @@
   await loadStats();
 
   // Top papers
-  const papers = await fetchData('/data/papers.json');
+  const papers = await fetchData('data/papers.json');
   if (!papers || !papers.length) {
     showEmpty('top-papers-container');
     showEmpty('recent-papers-container');
@@ -170,7 +170,7 @@
   }
 
   // Topics
-  const topics = await fetchData('/data/topics.json');
+  const topics = await fetchData('data/topics.json');
   const topicsEl = document.getElementById('topics-container');
   if (topics && topics.length) {
     topicsEl.innerHTML = topics.slice(0, 20).map(t =>
@@ -184,7 +184,7 @@
   }
 
   // Top authors
-  const authors = await fetchData('/data/authors.json');
+  const authors = await fetchData('data/authors.json');
   const authorsEl = document.getElementById('authors-container');
   if (authors && authors.length) {
     authorsEl.innerHTML =
@@ -207,7 +207,7 @@
   }
 
   // Research gaps
-  const gaps = await fetchData('/data/gaps.json');
+  const gaps = await fetchData('data/gaps.json');
   const gapsEl = document.getElementById('gaps-container');
   if (gaps && gaps.length) {
     gapsEl.innerHTML =

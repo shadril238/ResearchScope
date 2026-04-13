@@ -108,7 +108,7 @@ function renderPaperCard(paper) {
 
 // ── Stats bar ──────────────────────────────────────────────────────────
 async function loadStats() {
-  const stats = await fetchData('/data/stats.json');
+  const stats = await fetchData('data/stats.json');
   if (!stats) return;
   const map = {
     'stat-papers':  stats.total_papers,

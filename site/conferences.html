@@ -133,7 +133,7 @@ document.querySelectorAll('.conf-tab').forEach(btn => {
 });
 
 (async () => {
-  const papers = await fetchData('/data/papers.json');
+  const papers = await fetchData('data/papers.json');
   if (!papers || !papers.length) {
     showEmpty('conf-content');
     return;

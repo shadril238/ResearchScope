@@ -109,7 +109,7 @@ function filterTopics(q) {
 }
 
 (async () => {
-  const topics = await fetchData('/data/topics.json');
+  const topics = await fetchData('data/topics.json');
   if (!topics || !topics.length) {
     showEmpty('topics-grid');
     return;

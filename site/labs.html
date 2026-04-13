@@ -67,7 +67,7 @@ function renderLabCard(lab) {
 }
 
 (async () => {
-  const labs = await fetchData('/data/labs.json');
+  const labs = await fetchData('data/labs.json');
   const grid = document.getElementById('labs-grid');
   if (!labs || !labs.length) {
     grid.innerHTML = `
