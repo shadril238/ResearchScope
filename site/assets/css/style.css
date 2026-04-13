@@ -45,6 +45,27 @@ body {
   color: var(--rs-primary);
 }
 
+/* ── Mobile nav menu ─────────────────────────────── */
+.mobile-nav-link {
+  display: block;
+  padding: 0.5rem 0.75rem;
+  border-radius: 0.5rem;
+  color: var(--rs-muted);
+  transition: color 0.15s, background-color 0.15s;
+}
+.mobile-nav-link:hover,
+.mobile-nav-link.active {
+  color: var(--rs-primary);
+  background-color: var(--rs-border);
+}
+#mobile-menu-btn {
+  color: var(--rs-muted);
+  transition: color 0.15s;
+}
+#mobile-menu-btn:hover {
+  color: var(--rs-primary);
+}
+
 /* ── Cards ───────────────────────────────────────── */
 .rs-card {
   background-color: var(--rs-surface);

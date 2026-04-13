@@ -11,13 +11,43 @@
 <nav class="rs-nav">
   <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
     <div class="flex items-center justify-between h-14">
-      <a href="index.html" class="font-bold text-lg" style="color:var(--rs-primary)">🔭 ResearchScope</a>
+      <a href="index.html" class="flex items-center gap-2 font-bold text-lg" style="color:var(--rs-primary)">
+        🔭 ResearchScope
+      </a>
       <div class="hidden sm:flex items-center gap-5 text-sm font-medium">
-        <a href="index.html">Home</a><a href="papers.html">Papers</a>
-        <a href="topics.html" class="active">Topics</a><a href="conferences.html">Conferences</a>
-        <a href="authors.html">Authors</a><a href="labs.html">Labs &amp; Unis</a><a href="gaps.html">Research Gaps</a><a href="deadlines.html">📅 Upcoming Conferences</a>
+        <a href="index.html">Home</a>
+        <a href="papers.html">Papers</a>
+        <a href="topics.html">Topics</a>
+        <a href="conferences.html">Conferences</a>
+        <a href="authors.html">Authors</a>
+        <a href="labs.html">Labs &amp; Unis</a>
+        <a href="gaps.html">Research Gaps</a>
+        <a href="deadlines.html">📅 Upcoming</a>
       </div>
-      <button id="theme-toggle"><span id="theme-icon">🌙</span></button>
+      <div class="flex items-center gap-2">
+        <button id="theme-toggle" aria-label="Toggle theme"><span id="theme-icon">🌙</span></button>
+        <button id="mobile-menu-btn" class="sm:hidden p-1 rounded" aria-label="Open menu" aria-expanded="false">
+          <svg id="hamburger-icon" class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/>
+          </svg>
+          <svg id="close-icon" class="w-5 h-5 hidden" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/>
+          </svg>
+        </button>
+      </div>
+    </div>
+  </div>
+  <!-- Mobile menu -->
+  <div id="mobile-menu" class="hidden sm:hidden border-t" style="border-color:var(--rs-border);background:var(--rs-surface)">
+    <div class="px-4 py-3 flex flex-col gap-1 text-sm font-medium">
+      <a href="index.html" class="mobile-nav-link">Home</a>
+      <a href="papers.html" class="mobile-nav-link">Papers</a>
+      <a href="topics.html" class="mobile-nav-link">Topics</a>
+      <a href="conferences.html" class="mobile-nav-link">Conferences</a>
+      <a href="authors.html" class="mobile-nav-link">Authors</a>
+      <a href="labs.html" class="mobile-nav-link">Labs &amp; Unis</a>
+      <a href="gaps.html" class="mobile-nav-link">Research Gaps</a>
+      <a href="deadlines.html" class="mobile-nav-link">📅 Upcoming Conferences</a>
     </div>
   </div>
 </nav>

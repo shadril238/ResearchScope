@@ -229,9 +229,35 @@ document.addEventListener('DOMContentLoaded', () => {
   const toggle = document.getElementById('theme-toggle');
   if (toggle) toggle.addEventListener('click', toggleTheme);
 
-  // Highlight active nav link
+  // Highlight active nav link (desktop + mobile)
   const path = window.location.pathname.split('/').pop() || 'index.html';
-  document.querySelectorAll('.rs-nav a[href]').forEach(a => {
+  document.querySelectorAll('.rs-nav a[href], .mobile-nav-link').forEach(a => {
     if (a.getAttribute('href') === path) a.classList.add('active');
   });
+
+  // Mobile menu toggle
+  const mobileBtn  = document.getElementById('mobile-menu-btn');
+  const mobileMenu = document.getElementById('mobile-menu');
+  const iconOpen   = document.getElementById('hamburger-icon');
+  const iconClose  = document.getElementById('close-icon');
+
+  if (mobileBtn && mobileMenu) {
+    mobileBtn.addEventListener('click', () => {
+      const isOpen = !mobileMenu.classList.contains('hidden');
+      mobileMenu.classList.toggle('hidden');
+      iconOpen.classList.toggle('hidden', !isOpen);
+      iconClose.classList.toggle('hidden', isOpen);
+      mobileBtn.setAttribute('aria-expanded', String(isOpen));
+    });
+
+    // Close menu when a link is tapped
+    mobileMenu.querySelectorAll('a').forEach(a => {
+      a.addEventListener('click', () => {
+        mobileMenu.classList.add('hidden');
+        iconOpen.classList.remove('hidden');
+        iconClose.classList.add('hidden');
+        mobileBtn.setAttribute('aria-expanded', 'false');
+      });
+    });
+  }
 });
