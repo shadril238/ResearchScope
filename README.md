@@ -125,6 +125,21 @@ To enable Pages for a fork: go to **Settings → Pages** and set the source to
 
 See [CONTRIBUTING.md](CONTRIBUTING.md) for guidelines.
 
+## Acknowledgments
+
+ResearchScope aggregates metadata from the following open academic resources. We are grateful to each for making their data publicly accessible.
+
+| Source | What we use | License |
+|---|---|---|
+| [arXiv](https://arxiv.org) | Paper metadata (title, abstract, authors, categories) | Metadata: CC0 (public domain) |
+| [ACL Anthology](https://aclanthology.org) | NLP/CL paper metadata via `anthology+abstracts.bib.gz` | 2016+: CC BY 4.0 · Pre-2016: CC BY-NC-SA 3.0 |
+| [PMLR](https://proceedings.mlr.press) | ICML proceedings metadata | CC BY 4.0 |
+| [Semantic Scholar](https://www.semanticscholar.org) | Conference paper metadata and author affiliations | See [S2 API License](https://www.semanticscholar.org/product/api/license) |
+
+ResearchScope stores only bibliographic metadata (titles, abstracts, authors, affiliations, URLs). No full paper text or PDFs are stored or redistributed. All papers link back to their original sources.
+
+If you are a publisher and have concerns about how your content is represented, please [open an issue](https://github.com/kishormorol/ResearchScope/issues).
+
 ## License
 
 MIT © 2026 Md Kishor Morol
