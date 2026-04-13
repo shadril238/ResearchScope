@@ -21,11 +21,20 @@ from src.normalization.schema import Paper
 
 log = logging.getLogger(__name__)
 
-_API_BASE = "https://api.semanticscholar.org/graph/v1/paper/search"
-_FIELDS   = (
+_API_BASE      = "https://api.semanticscholar.org/graph/v1/paper/search"
+_API_BULK      = "https://api.semanticscholar.org/graph/v1/paper/search/bulk"
+_FIELDS        = (
     "paperId,title,abstract,authors,year,venue,"
     "externalIds,openAccessPdf,publicationVenue,fieldsOfStudy"
 )
+
+# Venues to bulk-fetch in fetch_all (OpenReview is down; S2 is the fallback)
+# Each entry: venue_key → years to fetch
+_BULK_VENUES: dict[str, list[int]] = {
+    "ICLR":    [2023, 2024, 2025],
+    "NeurIPS": [2023, 2024],
+    "COLM":    [2024],
+}
 
 # Short venue names accepted by the S2 ?venue= filter → (canonical, rank)
 _VENUES: dict[str, tuple[str, str]] = {
@@ -56,6 +65,70 @@ class SemanticScholarConnector(BaseConnector):
     @property
     def source_name(self) -> str:
         return "semantic_scholar"
+
+    def fetch_all(self, venues: dict[str, list[int]] | None = None) -> list[Paper]:
+        """Bulk-fetch ALL papers for ICLR/NeurIPS/COLM using the S2 bulk endpoint.
+
+        Uses cursor-based pagination — no result cap beyond API limits.
+        Falls back gracefully per venue/year on failure.
+        """
+        target = venues or _BULK_VENUES
+        all_papers: list[Paper] = []
+        seen: set[str] = set()
+
+        for venue_key, years in target.items():
+            venue_name, rank = _VENUES.get(venue_key, (venue_key, ""))
+            for year in years:
+                try:
+                    papers = self._bulk_fetch_venue_year(venue_key, venue_name, rank, year)
+                    log.info("[s2] bulk %s %d → %d papers", venue_key, year, len(papers))
+                    for p in papers:
+                        if p.id not in seen:
+                            seen.add(p.id)
+                            all_papers.append(p)
+                except Exception as exc:
+                    log.warning("[s2] bulk %s %d failed: %s", venue_key, year, exc)
+
+        return all_papers
+
+    def _bulk_fetch_venue_year(
+        self, venue_key: str, venue_name: str, rank: str, year: int
+    ) -> list[Paper]:
+        """Paginate through ALL S2 papers for a venue+year using the bulk endpoint."""
+        papers: list[Paper] = []
+        token: str | None = None
+
+        while True:
+            params: dict[str, Any] = {
+                "query":  venue_key,
+                "venue":  venue_key,
+                "year":   str(year),
+                "fields": _FIELDS,
+                "limit":  500,
+            }
+            if token:
+                params["token"] = token
+
+            url = f"{_API_BULK}?{urllib.parse.urlencode(params)}"
+            headers: dict[str, str] = {"User-Agent": "ResearchScope/1.0"}
+            if self._key:
+                headers["x-api-key"] = self._key
+
+            req = urllib.request.Request(url, headers=headers)
+            with urllib.request.urlopen(req, timeout=60) as resp:
+                data = json.loads(resp.read())
+
+            for rec in data.get("data", []):
+                p = self._record_to_paper(rec, venue_name, rank)
+                if p:
+                    papers.append(p)
+
+            token = data.get("token")
+            if not token:
+                break
+            time.sleep(self._sleep)
+
+        return papers
 
     def fetch(self, query: str, max_results: int = 50) -> list[Paper]:
         """Fetch *query* across all configured venues."""

@@ -5,7 +5,7 @@ env:
 
 on:
   schedule:
-    - cron: "0 2 * * *"   # daily at 02:00 UTC
+    - cron: "0 2 * * 1-5"   # weekdays only (Mon–Fri) at 02:00 UTC
   workflow_dispatch:        # manual trigger
 
 permissions:
@@ -58,6 +58,7 @@ jobs:
           git config user.name  "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
           git commit -m "chore: update research data [$(date -u +%Y-%m-%d)]"
+          git pull --rebase origin main
           git push
 
   deploy-pages:

@@ -195,15 +195,16 @@ def run_pipeline(
     if not skip_conferences or conferences_only:
         if conferences_only:
             # ── Conference-sync mode: fetch ALL papers directly from proceedings ──
-            log.info("  [openreview] fetching ALL papers (ICLR, NeurIPS, COLM) …")
+            # S2 bulk — ICLR, NeurIPS, COLM (replaces OpenReview which returns 403)
+            log.info("  [s2] bulk-fetching ALL papers (ICLR, NeurIPS, COLM) …")
             try:
-                fetched = OpenReviewConnector().fetch_all()
+                fetched = SemanticScholarConnector().fetch_all()
                 log.info("    → %d papers", len(fetched))
                 all_papers.extend(fetched)
             except Exception as exc:
-                log.warning("  [openreview] fetch_all failed: %s", exc)
+                log.warning("  [s2] fetch_all failed: %s", exc)
 
-            log.info("  [pmlr] fetching ALL papers (ICML) …")
+            log.info("  [pmlr] fetching ALL papers (ICML 2022-2025) …")
             try:
                 fetched = PMLRConnector().fetch_all()
                 log.info("    → %d papers", len(fetched))
@@ -219,7 +220,6 @@ def run_pipeline(
             except Exception as exc:
                 log.warning("  [cvf] fetch_all failed: %s", exc)
 
-                # ACL Anthology — full export for all NLP venues
             log.info("  [acl] fetching ALL papers from anthology export (2020+) …")
             try:
                 fetched = ACLAnthologyConnector().fetch_all(min_year=2020)
@@ -228,13 +228,12 @@ def run_pipeline(
             except Exception as exc:
                 log.warning("  [acl] fetch_all failed: %s", exc)
 
-            # Semantic Scholar — AAAI, IJCAI, CHI (no clean direct proceedings API)
+            # S2 keyword queries — AAAI, IJCAI, CHI (no clean direct proceedings API)
             log.info("  [s2] fetching AAAI, IJCAI, CHI …")
-            s2 = SemanticScholarConnector(venues=["AAAI", "IJCAI", "CHI"])
-            conf_queries = queries[:3]
-            for query in conf_queries:
+            s2_kw = SemanticScholarConnector(venues=["AAAI", "IJCAI", "CHI"])
+            for query in queries[:3]:
                 try:
-                    fetched = s2.fetch(query, max_results=max_results_per_query)
+                    fetched = s2_kw.fetch(query, max_results=max_results_per_query)
                     log.info("    [s2] '%s' → %d papers", query, len(fetched))
                     all_papers.extend(fetched)
                 except Exception as exc:
@@ -260,6 +259,9 @@ def run_pipeline(
     log.info("Fetched %d papers total (before dedup)", len(all_papers))
 
     if not all_papers:
+        if today_mode and date.today().weekday() >= 5:
+            log.info("No papers fetched — arXiv does not publish on weekends. Exiting cleanly.")
+            return {"weekend_skip": True}
         log.error("No papers fetched. Check network connectivity.")
         return {}
 
@@ -427,3 +429,5 @@ if __name__ == "__main__":
     )
     if not stats:
         sys.exit(1)
+    if stats.get("weekend_skip"):
+        sys.exit(0)

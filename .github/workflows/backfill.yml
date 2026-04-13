@@ -79,6 +79,7 @@ jobs:
             echo "No changes to commit"
           else
             git commit -m "chore: backfill data from ${{ github.event.inputs.from_date }}"
+            git pull --rebase origin main
             git push
           fi
 

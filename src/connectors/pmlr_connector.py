@@ -28,6 +28,7 @@ _BASE = "https://proceedings.mlr.press"
 
 # volume → (venue name, rank, year)
 _VOLUMES: dict[str, tuple[str, str, int]] = {
+    "267": ("ICML", "A*", 2025),
     "235": ("ICML", "A*", 2024),
     "202": ("ICML", "A*", 2023),
     "162": ("ICML", "A*", 2022),
