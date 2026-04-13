@@ -103,6 +103,35 @@ def _match_lab(text: str) -> str | None:
     return None
 
 
+def _affiliations_from_paper(paper: "Paper") -> list[str]:
+    """Return affiliation strings for a paper.
+
+    Priority:
+      1. paper.affiliations_raw  (populated by connectors that have this data)
+      2. Scan abstract + title for institution keywords (covers arXiv papers
+         that mention their org in the text, e.g. "We at Google Research…")
+    """
+    if paper.affiliations_raw:
+        return paper.affiliations_raw
+
+    # Infer from text — collect every distinct matched name
+    text = f"{paper.title} {paper.abstract or ''}"
+    found: list[str] = []
+    seen: set[str] = set()
+
+    for pattern, name in _LAB_PATTERNS:
+        if pattern.search(text) and name not in seen:
+            found.append(name)
+            seen.add(name)
+
+    for pattern, name in _UNI_PATTERNS:
+        if pattern.search(text) and name not in seen:
+            found.append(name)
+            seen.add(name)
+
+    return found
+
+
 # ── Main aggregator ───────────────────────────────────────────────────────────
 
 class Aggregator:
@@ -139,7 +168,7 @@ class Aggregator:
                 if venue:
                     author.conference_counts[venue] = author.conference_counts.get(venue, 0) + 1
 
-                for aff in paper.affiliations_raw:
+                for aff in _affiliations_from_paper(paper):
                     if aff and aff not in author.affiliations:
                         author.affiliations.append(aff)
                     lab = _match_lab(aff)
@@ -176,9 +205,8 @@ class Aggregator:
         lab_map: dict[str, Lab] = {}
 
         for paper in papers:
-            # Infer labs from affiliations_raw
             aff_labs: list[str] = []
-            for aff in paper.affiliations_raw:
+            for aff in _affiliations_from_paper(paper):
                 lab = _match_lab(aff)
                 if lab:
                     aff_labs.append(lab)
@@ -245,7 +273,7 @@ class Aggregator:
 
         for paper in papers:
             unis: list[str] = []
-            for aff in paper.affiliations_raw:
+            for aff in _affiliations_from_paper(paper):
                 uni = _match_university(aff)
                 if uni:
                     unis.append(uni)
