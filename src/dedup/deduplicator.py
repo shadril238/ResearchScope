@@ -1,4 +1,17 @@
-"""Deduplication logic for Paper objects."""
+"""Deduplication logic for Paper objects.
+
+Two-pass strategy:
+  1. Exact arXiv-ID match  — most conference papers also appear on arXiv;
+     S2 returns the arXiv ID via externalIds / paper_url, so this catches the
+     most common conference↔preprint duplicate cheaply and reliably.
+  2. Title Jaccard similarity — catches remaining near-duplicates where no
+     shared arXiv ID exists (e.g. two conference versions, or an ACL paper
+     that was never on arXiv).
+
+When two papers are merged we keep the one with the richer metadata, but
+always prefer a non-arXiv venue/rank when merging an arXiv preprint with
+its accepted conference version.
+"""
 from __future__ import annotations
 
 import re
@@ -7,22 +20,36 @@ import unicodedata
 from src.normalization.schema import Paper
 
 
+# ── Helpers ───────────────────────────────────────────────────────────────────
+
 def _normalise_title(title: str) -> str:
-    """Lowercase, strip punctuation and extra whitespace."""
     title = unicodedata.normalize("NFKC", title).lower()
     title = re.sub(r"[^\w\s]", " ", title)
     return re.sub(r"\s+", " ", title).strip()
 
 
+_ARXIV_URL_RE = re.compile(r"arxiv\.org/abs/(\d{4}\.\d{4,5})", re.IGNORECASE)
+_ARXIV_ID_RE  = re.compile(r"^arxiv:(\d{4}\.\d{4,5})", re.IGNORECASE)
+
+
+def _arxiv_id(paper: Paper) -> str | None:
+    """Extract a bare arXiv ID (e.g. '2501.12345') from a paper, if available."""
+    # arXiv-sourced papers: id = "arxiv:2501.12345v2"
+    m = _ARXIV_ID_RE.match(paper.id)
+    if m:
+        return m.group(1)
+    # S2/conference papers whose paper_url points to arXiv
+    if paper.paper_url:
+        m = _ARXIV_URL_RE.search(paper.paper_url)
+        if m:
+            return m.group(1)
+    return None
+
+
 def _completeness(paper: Paper) -> int:
-    """Count how many optional fields are non-empty."""
+    """Score how much useful metadata a paper has (higher = keep this one)."""
     score = 0
-    for value in (
-        paper.abstract,
-        paper.pdf_url,
-        paper.summary,
-        paper.why_it_matters,
-    ):
+    for value in (paper.abstract, paper.pdf_url, paper.summary, paper.why_it_matters):
         if value:
             score += 1
     score += len(paper.authors)
@@ -31,11 +58,15 @@ def _completeness(paper: Paper) -> int:
     score += len(paper.future_work)
     if paper.citations:
         score += 1
+    # Prefer accepted conference version over bare arXiv preprint
+    if paper.venue and paper.venue.lower() not in ("arxiv", ""):
+        score += 5
+    if paper.conference_rank:
+        score += 3
     return score
 
 
 def _similarity(a: str, b: str) -> float:
-    """Simple Jaccard similarity on word sets."""
     wa = set(a.split())
     wb = set(b.split())
     if not wa or not wb:
@@ -43,30 +74,64 @@ def _similarity(a: str, b: str) -> float:
     return len(wa & wb) / len(wa | wb)
 
 
+def _merge(winner: Paper, loser: Paper) -> Paper:
+    """Fill missing fields in winner from loser where winner is empty."""
+    if not winner.abstract and loser.abstract:
+        winner.abstract = loser.abstract
+    if not winner.pdf_url and loser.pdf_url:
+        winner.pdf_url = loser.pdf_url
+    if not winner.affiliations_raw and loser.affiliations_raw:
+        winner.affiliations_raw = loser.affiliations_raw
+    if not winner.citations and loser.citations:
+        winner.citations = loser.citations
+    return winner
+
+
+# ── Deduplicator ──────────────────────────────────────────────────────────────
+
 class Deduplicator:
-    """Remove near-duplicate papers from a list."""
+    """Remove duplicate / near-duplicate papers from a list."""
 
     def __init__(self, threshold: float = 0.85) -> None:
         self.threshold = threshold
 
     def deduplicate(self, papers: list[Paper]) -> list[Paper]:
-        """Return a deduplicated list, keeping the most complete entry."""
-        normalised = [_normalise_title(p.title) for p in papers]
+        # ── Pass 1: exact arXiv-ID match ──────────────────────────────────────
+        arxiv_index: dict[str, int] = {}   # arXiv ID → index in `result`
+        result: list[Paper] = []
+
+        for paper in papers:
+            aid = _arxiv_id(paper)
+            if aid and aid in arxiv_index:
+                existing = result[arxiv_index[aid]]
+                if _completeness(paper) > _completeness(existing):
+                    result[arxiv_index[aid]] = _merge(paper, existing)
+                else:
+                    _merge(existing, paper)
+                continue
+
+            idx = len(result)
+            result.append(paper)
+            if aid:
+                arxiv_index[aid] = idx
+
+        # ── Pass 2: title Jaccard similarity ──────────────────────────────────
+        normalised = [_normalise_title(p.title) for p in result]
         kept: list[int] = []
 
-        for i, paper in enumerate(papers):
+        for i, paper in enumerate(result):
             merged_into: int | None = None
             for j in kept:
-                sim = _similarity(normalised[i], normalised[j])
-                if sim >= self.threshold:
+                if _similarity(normalised[i], normalised[j]) >= self.threshold:
                     merged_into = j
                     break
 
             if merged_into is None:
                 kept.append(i)
             else:
-                # Replace kept entry if this one is more complete
-                if _completeness(paper) > _completeness(papers[merged_into]):
-                    kept[kept.index(merged_into)] = i
+                existing = result[merged_into]
+                if _completeness(paper) > _completeness(existing):
+                    result[merged_into] = _merge(paper, existing)
+                    kept[kept.index(merged_into)] = merged_into  # keep same slot
 
-        return [papers[i] for i in kept]
+        return [result[i] for i in kept]
