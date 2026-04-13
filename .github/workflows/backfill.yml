@@ -11,7 +11,7 @@ on:
         required: true
         default: '2026-01-01'
       skip_conferences:
-        description: 'Skip Semantic Scholar + OpenReview (true/false)'
+        description: 'Skip conference connectors (true/false)'
         required: false
         default: 'false'
 
@@ -19,15 +19,15 @@ permissions:
   contents: write
   pages: write
   id-token: write
-  
+
 concurrency:
   group: backfill-main
   cancel-in-progress: false
-  
+
 jobs:
   backfill:
     runs-on: ubuntu-latest
-    timeout-minutes: 120   # backfill can take a while
+    timeout-minutes: 120
     steps:
       - name: Checkout
         uses: actions/checkout@v4
@@ -40,48 +40,38 @@ jobs:
 
       - name: Install dependencies
         run: pip install -r requirements.txt
-      
+
+      - name: Run backfill pipeline
+        run: |
+          SKIP_FLAG=""
+          if [ "${{ github.event.inputs.skip_conferences }}" = "true" ]; then
+            SKIP_FLAG="--skip-conferences"
+          fi
+          python src/pipeline.py --backfill-from ${{ github.event.inputs.from_date }} $SKIP_FLAG
+        env:
+          PYTHONPATH: ${{ github.workspace }}
+          SEMANTIC_SCHOLAR_KEY: ${{ secrets.SEMANTIC_SCHOLAR_KEY }}
+
       - name: Commit backfilled data
         run: |
           set -euo pipefail
           git config user.name  "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
-      
+
           git add site/data/
           if git diff --cached --quiet; then
             echo "No changes to commit"
             exit 0
           fi
-      
+
           git commit -m "chore: backfill data from ${{ github.event.inputs.from_date }}"
-      
-          # Avoid non-fast-forward failure if main advanced while the job ran
+
+          # Rebase on latest main in case another job pushed while pipeline ran
           git fetch origin main
           git rebase origin/main
-      
-          # Push; retry once in case of a race
-          git push origin HEAD:main || (sleep 5 && git push origin HEAD:main)
 
-      - name: Check output
-        run: |
-          python -c "
-          import json
-          papers = json.load(open('site/data/papers.json'))
-          print(f'Backfill produced {len(papers)} papers')
-          "
-
-      - name: Commit backfilled data
-        run: |
-          git config user.name  "github-actions[bot]"
-          git config user.email "github-actions[bot]@users.noreply.github.com"
-          git add site/data/
-          if git diff --cached --quiet; then
-            echo "No changes to commit"
-          else
-            git commit -m "chore: backfill data from ${{ github.event.inputs.from_date }}"
-            git pull --rebase origin main
-            git push
-          fi
+          # Push with one retry for any remaining race
+          git push origin HEAD:main || (sleep 5 && git fetch origin main && git rebase origin/main && git push origin HEAD:main)
 
   deploy:
     needs: backfill
