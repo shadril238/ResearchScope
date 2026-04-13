@@ -2,14 +2,22 @@ name: Research Pipeline + Deploy
 
 on:
   schedule:
-    # Run daily at 06:00 UTC
+    # Run daily at 06:00 UTC (after arXiv's nightly announcement ~05:00 UTC)
     - cron: '0 6 * * *'
   workflow_dispatch:
     inputs:
-      max_results:
-        description: 'Max papers per query (default 50)'
+      today_mode:
+        description: 'Fetch ALL papers published today on arXiv (true/false)'
         required: false
-        default: '50'
+        default: 'true'
+      today_max:
+        description: 'Max papers in today-mode (default 2000)'
+        required: false
+        default: '2000'
+      max_results:
+        description: 'Max papers per query (only used when today_mode=false)'
+        required: false
+        default: '100'
       skip_acl:
         description: 'Skip ACL Anthology fetch (true/false)'
         required: false
@@ -42,17 +50,30 @@ jobs:
           OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
           ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
         run: |
-          MAX=${{ github.event.inputs.max_results || '50' }}
-          SKIP_ACL=${{ github.event.inputs.skip_acl || 'false' }}
-          SKIP_FLAG=""
-          if [ "$SKIP_ACL" = "true" ]; then SKIP_FLAG="--skip-acl"; fi
-          python src/pipeline.py --max-results "$MAX" $SKIP_FLAG
+          # Resolve inputs (workflow_dispatch values, or schedule defaults)
+          TODAY_MODE="${{ github.event.inputs.today_mode || 'true' }}"
+          TODAY_MAX="${{ github.event.inputs.today_max || '2000' }}"
+          MAX_RESULTS="${{ github.event.inputs.max_results || '100' }}"
+          SKIP_ACL="${{ github.event.inputs.skip_acl || 'false' }}"
+
+          FLAGS=""
+          if [ "$TODAY_MODE" = "true" ]; then
+            FLAGS="--today --today-max $TODAY_MAX"
+          else
+            FLAGS="--max-results $MAX_RESULTS"
+          fi
+          if [ "$SKIP_ACL" = "true" ]; then
+            FLAGS="$FLAGS --skip-acl"
+          fi
+
+          echo "Running: python src/pipeline.py $FLAGS"
+          python src/pipeline.py $FLAGS
 
       - name: Check output was produced
         run: |
           test -f site/data/papers.json || (echo "ERROR: papers.json not produced" && exit 1)
           python -c "
-          import json, sys
+          import json
           papers = json.load(open('site/data/papers.json'))
           print(f'Pipeline produced {len(papers)} papers')
           if len(papers) == 0:
@@ -81,7 +102,7 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v4
         with:
-          ref: main   # pick up the data commit from pipeline job
+          ref: main
 
       - name: Setup Pages
         uses: actions/configure-pages@v4

@@ -10,7 +10,7 @@ import re
 import urllib.parse
 import urllib.request
 import xml.etree.ElementTree as ET
-from datetime import datetime, timezone
+from datetime import date, datetime, timedelta, timezone
 
 from src.connectors.base import BaseConnector
 from src.normalization.schema import Paper
@@ -40,6 +40,13 @@ CATEGORY_TAG_MAP: dict[str, str] = {
 _ARXIV_NS = "http://www.w3.org/2005/Atom"
 _API_BASE  = "https://export.arxiv.org/api/query"
 
+# CS + ML categories to sweep when fetching by date
+_DEFAULT_CATEGORIES = [
+    "cs.AI", "cs.CL", "cs.LG", "cs.CV", "cs.NE",
+    "cs.IR", "cs.MA", "cs.RO", "cs.SE", "cs.HC",
+    "cs.CR", "cs.DB", "stat.ML", "eess.AS", "eess.IV",
+]
+
 
 def _ns(name: str) -> str:
     return f"{{{_ARXIV_NS}}}{name}"
@@ -64,6 +71,56 @@ class ArxivConnector(BaseConnector):
         except Exception as exc:
             log.warning("arXiv Atom API fetch failed: %s", exc)
             return []
+
+    def fetch_today(
+        self,
+        categories: list[str] | None = None,
+        max_results: int = 2000,
+        lookback_days: int = 2,
+    ) -> list[Paper]:
+        """Fetch all papers submitted in the last *lookback_days* across CS/ML categories.
+
+        arXiv papers submitted before ~14:00 ET appear the next business day, so a
+        lookback of 2 days reliably captures everything announced today.
+        """
+        cats = categories or _DEFAULT_CATEGORIES
+        cat_filter = " OR ".join(f"cat:{c}" for c in cats)
+
+        today     = date.today()
+        date_from = (today - timedelta(days=lookback_days)).strftime("%Y%m%d") + "000000"
+        date_to   = today.strftime("%Y%m%d") + "235959"
+
+        query = f"({cat_filter}) AND submittedDate:[{date_from} TO {date_to}]"
+        log.info(
+            "fetch_today: categories=%d, window=%s→%s, max=%d",
+            len(cats), date_from[:8], date_to[:8], max_results,
+        )
+
+        # Paginate to get everything (arXiv caps at 2000 per request)
+        all_papers: list[Paper] = []
+        seen_ids: set[str] = set()
+        batch = 500
+        start = 0
+
+        while start < max_results:
+            this_batch = min(batch, max_results - start)
+            try:
+                papers = self._fetch_via_api_paginated(query, start, this_batch)
+            except Exception as exc:
+                log.warning("fetch_today batch start=%d failed: %s", start, exc)
+                break
+            if not papers:
+                break
+            for p in papers:
+                if p.id not in seen_ids:
+                    seen_ids.add(p.id)
+                    all_papers.append(p)
+            log.info("  batch start=%d → %d new (total %d)", start, len(papers), len(all_papers))
+            if len(papers) < this_batch:
+                break   # last page
+            start += this_batch
+
+        return all_papers
 
     # ── Primary: arxiv package ────────────────────────────────────────────────
 
@@ -111,15 +168,19 @@ class ArxivConnector(BaseConnector):
     # ── Fallback: Atom API ────────────────────────────────────────────────────
 
     def _fetch_via_api(self, query: str, max_results: int) -> list[Paper]:
+        return self._fetch_via_api_paginated(f"all:{query}", 0, max_results)
+
+    def _fetch_via_api_paginated(self, search_query: str, start: int, max_results: int) -> list[Paper]:
         params = urllib.parse.urlencode({
-            "search_query": f"all:{query}",
+            "search_query": search_query,
+            "start": start,
             "max_results": max_results,
             "sortBy": "submittedDate",
             "sortOrder": "descending",
         })
         url = f"{_API_BASE}?{params}"
         req = urllib.request.Request(url, headers={"User-Agent": "ResearchScope/1.0"})
-        with urllib.request.urlopen(req, timeout=30) as resp:  # noqa: S310
+        with urllib.request.urlopen(req, timeout=60) as resp:  # noqa: S310
             data = resp.read()
         root = ET.fromstring(data)
         return [self._entry_to_paper(e) for e in root.findall(_ns("entry"))]

@@ -71,6 +71,8 @@ def run_pipeline(
     max_results_per_query: int = 50,
     output_dir: str = "data",
     skip_acl: bool = False,
+    today_mode: bool = False,
+    today_max: int = 2000,
 ) -> dict:
     """Execute the full ResearchScope pipeline. Returns summary stats."""
 
@@ -79,18 +81,38 @@ def run_pipeline(
 
     # ── Stage 1: Fetch ────────────────────────────────────────────────────────
     log.info("Stage 1/11 — Fetching papers …")
-    connectors = [ArxivConnector()]
-    if not skip_acl:
-        connectors.append(ACLAnthologyConnector())
-
+    arxiv = ArxivConnector()
     all_papers: list[Paper] = []
-    for connector in connectors:
+
+    if today_mode:
+        log.info("  [arxiv] today-mode: fetching all CS papers from last 2 days …")
+        try:
+            fetched = arxiv.fetch_today(max_results=today_max)
+            log.info("    → %d papers", len(fetched))
+            all_papers.extend(fetched)
+        except Exception as exc:
+            log.warning("  [arxiv] fetch_today failed: %s — falling back to queries", exc)
+            today_mode = False  # fall through to keyword queries
+
+    if not today_mode:
         for query in queries:
-            log.info("  [%s] '%s' …", connector.source_name, query)
+            log.info("  [arxiv] '%s' …", query)
             try:
-                fetched = connector.fetch(query, max_results=max_results_per_query)
+                fetched = arxiv.fetch(query, max_results=max_results_per_query)
             except Exception as exc:
-                log.warning("  [%s] fetch failed for '%s': %s", connector.source_name, query, exc)
+                log.warning("  [arxiv] fetch failed for '%s': %s", query, exc)
+                fetched = []
+            log.info("    → %d papers", len(fetched))
+            all_papers.extend(fetched)
+
+    if not skip_acl:
+        acl = ACLAnthologyConnector()
+        for query in queries:
+            log.info("  [acl] '%s' …", query)
+            try:
+                fetched = acl.fetch(query, max_results=max_results_per_query)
+            except Exception as exc:
+                log.warning("  [acl] fetch failed for '%s': %s", query, exc)
                 fetched = []
             log.info("    → %d papers", len(fetched))
             all_papers.extend(fetched)
@@ -194,7 +216,7 @@ def _parse_args() -> argparse.Namespace:
     )
     parser.add_argument(
         "--max-results", type=int, default=50,
-        help="Max papers per query per connector (default: 50)",
+        help="Max papers per query per connector (default: 50, ignored in --today mode)",
     )
     parser.add_argument(
         "--output-dir", default="data",
@@ -208,6 +230,14 @@ def _parse_args() -> argparse.Namespace:
         "--query", action="append", dest="queries",
         help="Override default queries (can be repeated)",
     )
+    parser.add_argument(
+        "--today", action="store_true",
+        help="Fetch ALL papers submitted to arXiv in the last 2 days (ignores --max-results and --query for arXiv)",
+    )
+    parser.add_argument(
+        "--today-max", type=int, default=2000,
+        help="Max papers to fetch in --today mode (default: 2000)",
+    )
     return parser.parse_args()
 
 
@@ -218,6 +248,8 @@ if __name__ == "__main__":
         max_results_per_query=args.max_results,
         output_dir=args.output_dir,
         skip_acl=args.skip_acl,
+        today_mode=args.today,
+        today_max=args.today_max,
     )
     if not stats:
         sys.exit(1)
