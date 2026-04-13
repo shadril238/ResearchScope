@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8"/>
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Conference Deadlines – ResearchScope</title>
+  <title>Upcoming Conferences – ResearchScope</title>
   <script src="https://cdn.tailwindcss.com"></script>
   <link rel="stylesheet" href="assets/css/style.css"/>
   <style>
@@ -35,7 +35,7 @@
         <a href="index.html">Home</a><a href="papers.html">Papers</a><a href="topics.html">Topics</a>
         <a href="conferences.html">Conferences</a><a href="authors.html">Authors</a>
         <a href="labs.html">Labs &amp; Unis</a><a href="gaps.html">Research Gaps</a>
-        <a href="deadlines.html" class="active">🔔 Deadlines</a>
+        <a href="deadlines.html" class="active">📅 Upcoming Conferences</a>
       </div>
       <button id="theme-toggle"><span id="theme-icon">🌙</span></button>
     </div>
@@ -43,9 +43,9 @@
 </nav>
 
 <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
-  <h1 class="text-2xl font-bold mb-1">🔔 Conference Deadline Tracker</h1>
+  <h1 class="text-2xl font-bold mb-1">📅 Upcoming Conferences</h1>
   <p class="text-sm mb-6" style="color:var(--rs-muted)">
-    Submission deadlines for top CS venues. Dates marked <span class="est-badge">est</span> are estimated from historical patterns — always verify on the official site.
+    Submission deadlines and venues for top CS conferences. Dates marked <span class="est-badge">est</span> are estimated from historical patterns — always verify on the official site.
   </p>
 
   <!-- Next deadline banner -->
@@ -102,19 +102,19 @@ const DEADLINES = [
   {name:"ICML 2026",      short:"ICML",   area:"ML", rank:"A*",
    abstract_deadline:"2026-01-23", paper_deadline:"2026-01-30",
    notification:"2026-05-02", conf_start:"2026-07-12", conf_end:"2026-07-18",
-   location:"TBD", website:"https://icml.cc", confirmed:false,
+   location:"Prague, Czech Republic", website:"https://icml.cc", confirmed:false,
    note:"Estimated from 2025 schedule"},
 
   {name:"NeurIPS 2026",   short:"NeurIPS",area:"ML", rank:"A*",
    abstract_deadline:"2026-05-14", paper_deadline:"2026-05-21",
    notification:"2026-09-10", conf_start:"2026-12-07", conf_end:"2026-12-13",
-   location:"TBD", website:"https://neurips.cc", confirmed:false,
+   location:"Vancouver, Canada", website:"https://neurips.cc", confirmed:false,
    note:"Estimated from 2025 schedule"},
 
   {name:"COLM 2026",      short:"COLM",   area:"ML", rank:"A*",
    paper_deadline:"2026-03-01",
    notification:"2026-05-15", conf_start:"2026-10-01", conf_end:"2026-10-04",
-   location:"TBD", website:"https://colmweb.org", confirmed:false,
+   location:"Philadelphia, PA", website:"https://colmweb.org", confirmed:false,
    note:"Estimated"},
 
   // ── NLP ───────────────────────────────────────────────────────────────────
@@ -126,7 +126,7 @@ const DEADLINES = [
   {name:"ACL 2026",       short:"ACL",    area:"NLP",rank:"A*",
    abstract_deadline:"2026-01-29", paper_deadline:"2026-02-05",
    notification:"2026-05-09", conf_start:"2026-07-27", conf_end:"2026-08-01",
-   location:"TBD", website:"https://2026.aclweb.org", confirmed:false,
+   location:"Vienna, Austria", website:"https://2026.aclweb.org", confirmed:false,
    note:"Estimated from 2025 schedule"},
 
   {name:"COLING 2026",    short:"COLING", area:"NLP",rank:"A",
@@ -137,20 +137,20 @@ const DEADLINES = [
   {name:"EMNLP 2026",     short:"EMNLP",  area:"NLP",rank:"A*",
    abstract_deadline:"2026-06-01", paper_deadline:"2026-06-08",
    notification:"2026-09-01", conf_start:"2026-11-07", conf_end:"2026-11-11",
-   location:"TBD", website:"https://2026.emnlp.org", confirmed:false,
+   location:"Dubai, UAE", website:"https://2026.emnlp.org", confirmed:false,
    note:"Estimated from 2025 schedule"},
 
   {name:"EACL 2026",      short:"EACL",   area:"NLP",rank:"A",
    paper_deadline:"2025-10-10",
    notification:"2025-12-15", conf_start:"2026-03-21", conf_end:"2026-03-25",
-   location:"TBD", website:"https://2026.eacl.org", confirmed:false,
+   location:"Tallinn, Estonia", website:"https://2026.eacl.org", confirmed:false,
    note:"Estimated"},
 
   // ── CV ────────────────────────────────────────────────────────────────────
   {name:"CVPR 2026",      short:"CVPR",   area:"CV", rank:"A*",
    abstract_deadline:"2025-11-08", paper_deadline:"2025-11-15",
    notification:"2026-02-26", conf_start:"2026-06-14", conf_end:"2026-06-19",
-   location:"TBD", website:"https://cvpr.thecvf.com", confirmed:false,
+   location:"Nashville, TN", website:"https://cvpr.thecvf.com", confirmed:false,
    note:"Estimated from 2025 schedule"},
 
   {name:"ICCV 2025",      short:"ICCV",   area:"CV", rank:"A*",
@@ -161,7 +161,7 @@ const DEADLINES = [
   {name:"ECCV 2026",      short:"ECCV",   area:"CV", rank:"A*",
    paper_deadline:"2026-03-05",
    notification:"2026-07-01", conf_start:"2026-09-28", conf_end:"2026-10-03",
-   location:"TBD", website:"https://eccv2026.org", confirmed:false,
+   location:"Zürich, Switzerland", website:"https://eccv2026.org", confirmed:false,
    note:"Estimated"},
 
   // ── AI ────────────────────────────────────────────────────────────────────
@@ -173,13 +173,13 @@ const DEADLINES = [
   {name:"AAAI 2027",      short:"AAAI",   area:"AI", rank:"A*",
    abstract_deadline:"2026-08-01", paper_deadline:"2026-08-08",
    notification:"2026-11-01", conf_start:"2027-02-16", conf_end:"2027-02-23",
-   location:"TBD", website:"https://aaai.org", confirmed:false,
+   location:"Seattle, WA", website:"https://aaai.org", confirmed:false,
    note:"Estimated"},
 
   {name:"IJCAI 2026",     short:"IJCAI",  area:"AI", rank:"A*",
    abstract_deadline:"2026-01-08", paper_deadline:"2026-01-15",
    notification:"2026-04-20", conf_start:"2026-08-01", conf_end:"2026-08-07",
-   location:"TBD", website:"https://ijcai.org", confirmed:false,
+   location:"Melbourne, Australia", website:"https://ijcai.org", confirmed:false,
    note:"Estimated"},
 
   // ── HCI ───────────────────────────────────────────────────────────────────
@@ -191,7 +191,7 @@ const DEADLINES = [
   {name:"CHI 2027",       short:"CHI",    area:"HCI",rank:"A*",
    abstract_deadline:"2026-09-11", paper_deadline:"2026-09-18",
    notification:"2026-12-10", conf_start:"2027-04-24", conf_end:"2027-04-29",
-   location:"TBD", website:"https://chi2027.acm.org", confirmed:false,
+   location:"Amsterdam, Netherlands", website:"https://chi2027.acm.org", confirmed:false,
    note:"Estimated"},
 ];
 
