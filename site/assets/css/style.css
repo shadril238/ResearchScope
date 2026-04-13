@@ -45,6 +45,101 @@ body {
   color: var(--rs-primary);
 }
 
+/* ── Global search ───────────────────────────────── */
+.search-wrap {
+  position: relative;
+}
+.search-input {
+  background: var(--rs-bg);
+  border: 1px solid var(--rs-border);
+  border-radius: 0.5rem;
+  color: var(--rs-text);
+  font-size: 0.8rem;
+  padding: 0.3rem 0.75rem 0.3rem 2rem;
+  width: 200px;
+  transition: width 0.2s, border-color 0.15s;
+  outline: none;
+}
+.search-input:focus {
+  border-color: var(--rs-primary);
+  width: 260px;
+}
+.search-input::placeholder { color: var(--rs-muted); }
+.search-icon {
+  position: absolute;
+  left: 0.5rem;
+  top: 50%;
+  transform: translateY(-50%);
+  color: var(--rs-muted);
+  pointer-events: none;
+  width: 14px; height: 14px;
+}
+.search-dropdown {
+  position: absolute;
+  top: calc(100% + 6px);
+  right: 0;
+  width: 380px;
+  max-height: 480px;
+  overflow-y: auto;
+  background: var(--rs-surface);
+  border: 1px solid var(--rs-border);
+  border-radius: 0.75rem;
+  box-shadow: 0 8px 24px rgba(0,0,0,0.12);
+  z-index: 200;
+}
+.search-dropdown.hidden { display: none; }
+.search-section-label {
+  font-size: 0.7rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--rs-muted);
+  padding: 0.6rem 0.75rem 0.3rem;
+}
+.search-result-item {
+  display: block;
+  padding: 0.5rem 0.75rem;
+  cursor: pointer;
+  transition: background 0.1s;
+  text-decoration: none;
+  color: var(--rs-text);
+  border-radius: 0;
+}
+.search-result-item:hover,
+.search-result-item.focused {
+  background: var(--rs-border);
+}
+.search-result-item .sr-title {
+  font-size: 0.82rem;
+  font-weight: 500;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.search-result-item .sr-meta {
+  font-size: 0.72rem;
+  color: var(--rs-muted);
+  margin-top: 1px;
+}
+.search-see-all {
+  display: block;
+  text-align: center;
+  font-size: 0.78rem;
+  font-weight: 600;
+  color: var(--rs-primary);
+  padding: 0.6rem;
+  border-top: 1px solid var(--rs-border);
+  cursor: pointer;
+  text-decoration: none;
+}
+.search-see-all:hover { text-decoration: underline; }
+.search-empty {
+  padding: 1.5rem;
+  text-align: center;
+  font-size: 0.85rem;
+  color: var(--rs-muted);
+}
+
 /* ── Mobile nav menu ─────────────────────────────── */
 .mobile-nav-link {
   display: block;

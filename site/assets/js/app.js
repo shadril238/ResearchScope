@@ -223,6 +223,126 @@ function showEmpty(containerId, msg = 'No data available') {
     </div>`;
 }
 
+// ── Global Search ─────────────────────────────────────────────────────
+let _searchData = null;
+
+async function loadSearchData() {
+  if (_searchData) return _searchData;
+  const [papers, authors, topics] = await Promise.all([
+    fetch('data/papers.json').then(r => r.json()).catch(() => []),
+    fetch('data/authors.json').then(r => r.json()).catch(() => []),
+    fetch('data/topics.json').then(r => r.json()).catch(() => []),
+  ]);
+  _searchData = { papers, authors, topics };
+  return _searchData;
+}
+
+function runSearch(query, data, limit = 5) {
+  const q = query.toLowerCase().trim();
+  if (!q) return { papers: [], authors: [], topics: [] };
+
+  const papers = data.papers
+    .filter(p => p.title?.toLowerCase().includes(q) ||
+                 p.abstract?.toLowerCase().includes(q) ||
+                 p.authors?.some(a => a.toLowerCase().includes(q)))
+    .slice(0, limit);
+
+  const authors = data.authors
+    .filter(a => a.name?.toLowerCase().includes(q))
+    .slice(0, limit);
+
+  const topics = data.topics
+    .filter(t => t.name?.toLowerCase().includes(q) ||
+                 t.keywords?.some(k => k.toLowerCase().includes(q)))
+    .slice(0, limit);
+
+  return { papers, authors, topics };
+}
+
+function renderDropdown(results, query, dropdown) {
+  const { papers, authors, topics } = results;
+  const total = papers.length + authors.length + topics.length;
+
+  if (total === 0) {
+    dropdown.innerHTML = `<p class="search-empty">No results for "<strong>${escHtml(query)}</strong>"</p>`;
+    return;
+  }
+
+  let html = '';
+
+  if (papers.length) {
+    html += `<div class="search-section-label">Papers</div>`;
+    papers.forEach(p => {
+      html += `<a class="search-result-item" href="papers.html?q=${encodeURIComponent(p.title)}">
+        <div class="sr-title">${escHtml(p.title)}</div>
+        <div class="sr-meta">${escHtml(p.venue || 'arXiv')} · ${p.year || ''}</div>
+      </a>`;
+    });
+  }
+
+  if (authors.length) {
+    html += `<div class="search-section-label">Authors</div>`;
+    authors.forEach(a => {
+      html += `<a class="search-result-item" href="authors.html?q=${encodeURIComponent(a.name)}">
+        <div class="sr-title">${escHtml(a.name)}</div>
+        <div class="sr-meta">${a.paper_ids?.length || 0} papers</div>
+      </a>`;
+    });
+  }
+
+  if (topics.length) {
+    html += `<div class="search-section-label">Topics</div>`;
+    topics.forEach(t => {
+      html += `<a class="search-result-item" href="topics.html#${escHtml(t.id)}">
+        <div class="sr-title">${escHtml(t.name)}</div>
+        <div class="sr-meta">${t.paper_ids?.length || 0} papers</div>
+      </a>`;
+    });
+  }
+
+  html += `<a class="search-see-all" href="search.html?q=${encodeURIComponent(query)}">See all results →</a>`;
+  dropdown.innerHTML = html;
+}
+
+function initSearch() {
+  const input    = document.getElementById('global-search');
+  const dropdown = document.getElementById('search-dropdown');
+  if (!input || !dropdown) return;
+
+  let debounce;
+
+  input.addEventListener('focus', () => loadSearchData());
+
+  input.addEventListener('input', () => {
+    clearTimeout(debounce);
+    const q = input.value.trim();
+    if (!q) { dropdown.classList.add('hidden'); return; }
+
+    debounce = setTimeout(async () => {
+      const data = await loadSearchData();
+      const results = runSearch(q, data, 4);
+      renderDropdown(results, q, dropdown);
+      dropdown.classList.remove('hidden');
+    }, 180);
+  });
+
+  input.addEventListener('keydown', e => {
+    if (e.key === 'Enter' && input.value.trim()) {
+      window.location.href = `search.html?q=${encodeURIComponent(input.value.trim())}`;
+    }
+    if (e.key === 'Escape') {
+      dropdown.classList.add('hidden');
+      input.blur();
+    }
+  });
+
+  document.addEventListener('click', e => {
+    if (!input.closest('.search-wrap').contains(e.target)) {
+      dropdown.classList.add('hidden');
+    }
+  });
+}
+
 // ── Init ───────────────────────────────────────────────────────────────
 document.addEventListener('DOMContentLoaded', () => {
   initTheme();
@@ -234,6 +354,9 @@ document.addEventListener('DOMContentLoaded', () => {
   document.querySelectorAll('.rs-nav a[href], .mobile-nav-link').forEach(a => {
     if (a.getAttribute('href') === path) a.classList.add('active');
   });
+
+  // Global search
+  initSearch();
 
   // Mobile menu toggle
   const mobileBtn  = document.getElementById('mobile-menu-btn');

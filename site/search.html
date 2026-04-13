@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Search – ResearchScope</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="assets/css/style.css"/>
+</head>
+<body>
+
+<!-- ── Navigation ──────────────────────────────────────────────────── -->
+<nav class="rs-nav">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="flex items-center justify-between h-14">
+      <a href="index.html" class="flex items-center gap-2 font-bold text-lg" style="color:var(--rs-primary)">
+        🔭 ResearchScope
+      </a>
+      <div class="hidden sm:flex items-center gap-5 text-sm font-medium">
+        <a href="index.html">Home</a>
+        <a href="papers.html">Papers</a>
+        <a href="topics.html">Topics</a>
+        <a href="conferences.html">Conferences</a>
+        <a href="authors.html">Authors</a>
+        <a href="labs.html">Labs &amp; Unis</a>
+        <a href="gaps.html">Research Gaps</a>
+        <a href="deadlines.html">📅 Upcoming</a>
+      </div>
+      <div class="flex items-center gap-2">
+        <!-- Global search -->
+        <div class="search-wrap hidden sm:block">
+          <svg class="search-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-4.35-4.35M17 11A6 6 0 1 1 5 11a6 6 0 0 1 12 0z"/>
+          </svg>
+          <input id="global-search" class="search-input" type="search" placeholder="Search papers, authors…" autocomplete="off"/>
+          <div id="search-dropdown" class="search-dropdown hidden"></div>
+        </div>
+        <button id="theme-toggle" aria-label="Toggle theme"><span id="theme-icon">🌙</span></button>
+        <button id="mobile-menu-btn" class="sm:hidden p-1 rounded" aria-label="Open menu" aria-expanded="false">
+          <svg id="hamburger-icon" class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/>
+          </svg>
+          <svg id="close-icon" class="w-5 h-5 hidden" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/>
+          </svg>
+        </button>
+      </div>
+    </div>
+  </div>
+  <!-- Mobile menu -->
+  <div id="mobile-menu" class="hidden sm:hidden border-t" style="border-color:var(--rs-border);background:var(--rs-surface)">
+    <div class="px-4 py-3 flex flex-col gap-1 text-sm font-medium">
+      <a href="index.html" class="mobile-nav-link">Home</a>
+      <a href="papers.html" class="mobile-nav-link">Papers</a>
+      <a href="topics.html" class="mobile-nav-link">Topics</a>
+      <a href="conferences.html" class="mobile-nav-link">Conferences</a>
+      <a href="authors.html" class="mobile-nav-link">Authors</a>
+      <a href="labs.html" class="mobile-nav-link">Labs &amp; Unis</a>
+      <a href="gaps.html" class="mobile-nav-link">Research Gaps</a>
+      <a href="deadlines.html" class="mobile-nav-link">📅 Upcoming Conferences</a>
+    </div>
+  </div>
+</nav>
+
+<div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
+
+  <!-- Search bar -->
+  <div class="relative mb-8">
+    <svg class="absolute left-3 top-1/2 -translate-y-1/2 w-5 h-5" style="color:var(--rs-muted)" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-4.35-4.35M17 11A6 6 0 1 1 5 11a6 6 0 0 1 12 0z"/>
+    </svg>
+    <input id="search-page-input" type="search" autocomplete="off"
+      class="w-full pl-10 pr-4 py-3 rounded-xl text-base outline-none"
+      style="background:var(--rs-surface);border:1px solid var(--rs-border);color:var(--rs-text)"
+      placeholder="Search papers, authors, topics…"/>
+  </div>
+
+  <div id="search-status" class="text-sm mb-4" style="color:var(--rs-muted)"></div>
+
+  <!-- Results sections -->
+  <div id="results-papers" class="mb-8 hidden">
+    <h2 class="text-lg font-bold mb-3">📄 Papers</h2>
+    <div id="results-papers-list" class="flex flex-col gap-3"></div>
+  </div>
+
+  <div id="results-authors" class="mb-8 hidden">
+    <h2 class="text-lg font-bold mb-3">👩‍🔬 Authors</h2>
+    <div id="results-authors-list" class="flex flex-col gap-2"></div>
+  </div>
+
+  <div id="results-topics" class="mb-8 hidden">
+    <h2 class="text-lg font-bold mb-3">🗂 Topics</h2>
+    <div id="results-topics-list" class="flex flex-col gap-2"></div>
+  </div>
+
+  <div id="results-empty" class="hidden">
+    <div class="empty-state">
+      <p class="text-lg font-medium">No results found</p>
+      <p class="text-sm mt-1">Try different keywords</p>
+    </div>
+  </div>
+
+  <div id="results-idle" class="empty-state">
+    <p class="text-lg font-medium">Search across all research data</p>
+    <p class="text-sm mt-1">Papers, authors, and topics</p>
+  </div>
+
+</div>
+
+<!-- ── Footer ──────────────────────────────────────────────────────── -->
+<footer class="border-t py-8 text-center text-sm mt-8" style="border-color:var(--rs-border);color:var(--rs-muted)">
+  <p class="font-semibold mb-2">🔭 ResearchScope</p>
+  <p>Open-source CS research intelligence &middot; Updated daily via GitHub Actions &middot; Built for researchers and creators</p>
+  <p class="mt-3 font-medium" style="color:var(--rs-text)">Data Sources</p>
+  <p class="mt-1">
+    <a href="https://arxiv.org" target="_blank" class="hover:underline" style="color:var(--rs-primary)">arXiv</a> (metadata CC0) &middot;
+    <a href="https://aclanthology.org" target="_blank" class="hover:underline" style="color:var(--rs-primary)">ACL Anthology</a> (CC BY 4.0 / CC BY-NC-SA 3.0) &middot;
+    <a href="https://proceedings.mlr.press" target="_blank" class="hover:underline" style="color:var(--rs-primary)">PMLR</a> (CC BY 4.0) &middot;
+    <a href="https://www.semanticscholar.org" target="_blank" class="hover:underline" style="color:var(--rs-primary)">Semantic Scholar</a>
+  </p>
+  <p class="mt-2">
+    <a href="https://github.com/kishormorol/ResearchScope" target="_blank" class="hover:underline" style="color:var(--rs-primary)">GitHub</a>
+    &middot; <a href="ROADMAP.md" class="hover:underline" style="color:var(--rs-primary)">Roadmap</a>
+    &middot; MIT License &copy; 2026 Md Kishor Morol
+  </p>
+</footer>
+
+<script src="assets/js/app.js"></script>
+<script>
+(async () => {
+  const input   = document.getElementById('search-page-input');
+  const status  = document.getElementById('search-status');
+
+  function show(id, visible) {
+    document.getElementById(id).classList.toggle('hidden', !visible);
+  }
+
+  function renderResults(results, query) {
+    const { papers, authors, topics } = results;
+    const total = papers.length + authors.length + topics.length;
+
+    show('results-idle', false);
+    show('results-empty', total === 0);
+
+    // Papers
+    show('results-papers', papers.length > 0);
+    document.getElementById('results-papers-list').innerHTML = papers.map(p => `
+      <div class="rs-card p-4">
+        <a href="${escHtml(p.paper_url || '#')}" target="_blank" class="font-semibold hover:underline" style="color:var(--rs-primary)">${escHtml(p.title)}</a>
+        <div class="text-xs mt-1" style="color:var(--rs-muted)">${escHtml(p.venue || 'arXiv')} · ${p.year || ''} · Score ${p.paper_score?.toFixed(1) || '—'}</div>
+        ${p.abstract ? `<p class="text-sm mt-2" style="color:var(--rs-muted)">${escHtml(p.abstract.slice(0, 180))}…</p>` : ''}
+      </div>`).join('');
+
+    // Authors
+    show('results-authors', authors.length > 0);
+    document.getElementById('results-authors-list').innerHTML = authors.map(a => `
+      <div class="rs-card p-4 flex items-center justify-between">
+        <div>
+          <span class="font-medium">${escHtml(a.name)}</span>
+          <span class="text-xs ml-2" style="color:var(--rs-muted)">${a.paper_ids?.length || 0} papers</span>
+        </div>
+        <a href="authors.html?q=${encodeURIComponent(a.name)}" class="text-xs font-medium hover:underline" style="color:var(--rs-primary)">View →</a>
+      </div>`).join('');
+
+    // Topics
+    show('results-topics', topics.length > 0);
+    document.getElementById('results-topics-list').innerHTML = topics.map(t => `
+      <div class="rs-card p-4 flex items-center justify-between">
+        <div>
+          <span class="font-medium">${escHtml(t.name)}</span>
+          <span class="text-xs ml-2" style="color:var(--rs-muted)">${t.paper_ids?.length || 0} papers</span>
+        </div>
+        <a href="topics.html#${escHtml(t.id)}" class="text-xs font-medium hover:underline" style="color:var(--rs-primary)">View →</a>
+      </div>`).join('');
+
+    status.textContent = total
+      ? `${total} result${total !== 1 ? 's' : ''} for "${query}"`
+      : '';
+  }
+
+  // Pre-fill from URL param
+  const params = new URLSearchParams(window.location.search);
+  const q = params.get('q') || '';
+  if (q) {
+    input.value = q;
+    const data = await loadSearchData();
+    renderResults(runSearch(q, data, 20), q);
+  }
+
+  // Live search on the page
+  let debounce;
+  input.addEventListener('input', () => {
+    clearTimeout(debounce);
+    const query = input.value.trim();
+    if (!query) {
+      show('results-idle', true);
+      show('results-empty', false);
+      show('results-papers', false);
+      show('results-authors', false);
+      show('results-topics', false);
+      status.textContent = '';
+      return;
+    }
+    debounce = setTimeout(async () => {
+      const data = await loadSearchData();
+      renderResults(runSearch(query, data, 20), query);
+      // Update URL without navigation
+      history.replaceState(null, '', `?q=${encodeURIComponent(query)}`);
+    }, 200);
+  });
+
+  input.focus();
+})();
+</script>
+</body>
+</html>
