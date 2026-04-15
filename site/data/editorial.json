@@ -1,176 +1,175 @@
 {
-  "date": "2026-04-14",
+  "date": "2026-04-15",
   "top_papers": [
     {
-      "id": "arxiv:2604.09480v1",
-      "title": "Online3R: Online Learning for Consistent Sequential Reconstruction Based on Geometry Foundation Model",
+      "id": "openreview:7nyJBVCTGQ",
+      "title": "LiFT: Learning to Fine-Tune via Bayesian Parameter Efficient Meta Fine-Tuning",
       "authors": [
-        "Shunkai Zhou",
-        "Zike Yan",
-        "Fei Xue"
+        "Minyoung Kim",
+        "Timothy Hospedales"
       ],
-      "venue": "arXiv",
-      "year": 2026,
+      "venue": "ICLR",
+      "year": 2025,
       "tags": [
+        "Bayesian methods",
         "Benchmarking & Evaluation",
-        "Computer Vision",
-        "Machine Learning",
-        "Self-Supervised & Contrastive Learning"
+        "Fine-Tuning & PEFT",
+        "Information Extraction"
       ],
-      "paper_score": 7.4,
-      "read_first_score": 3.85,
-      "content_potential_score": 0.0,
-      "difficulty_level": "L3",
-      "why_it_matters": "Online3R: Online Learning for Consistent Sequential Reconstruction Based on Geometry Foundation Model advances machine perception, enabling better visual understanding in real-world applications.",
-      "one_line_takeaway": "We present Online3R, a new sequential reconstruction framework that is capable of adapting to new scenes through online…",
-      "content_hook": "A new paper that could change how we think about Benchmarking & Evaluation.",
-      "paper_url": "http://arxiv.org/abs/2604.09480v1"
+      "paper_score": 10.0,
+      "read_first_score": 3.38,
+      "content_potential_score": 1.0,
+      "difficulty_level": "L4",
+      "why_it_matters": "LiFT: Learning to Fine-Tune via Bayesian Parameter Efficient Meta Fine-Tuning represents a meaningful contribution to its field and opens new research directions.",
+      "one_line_takeaway": "That is, we propose a method for {\\em learning-to-fine-tune} (LiFT).",
+      "content_hook": "A new paper that could change how we think about Bayesian methods.",
+      "paper_url": "https://openreview.net/forum?id=7nyJBVCTGQ"
     },
     {
-      "id": "arxiv:2604.09321v1",
-      "title": "UHD Low-Light Image Enhancement via Real-Time Enhancement Methods with Clifford Information Fusion",
+      "id": "openreview:GLWf2fq0bX",
+      "title": "Skill Expansion and Composition in Parameter Space",
       "authors": [
-        "Xiaohan Wang",
-        "Chen Wu",
-        "Dawei Zhao"
+        "Tenglong Liu",
+        "Jianxiong Li",
+        "Yinan Zheng"
       ],
-      "venue": "arXiv",
-      "year": 2026,
+      "venue": "ICLR",
+      "year": 2025,
       "tags": [
-        "Computer Vision",
-        "Deep Learning",
-        "Transformer Architectures",
-        "Transformers"
-      ],
-      "paper_score": 7.4,
-      "read_first_score": 5.85,
-      "content_potential_score": 0.25,
-      "difficulty_level": "L2",
-      "why_it_matters": "UHD Low-Light Image Enhancement via Real-Time Enhancement Methods with Clifford Information Fusion advances machine perception, enabling better visual understanding in real-world applications.",
-      "one_line_takeaway": "Existing methods based on Transformer architectures or high-dimensional complex convolutional neural networks often…",
-      "content_hook": "A new paper that could change how we think about Computer Vision.",
-      "paper_url": "http://arxiv.org/abs/2604.09321v1"
-    },
-    {
-      "id": "arxiv:2604.08995v1",
-      "title": "Matrix-Game 3.0: Real-Time and Streaming Interactive World Model with Long-Horizon Memory",
-      "authors": [
-        "Zile Wang",
-        "Zexiang Liu",
-        "Jaixing Li"
-      ],
-      "venue": "arXiv",
-      "year": 2026,
-      "tags": [
-        "Computer Vision",
-        "Diffusion Models",
-        "Model Compression",
-        "Model Compression & Efficiency"
-      ],
-      "paper_score": 7.4,
-      "read_first_score": 4.5,
-      "content_potential_score": 1.38,
-      "difficulty_level": "L3",
-      "why_it_matters": "Matrix-Game 3.0: Real-Time and Streaming Interactive World Model with Long-Horizon Memory advances machine perception, enabling better visual understanding in real-world applications.",
-      "one_line_takeaway": "However, existing approaches still struggle to simultaneously achieve memory-enabled long-term temporal consistency and…",
-      "content_hook": "A new paper that could change how we think about Computer Vision.",
-      "paper_url": "http://arxiv.org/abs/2604.08995v1"
-    },
-    {
-      "id": "arxiv:2604.08943v1",
-      "title": "MASS: Mesh-inellipse Aligned Deformable Surfel Splatting for Hand Reconstruction and Rendering from Egocentric Monocular Video",
-      "authors": [
-        "Haoyu Zhu",
-        "Yi Zhang",
-        "Lei Yao"
-      ],
-      "venue": "arXiv",
-      "year": 2026,
-      "tags": [
-        "Computer Vision",
-        "Information Extraction",
-        "Robotics"
-      ],
-      "paper_score": 7.4,
-      "read_first_score": 4.75,
-      "content_potential_score": 0.0,
-      "difficulty_level": "L2",
-      "why_it_matters": "MASS: Mesh-inellipse Aligned Deformable Surfel Splatting for Hand Reconstruction and Rendering from Egocentric Monocular Video advances machine perception, enabling better visual understanding in real-world applications.",
-      "one_line_takeaway": "In this work, we propose Mesh-inellipse Aligned deformable Surfel Splatting (MASS) to address these challenges by…",
-      "content_hook": "A new paper that could change how we think about Computer Vision.",
-      "paper_url": "http://arxiv.org/abs/2604.08943v1"
-    },
-    {
-      "id": "arxiv:2604.08894v1",
-      "title": "Ge$^\\text{2}$mS-T: Multi-Dimensional Grouping for Ultra-High Energy Efficiency in Spiking Transformer",
-      "authors": [
-        "Zecheng Hao",
-        "Shenghao Xie",
-        "Kang Chen"
-      ],
-      "venue": "arXiv",
-      "year": 2026,
-      "tags": [
-        "Artificial Intelligence",
+        "AI Agents & Tool Use",
         "Benchmarking & Evaluation",
-        "Computer Vision",
-        "Deep Learning"
+        "Fine-Tuning & PEFT",
+        "Skill expansion"
       ],
-      "paper_score": 7.4,
-      "read_first_score": 5.1,
-      "content_potential_score": 0.25,
+      "paper_score": 10.0,
+      "read_first_score": 3.9,
+      "content_potential_score": 0.55,
       "difficulty_level": "L3",
-      "why_it_matters": "Ge$^\\text{2}$mS-T: Multi-Dimensional Grouping for Ultra-High Energy Efficiency in Spiking Transformer advances machine perception, enabling better visual understanding in real-world applications.",
-      "one_line_takeaway": "To address these issues, we propose Ge$^\\text{2}$mS-T, a novel architecture implementing grouped computation across…",
-      "content_hook": "A new paper that could change how we think about Artificial Intelligence.",
-      "paper_url": "http://arxiv.org/abs/2604.08894v1"
+      "why_it_matters": "Skill Expansion and Composition in Parameter Space moves AI from passive text generators to active problem-solvers that use tools and reason over time.",
+      "one_line_takeaway": "We propose Parametric Skill Expansion and Composition (PSEC), a new framework designed to iteratively evolve the…",
+      "content_hook": "AI that takes action, not just text — a new step forward.",
+      "paper_url": "https://openreview.net/forum?id=GLWf2fq0bX"
+    },
+    {
+      "id": "openreview:CkgKSqZbuC",
+      "title": "$R^2$-Guard: Robust Reasoning Enabled LLM Guardrail via Knowledge-Enhanced Logical Reasoning",
+      "authors": [
+        "Mintong Kang",
+        "Bo Li"
+      ],
+      "venue": "ICLR",
+      "year": 2025,
+      "tags": [
+        "AI Safety & Alignment",
+        "Benchmarking & Evaluation",
+        "LLM guardrail model",
+        "Large Language Models"
+      ],
+      "paper_score": 10.0,
+      "read_first_score": 6.35,
+      "content_potential_score": 1.48,
+      "difficulty_level": "L1",
+      "why_it_matters": "$R^2$-Guard: Robust Reasoning Enabled LLM Guardrail via Knowledge-Enhanced Logical Reasoning advances the critical goal of making AI systems safer, more reliable, and aligned with human values.",
+      "one_line_takeaway": "To address these limitations, we propose $R^2$-Guard, a robust reasoning enabled LLM guardrail via knowledge-enhanced…",
+      "content_hook": "Making AI systems safer is one of the most important problems in tech right now.",
+      "paper_url": "https://openreview.net/forum?id=CkgKSqZbuC"
+    },
+    {
+      "id": "openreview:Oxpkn0YLG1",
+      "title": "GTR: Improving Large 3D Reconstruction Models through Geometry and Texture Refinement",
+      "authors": [
+        "Peiye Zhuang",
+        "Songfang Han",
+        "Chaoyang Wang"
+      ],
+      "venue": "ICLR",
+      "year": 2025,
+      "tags": [
+        "3D Reconstruction",
+        "3D Vision & Scene Understanding",
+        "Feed-forward",
+        "Fine-Tuning & PEFT"
+      ],
+      "paper_score": 10.0,
+      "read_first_score": 6.0,
+      "content_potential_score": 0.62,
+      "difficulty_level": "L2",
+      "why_it_matters": "GTR: Improving Large 3D Reconstruction Models through Geometry and Texture Refinement extends Transformer capabilities — the architecture underpinning virtually every modern NLP and vision model.",
+      "one_line_takeaway": "We propose a novel approach for 3D mesh reconstruction from multi-view images.",
+      "content_hook": "A new paper that could change how we think about 3D Reconstruction.",
+      "paper_url": "https://openreview.net/forum?id=Oxpkn0YLG1"
+    },
+    {
+      "id": "openreview:auZZ2gN0ZN",
+      "title": "Dense Video Object Captioning from Disjoint Supervision",
+      "authors": [
+        "Xingyi Zhou",
+        "Anurag Arnab",
+        "Chen Sun"
+      ],
+      "venue": "ICLR",
+      "year": 2025,
+      "tags": [
+        "Factuality & Hallucination",
+        "Self-Supervised & Contrastive Learning",
+        "object captioning",
+        "tracking"
+      ],
+      "paper_score": 10.0,
+      "read_first_score": 4.0,
+      "content_potential_score": 0.6,
+      "difficulty_level": "L3",
+      "why_it_matters": "Dense Video Object Captioning from Disjoint Supervision represents a meaningful contribution to its field and opens new research directions.",
+      "one_line_takeaway": "We propose a new task and model for dense video object captioning -- detecting, tracking and captioning trajectories of…",
+      "content_hook": "A new paper that could change how we think about Factuality & Hallucination.",
+      "paper_url": "https://openreview.net/forum?id=auZZ2gN0ZN"
     }
   ],
   "underrated_paper": {
-    "id": "arxiv:2604.09480v1",
-    "title": "Online3R: Online Learning for Consistent Sequential Reconstruction Based on Geometry Foundation Model",
-    "paper_score": 7.4,
+    "id": "openreview:7nyJBVCTGQ",
+    "title": "LiFT: Learning to Fine-Tune via Bayesian Parameter Efficient Meta Fine-Tuning",
+    "paper_score": 10.0,
     "citations": 0,
     "reason": "Strong paper score with low citation count — possibly underexposed.",
-    "paper_url": "http://arxiv.org/abs/2604.09480v1"
+    "paper_url": "https://openreview.net/forum?id=7nyJBVCTGQ"
   },
   "breakout_author": {
-    "author_id": "yu_liu",
-    "name": "Yu Liu",
-    "momentum_score": 7.8,
-    "paper_count": 10,
+    "author_id": "tianjun_zhang",
+    "name": "Tianjun Zhang",
+    "momentum_score": 9.37,
+    "paper_count": 8,
     "topics": [
-      "AI Safety & Alignment",
-      "Computer Vision",
-      "Multimodal Learning"
+      "Large Language Models",
+      "Reasoning & Chain-of-Thought",
+      "Benchmarking & Evaluation"
     ],
-    "reason": "Rising researcher with momentum score 7.8/10."
+    "reason": "Rising researcher with momentum score 9.4/10."
   },
   "rising_lab": {
     "lab_id": "meta_ai__fair",
     "name": "Meta AI (FAIR)",
     "momentum_score": 10.0,
-    "paper_count": 176,
+    "paper_count": 1584,
     "topics": [
-      "Computer Vision",
-      "AI Safety & Alignment",
+      "Bayesian methods",
+      "Benchmarking & Evaluation",
       "Fine-Tuning & PEFT"
     ]
   },
   "emerging_trend": {
-    "topic_id": "artificial_intelligence",
-    "name": "Artificial Intelligence",
+    "topic_id": "nlp",
+    "name": "NLP",
     "trend_score": 10.0,
-    "paper_count": 1816,
-    "gap_summary": "No explicit gaps extracted yet for Artificial Intelligence."
+    "paper_count": 32854,
+    "gap_summary": "No explicit gaps extracted yet for NLP."
   },
   "research_gap": {
-    "gap_id": "db063286-479c-4691-9133-2c956590479d",
-    "topic": "Artificial Intelligence",
-    "title": "Limitations",
-    "description": "limitations, precluding concurrent optimization of memory, accuracy and energy consumption.",
-    "frequency": 259,
-    "starter_idea": "Build a text classification pipeline with scikit-learn as a baseline.",
+    "gap_id": "d80c38d2-3c3a-4290-b473-a4ac75b58c61",
+    "topic": "Benchmarking & Evaluation",
+    "title": "Struggle with consistency and verification",
+    "description": "struggle with consistency and verification.",
+    "frequency": 2168,
+    "starter_idea": "Reproduce the paper's baseline experiment.",
     "gap_type": "explicit"
   }
 }
