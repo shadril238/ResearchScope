@@ -133,10 +133,10 @@
     "paper_url": "http://arxiv.org/abs/2604.08537v1"
   },
   "breakout_author": {
-    "author_id": "minkai_xu",
-    "name": "Minkai Xu",
-    "momentum_score": 9.52,
-    "paper_count": 9,
+    "author_id": "tianjun_zhang",
+    "name": "Tianjun Zhang",
+    "momentum_score": 9.4,
+    "paper_count": 8,
     "topics": [
       "Large Language Models",
       "Reasoning & Chain-of-Thought",
@@ -148,7 +148,7 @@
     "lab_id": "meta_ai__fair",
     "name": "Meta AI (FAIR)",
     "momentum_score": 10.0,
-    "paper_count": 852,
+    "paper_count": 1585,
     "topics": [
       "Bayesian methods",
       "Benchmarking & Evaluation",
@@ -159,16 +159,16 @@
     "topic_id": "nlp",
     "name": "NLP",
     "trend_score": 10.0,
-    "paper_count": 6349,
+    "paper_count": 32821,
     "gap_summary": "No explicit gaps extracted yet for NLP."
   },
   "research_gap": {
-    "gap_id": "d3779c0f-a9c9-4728-a225-0c34df126f28",
+    "gap_id": "bcd73d48-14a6-4b74-9815-86f147bb2ef0",
     "topic": "Benchmarking & Evaluation",
     "title": "Struggle with consistency and verification",
     "description": "struggle with consistency and verification.",
-    "frequency": 764,
-    "starter_idea": "Fine-tune a CLIP model on a domain-specific image-caption dataset.",
+    "frequency": 2204,
+    "starter_idea": "Reproduce the paper's baseline experiment.",
     "gap_type": "explicit"
   }
 }
