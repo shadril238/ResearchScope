@@ -73,7 +73,7 @@ _LAB_PATTERNS: list[tuple[re.Pattern[str], str]] = [
     (re.compile(r"google.*research|google inc",  re.IGNORECASE), "Google Research"),
     (re.compile(r"openai",                       re.IGNORECASE), "OpenAI"),
     (re.compile(r"anthropic",                    re.IGNORECASE), "Anthropic"),
-    (re.compile(r"meta.*ai|fair\b|facebook.*ai", re.IGNORECASE), "Meta AI (FAIR)"),
+    (re.compile(r"meta.*ai|meta.*research|\bfair\b.*(?:lab|research|ai)|facebook.*ai", re.IGNORECASE), "Meta AI (FAIR)"),
     (re.compile(r"microsoft.*research",          re.IGNORECASE), "Microsoft Research"),
     (re.compile(r"amazon.*aws|amazon.*alexa",    re.IGNORECASE), "Amazon AWS / Alexa AI"),
     (re.compile(r"apple.*ai|apple.*ml",          re.IGNORECASE), "Apple ML"),
