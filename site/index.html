@@ -460,9 +460,11 @@ function renderEditorial(ed) {
     fetchData('data/editorial.json'),
   ]);
 
-  // Paper of the Day
+  // Paper of the Day — arXiv only
   if (papers && papers.length) {
-    const sorted = [...papers].sort((a,b) => (b.paper_score||0) - (a.paper_score||0));
+    const ARXIV_VENUES = new Set(['arXiv', 'Unknown', '', null, undefined]);
+    const arxivPapers = papers.filter(p => ARXIV_VENUES.has(p.venue));
+    const sorted = [...arxivPapers].sort((a,b) => (b.paper_score||0) - (a.paper_score||0));
     const potd = pickPaperOfTheDay(sorted);
     if (potd) document.getElementById('potd-container').innerHTML = renderPotdCard(potd);
   }
