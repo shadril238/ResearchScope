@@ -92,6 +92,15 @@
       </select>
       <select id="filter-topic" class="rs-select"><option value="">All Topics</option></select>
     </div>
+    <div class="flex flex-wrap items-center gap-3 mt-3">
+      <span class="text-xs font-medium" style="color:var(--rs-muted)">Sort by:</span>
+      <div class="flex flex-wrap gap-2" id="sort-btns">
+        <button class="badge sort-btn active" data-sort="frequency">Most Evidence</button>
+        <button class="badge sort-btn" data-sort="confidence">Confidence</button>
+        <button class="badge sort-btn" data-sort="type">Type</button>
+        <button class="badge sort-btn" data-sort="topic">Topic A–Z</button>
+      </div>
+    </div>
   </div>
 
   <p id="gap-count" class="text-xs mb-4" style="color:var(--rs-muted)"></p>
@@ -120,6 +129,7 @@ const TYPE_CLS    = {explicit:'gap-card-explicit',pattern:'gap-card-pattern',sta
 const CONF_LABELS = v => v >= 0.8 ? 'High' : v >= 0.6 ? 'Medium' : 'Low';
 
 let allGaps = [];
+let currentSort = 'frequency';
 
 function renderGap(g, papersById) {
   const cls = TYPE_CLS[g.gap_type] || '';
@@ -168,6 +178,12 @@ function applyFilters(papersById) {
     return true;
   });
 
+  const TYPE_ORDER = {explicit:0, pattern:1, starter:2};
+  if      (currentSort === 'frequency')  filtered.sort((a,b) => (b.frequency||0)-(a.frequency||0));
+  else if (currentSort === 'confidence') filtered.sort((a,b) => (b.confidence||0)-(a.confidence||0));
+  else if (currentSort === 'type')       filtered.sort((a,b) => (TYPE_ORDER[a.gap_type]||0)-(TYPE_ORDER[b.gap_type]||0));
+  else if (currentSort === 'topic')      filtered.sort((a,b) => (a.topic||'').localeCompare(b.topic||''));
+
   document.getElementById('gap-count').textContent = `${filtered.length} gap${filtered.length!==1?'s':''}`;
   document.getElementById('gaps-list').innerHTML = filtered.length
     ? filtered.map(g => renderGap(g, papersById)).join('')
@@ -190,6 +206,15 @@ function applyFilters(papersById) {
   ['search-gaps','filter-type','filter-topic'].forEach(id => {
     const el = document.getElementById(id);
     if (el) el.addEventListener('input', debounce(() => applyFilters(papersById), 200));
+  });
+
+  document.querySelectorAll('.sort-btn').forEach(btn => {
+    btn.addEventListener('click', () => {
+      currentSort = btn.dataset.sort;
+      document.querySelectorAll('.sort-btn').forEach(b => b.classList.remove('active'));
+      btn.classList.add('active');
+      applyFilters(papersById);
+    });
   });
 
   applyFilters(papersById);
