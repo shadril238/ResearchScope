@@ -1,0 +1,23 @@
+name: Discord – Paper of the Day
+
+on:
+  schedule:
+    # Every day at 09:00 UTC
+    - cron: "0 9 * * *"
+  workflow_dispatch:   # allow manual trigger to test
+
+jobs:
+  post:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+
+      - name: Post Paper of the Day to Discord
+        env:
+          DISCORD_WEBHOOK_URL: ${{ secrets.DISCORD_WEBHOOK_URL }}
+        run: python scripts/discord_potd.py
