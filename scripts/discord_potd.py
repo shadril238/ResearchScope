@@ -30,7 +30,7 @@ def pick_paper_of_the_day(papers: list[dict]) -> dict | None:
     return pool[day_of_year % len(pool)]
 
 
-def build_embed(paper: dict) -> dict:
+def build_payload(paper: dict) -> dict:
     title = paper.get("title", "Untitled")
     url = paper.get("paper_url") or paper.get("url") or ""
     abstract = (paper.get("abstract") or paper.get("summary") or "")[:300]
@@ -54,24 +54,25 @@ def build_embed(paper: dict) -> dict:
     if tag_str:
         fields.append({"name": "Topics", "value": tag_str, "inline": False})
 
+    embed: dict = {
+        "title": f"📄 {title}",
+        "description": abstract or "_No abstract available._",
+        "color": 0x4F46E5,
+        "fields": fields,
+        "author": {"name": author_str or "Unknown authors"},
+        "footer": {
+            "text": (
+                f"🔭 ResearchScope · Paper of the Day · "
+                f"{datetime.now(timezone.utc).strftime('%B %d, %Y')}"
+            )
+        },
+    }
+    if url:
+        embed["url"] = url
+
     return {
         "username": "ResearchScope",
-        "avatar_url": "https://kishormorol.github.io/ResearchScope/assets/img/logo.png",
-        "embeds": [
-            {
-                "title": f"📄 {title}",
-                "url": url or None,
-                "description": abstract or "_No abstract available._",
-                "color": 0x4F46E5,
-                "fields": fields,
-                "author": {
-                    "name": author_str or "Unknown authors",
-                },
-                "footer": {
-                    "text": f"🔭 ResearchScope · Paper of the Day · {datetime.now(timezone.utc).strftime('%B %d, %Y')}",
-                },
-            }
-        ],
+        "embeds": [embed],
     }
 
 
@@ -84,9 +85,7 @@ def post_to_discord(webhook_url: str, payload: dict) -> None:
         method="POST",
     )
     with urllib.request.urlopen(req) as resp:
-        if resp.status not in (200, 204):
-            raise RuntimeError(f"Discord returned {resp.status}")
-    print(f"Posted successfully (HTTP {resp.status})")
+        print(f"Posted successfully (HTTP {resp.status})")
 
 
 def main() -> None:
@@ -106,7 +105,7 @@ def main() -> None:
         sys.exit(1)
 
     print(f"Paper of the Day: {paper.get('title')}")
-    payload = build_embed(paper)
+    payload = build_payload(paper)
     post_to_discord(webhook_url, payload)
 
 
