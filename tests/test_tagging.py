@@ -18,58 +18,76 @@ class TestPaperTagger:
 
     def test_transformer_attention_tag(self):
         p = self.tagger.tag(_paper("We propose a transformer with attention mechanism."))
-        assert "Transformer Architectures" in p.tags
+        assert "Transformers" in p.tags
 
     def test_llm_tag(self):
         p = self.tagger.tag(_paper("We study large language model alignment."))
-        assert "Large Language Models" in p.tags
+        assert "LLMs" in p.tags
 
     def test_llm_abbreviation(self):
         p = self.tagger.tag(_paper("LLM-based systems are becoming widespread."))
-        assert "Large Language Models" in p.tags
+        assert "LLMs" in p.tags
 
     def test_diffusion_tag(self):
-        p = self.tagger.tag(_paper("We use a diffusion model for image synthesis."))
-        assert "Diffusion Models" in p.tags
+        p = self.tagger.tag(_paper("We use a denoising diffusion probabilistic model for audio generation."))
+        assert "Diffusion" in p.tags
 
     def test_rl_tag(self):
         p = self.tagger.tag(_paper("We apply reinforcement learning to robotics."))
-        assert "Reinforcement Learning" in p.tags
+        assert "RL" in p.tags
 
     def test_gnn_tag(self):
         p = self.tagger.tag(_paper("Graph neural networks for node classification."))
-        assert "Graph Neural Networks" in p.tags
+        assert "GNNs" in p.tags
 
     def test_rag_tag(self):
         p = self.tagger.tag(_paper("Retrieval-augmented generation improves QA."))
-        assert "Retrieval-Augmented Generation" in p.tags
+        assert "RAG" in p.tags
+
+    def test_rag_supersedes_ir(self):
+        p = self.tagger.tag(_paper("Retrieval-augmented generation with information retrieval and document ranking."))
+        assert "RAG" in p.tags
+        assert "IR" not in p.tags
+
+    def test_vlms_supersedes_multimodal(self):
+        p = self.tagger.tag(_paper("Vision-language models for multimodal understanding."))
+        assert "VLMs" in p.tags
+        assert "Multimodal" not in p.tags
+
+    def test_rlhf_supersedes_rl(self):
+        p = self.tagger.tag(_paper("We use RLHF with reinforcement learning reward models."))
+        assert "RLHF" in p.tags
+        assert "RL" not in p.tags
 
     def test_code_generation_tag(self):
         p = self.tagger.tag(_paper("code generation with LLM", title="Code Completion"))
-        assert "Code Generation & Synthesis" in p.tags
+        assert "Code Generation" in p.tags
 
     def test_ai_agents_tag(self):
         p = self.tagger.tag(_paper("We study autonomous agent frameworks with tool use."))
-        assert "AI Agents & Tool Use" in p.tags
+        assert "AI Agents" in p.tags
 
     def test_ai_safety_tag(self):
         p = self.tagger.tag(_paper("We evaluate hallucination and alignment in language models."))
-        assert "AI Safety & Alignment" in p.tags
+        assert "AI Safety" in p.tags
 
-    def test_existing_tags_preserved(self):
+    def test_existing_custom_tags_preserved(self):
         p = Paper(id="x", abstract="We study transformers.", tags=["NLP"])
         result = self.tagger.tag(p)
         assert "NLP" in result.tags
-        assert "Transformer Architectures" in result.tags
+        assert "Transformers" in result.tags
 
-    def test_tags_sorted(self):
-        p = self.tagger.tag(_paper("reinforcement learning with large language models"))
-        assert p.tags == sorted(p.tags)
+    def test_max_five_tags(self):
+        p = self.tagger.tag(_paper(
+            "We study large language models with reinforcement learning, diffusion models, "
+            "graph neural networks, and information retrieval for code generation."
+        ))
+        assert len(p.tags) <= 5
 
     def test_no_irrelevant_tags(self):
         p = self.tagger.tag(_paper("We study weather forecasting with CNNs."))
-        assert "Large Language Models" not in p.tags
-        assert "Reinforcement Learning" not in p.tags
+        assert "LLMs" not in p.tags
+        assert "RL" not in p.tags
 
     def test_paper_type_survey(self):
         p = _paper("This survey provides an overview of the field.", title="A Survey")
@@ -118,12 +136,12 @@ class TestDifficultyAssessor:
 
     def test_sentiment_without_math_is_l1(self):
         p = _paper("We apply BERT to sentiment analysis on product reviews.",
-                   tags=["Sentiment & Opinion Analysis"])
+                   tags=["Sentiment Analysis"])
         self.assessor.assess(p)
         assert p.difficulty_level == "L1"
 
     def test_rl_tag_is_l3(self):
-        p = _paper("We study policy gradient methods.", tags=["Reinforcement Learning"])
+        p = _paper("We study policy gradient methods.", tags=["RL"])
         self.assessor.assess(p)
         assert p.difficulty_level == "L3"
 

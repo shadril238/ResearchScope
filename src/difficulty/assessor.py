@@ -43,15 +43,15 @@ _L3_POSITIVE = re.compile(
 )
 
 _L1_TAGS = {
-    "Sentiment & Opinion Analysis", "Text Summarization", "Question Answering",
-    "Machine Translation", "Prompting & In-Context Learning",
-    "Text Classification", "Benchmarking & Evaluation",
+    "Sentiment Analysis", "Summarization", "QA",
+    "Translation", "Prompting",
+    "Classification", "Evaluation",
 }
 _L3_TAGS = {
-    "Diffusion Models", "Reinforcement Learning", "Graph Neural Networks",
-    "Federated & Privacy-Preserving Learning", "Continual Learning",
-    "AI Safety & Alignment", "Mixture of Experts", "State Space Models",
-    "RLHF & Preference Alignment",
+    "Diffusion", "RL", "GNNs",
+    "Federated Learning", "Continual Learning",
+    "AI Safety", "MoE", "SSMs",
+    "RLHF",
 }
 _L4_TAGS = set()  # reserved; currently detected by text patterns only
 
