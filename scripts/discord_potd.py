@@ -84,8 +84,13 @@ def post_to_discord(webhook_url: str, payload: dict) -> None:
         headers={"Content-Type": "application/json"},
         method="POST",
     )
-    with urllib.request.urlopen(req) as resp:
-        print(f"Posted successfully (HTTP {resp.status})")
+    try:
+        with urllib.request.urlopen(req) as resp:
+            print(f"Posted successfully (HTTP {resp.status})")
+    except urllib.error.HTTPError as e:
+        body = e.read().decode("utf-8", errors="replace")
+        print(f"Discord error {e.code}: {body}", file=sys.stderr)
+        raise
 
 
 def main() -> None:
