@@ -2,154 +2,153 @@
   "date": "2026-04-15",
   "top_papers": [
     {
-      "id": "openreview:7nyJBVCTGQ",
-      "title": "LiFT: Learning to Fine-Tune via Bayesian Parameter Efficient Meta Fine-Tuning",
+      "id": "arxiv:2604.08537v1",
+      "title": "Meta-learning In-Context Enables Training-Free Cross Subject Brain Decoding",
       "authors": [
-        "Minyoung Kim",
-        "Timothy Hospedales"
+        "Mu Nan",
+        "Muquan Yu",
+        "Weijian Mai"
       ],
-      "venue": "ICLR",
-      "year": 2025,
-      "tags": [
-        "Bayesian methods",
-        "Benchmarking & Evaluation",
-        "Fine-Tuning & PEFT",
-        "Information Extraction"
-      ],
-      "paper_score": 10.0,
-      "read_first_score": 3.38,
-      "content_potential_score": 1.0,
-      "difficulty_level": "L4",
-      "why_it_matters": "LiFT: Learning to Fine-Tune via Bayesian Parameter Efficient Meta Fine-Tuning represents a meaningful contribution to its field and opens new research directions.",
-      "one_line_takeaway": "That is, we propose a method for {\\em learning-to-fine-tune} (LiFT).",
-      "content_hook": "A new paper that could change how we think about Bayesian methods.",
-      "paper_url": "https://openreview.net/forum?id=7nyJBVCTGQ"
-    },
-    {
-      "id": "openreview:GLWf2fq0bX",
-      "title": "Skill Expansion and Composition in Parameter Space",
-      "authors": [
-        "Tenglong Liu",
-        "Jianxiong Li",
-        "Yinan Zheng"
-      ],
-      "venue": "ICLR",
-      "year": 2025,
-      "tags": [
-        "AI Agents & Tool Use",
-        "Benchmarking & Evaluation",
-        "Fine-Tuning & PEFT",
-        "Skill expansion"
-      ],
-      "paper_score": 10.0,
-      "read_first_score": 3.9,
-      "content_potential_score": 0.55,
-      "difficulty_level": "L3",
-      "why_it_matters": "Skill Expansion and Composition in Parameter Space moves AI from passive text generators to active problem-solvers that use tools and reason over time.",
-      "one_line_takeaway": "We propose Parametric Skill Expansion and Composition (PSEC), a new framework designed to iteratively evolve the…",
-      "content_hook": "AI that takes action, not just text — a new step forward.",
-      "paper_url": "https://openreview.net/forum?id=GLWf2fq0bX"
-    },
-    {
-      "id": "openreview:CkgKSqZbuC",
-      "title": "$R^2$-Guard: Robust Reasoning Enabled LLM Guardrail via Knowledge-Enhanced Logical Reasoning",
-      "authors": [
-        "Mintong Kang",
-        "Bo Li"
-      ],
-      "venue": "ICLR",
-      "year": 2025,
+      "venue": "arXiv",
+      "year": 2026,
       "tags": [
         "AI Safety & Alignment",
-        "Benchmarking & Evaluation",
-        "LLM guardrail model",
+        "Fine-Tuning & PEFT",
+        "Information Extraction",
+        "Machine Learning"
+      ],
+      "paper_score": 8.6,
+      "read_first_score": 6.0,
+      "content_potential_score": 0.85,
+      "difficulty_level": "L1",
+      "why_it_matters": "Meta-learning In-Context Enables Training-Free Cross Subject Brain Decoding advances the critical goal of making AI systems safer, more reliable, and aligned with human values.",
+      "one_line_takeaway": "A field-wide goal is to achieve generalizable, cross-subject models.",
+      "content_hook": "Making AI systems safer is one of the most important problems in tech right now.",
+      "paper_url": "http://arxiv.org/abs/2604.08537v1"
+    },
+    {
+      "id": "arxiv:2604.01658v1",
+      "title": "CORAL: Towards Autonomous Multi-Agent Evolution for Open-Ended Discovery",
+      "authors": [
+        "Ao Qu",
+        "Han Zheng",
+        "Zijian Zhou"
+      ],
+      "venue": "arXiv",
+      "year": 2026,
+      "tags": [
+        "Artificial Intelligence",
+        "LLMs",
         "Large Language Models"
       ],
-      "paper_score": 10.0,
-      "read_first_score": 6.35,
-      "content_potential_score": 1.48,
-      "difficulty_level": "L1",
-      "why_it_matters": "$R^2$-Guard: Robust Reasoning Enabled LLM Guardrail via Knowledge-Enhanced Logical Reasoning advances the critical goal of making AI systems safer, more reliable, and aligned with human values.",
-      "one_line_takeaway": "To address these limitations, we propose $R^2$-Guard, a robust reasoning enabled LLM guardrail via knowledge-enhanced…",
-      "content_hook": "Making AI systems safer is one of the most important problems in tech right now.",
-      "paper_url": "https://openreview.net/forum?id=CkgKSqZbuC"
-    },
-    {
-      "id": "openreview:Oxpkn0YLG1",
-      "title": "GTR: Improving Large 3D Reconstruction Models through Geometry and Texture Refinement",
-      "authors": [
-        "Peiye Zhuang",
-        "Songfang Han",
-        "Chaoyang Wang"
-      ],
-      "venue": "ICLR",
-      "year": 2025,
-      "tags": [
-        "3D Reconstruction",
-        "3D Vision & Scene Understanding",
-        "Feed-forward",
-        "Fine-Tuning & PEFT"
-      ],
-      "paper_score": 10.0,
-      "read_first_score": 6.0,
-      "content_potential_score": 0.62,
+      "paper_score": 8.6,
+      "read_first_score": 4.2,
+      "content_potential_score": 0.93,
       "difficulty_level": "L2",
-      "why_it_matters": "GTR: Improving Large 3D Reconstruction Models through Geometry and Texture Refinement extends Transformer capabilities — the architecture underpinning virtually every modern NLP and vision model.",
-      "one_line_takeaway": "We propose a novel approach for 3D mesh reconstruction from multi-view images.",
-      "content_hook": "A new paper that could change how we think about 3D Reconstruction.",
-      "paper_url": "https://openreview.net/forum?id=Oxpkn0YLG1"
+      "why_it_matters": "CORAL: Towards Autonomous Multi-Agent Evolution for Open-Ended Discovery advances our understanding of large language models, which are reshaping how we build AI systems and interact with knowledge.",
+      "one_line_takeaway": "We present CORAL, the first framework for autonomous multi-agent evolution on open-ended problems.",
+      "content_hook": "A new paper that could change how we think about Artificial Intelligence.",
+      "paper_url": "http://arxiv.org/abs/2604.01658v1"
     },
     {
-      "id": "openreview:auZZ2gN0ZN",
-      "title": "Dense Video Object Captioning from Disjoint Supervision",
+      "id": "arxiv:2604.02721v1",
+      "title": "GrandCode: Achieving Grandmaster Level in Competitive Programming via Agentic Reinforcement Learning",
       "authors": [
-        "Xingyi Zhou",
-        "Anurag Arnab",
-        "Chen Sun"
+        "DeepReinforce Team",
+        "Xiaoya Li",
+        "Xiaofei Sun"
       ],
-      "venue": "ICLR",
-      "year": 2025,
+      "venue": "arXiv",
+      "year": 2026,
       "tags": [
-        "Factuality & Hallucination",
-        "Self-Supervised & Contrastive Learning",
-        "object captioning",
-        "tracking"
+        "AI Agents & Tool Use",
+        "Artificial Intelligence",
+        "RL",
+        "RLHF & Preference Alignment"
       ],
-      "paper_score": 10.0,
-      "read_first_score": 4.0,
-      "content_potential_score": 0.6,
+      "paper_score": 8.15,
+      "read_first_score": 5.85,
+      "content_potential_score": 1.38,
+      "difficulty_level": "L1",
+      "why_it_matters": "GrandCode: Achieving Grandmaster Level in Competitive Programming via Agentic Reinforcement Learning moves AI from passive text generators to active problem-solvers that use tools and reason over time.",
+      "one_line_takeaway": "In this work, we introduce GrandCode, a multi-agent RL system designed for competitive programming.",
+      "content_hook": "AI that takes action, not just text — a new step forward.",
+      "paper_url": "http://arxiv.org/abs/2604.02721v1"
+    },
+    {
+      "id": "arxiv:2604.00852v1",
+      "title": "PanoAir: A Panoramic Visual-Inertial SLAM with Cross-Time Real-World UAV Dataset",
+      "authors": [
+        "Yiyang Wu",
+        "Xiaohu Zhang",
+        "Yanjin Du"
+      ],
+      "venue": "arXiv",
+      "year": 2026,
+      "tags": [
+        "Benchmarking & Evaluation",
+        "Robotics"
+      ],
+      "paper_score": 8.15,
+      "read_first_score": 4.9,
+      "content_potential_score": 2.1,
+      "difficulty_level": "L1",
+      "why_it_matters": "PanoAir: A Panoramic Visual-Inertial SLAM with Cross-Time Real-World UAV Dataset represents a meaningful contribution to its field and opens new research directions.",
+      "one_line_takeaway": "To achieve accurate and robust pose estimation under such challenging UAV scenarios, we propose a panoramic VI-SLAM…",
+      "content_hook": "A new paper that could change how we think about Benchmarking & Evaluation.",
+      "paper_url": "http://arxiv.org/abs/2604.00852v1"
+    },
+    {
+      "id": "arxiv:2604.11095v1",
+      "title": "Bottleneck Tokens for Unified Multimodal Retrieval",
+      "authors": [
+        "Siyu Sun",
+        "Jing Ren",
+        "Zhaohe Liao"
+      ],
+      "venue": "arXiv",
+      "year": 2026,
+      "tags": [
+        "Artificial Intelligence",
+        "Fine-Tuning & PEFT",
+        "Large Language Models",
+        "Machine Learning"
+      ],
+      "paper_score": 7.7,
+      "read_first_score": 4.85,
+      "content_potential_score": 0.5,
       "difficulty_level": "L3",
-      "why_it_matters": "Dense Video Object Captioning from Disjoint Supervision represents a meaningful contribution to its field and opens new research directions.",
-      "one_line_takeaway": "We propose a new task and model for dense video object captioning -- detecting, tracking and captioning trajectories of…",
-      "content_hook": "A new paper that could change how we think about Factuality & Hallucination.",
-      "paper_url": "https://openreview.net/forum?id=auZZ2gN0ZN"
+      "why_it_matters": "Bottleneck Tokens for Unified Multimodal Retrieval advances our understanding of large language models, which are reshaping how we build AI systems and interact with knowledge.",
+      "one_line_takeaway": "Architecturally, we introduce Bottleneck Tokens (BToks), a small set of learnable tokens that serve as a fixed-capacity…",
+      "content_hook": "A new paper that could change how we think about Artificial Intelligence.",
+      "paper_url": "http://arxiv.org/abs/2604.11095v1"
     }
   ],
   "underrated_paper": {
-    "id": "openreview:7nyJBVCTGQ",
-    "title": "LiFT: Learning to Fine-Tune via Bayesian Parameter Efficient Meta Fine-Tuning",
-    "paper_score": 10.0,
+    "id": "arxiv:2604.08537v1",
+    "title": "Meta-learning In-Context Enables Training-Free Cross Subject Brain Decoding",
+    "paper_score": 8.6,
     "citations": 0,
     "reason": "Strong paper score with low citation count — possibly underexposed.",
-    "paper_url": "https://openreview.net/forum?id=7nyJBVCTGQ"
+    "paper_url": "http://arxiv.org/abs/2604.08537v1"
   },
   "breakout_author": {
-    "author_id": "tianjun_zhang",
-    "name": "Tianjun Zhang",
-    "momentum_score": 9.37,
-    "paper_count": 8,
+    "author_id": "minkai_xu",
+    "name": "Minkai Xu",
+    "momentum_score": 9.52,
+    "paper_count": 9,
     "topics": [
       "Large Language Models",
       "Reasoning & Chain-of-Thought",
       "Benchmarking & Evaluation"
     ],
-    "reason": "Rising researcher with momentum score 9.4/10."
+    "reason": "Rising researcher with momentum score 9.5/10."
   },
   "rising_lab": {
     "lab_id": "meta_ai__fair",
     "name": "Meta AI (FAIR)",
     "momentum_score": 10.0,
-    "paper_count": 1584,
+    "paper_count": 852,
     "topics": [
       "Bayesian methods",
       "Benchmarking & Evaluation",
@@ -160,16 +159,16 @@
     "topic_id": "nlp",
     "name": "NLP",
     "trend_score": 10.0,
-    "paper_count": 32854,
+    "paper_count": 6349,
     "gap_summary": "No explicit gaps extracted yet for NLP."
   },
   "research_gap": {
-    "gap_id": "d80c38d2-3c3a-4290-b473-a4ac75b58c61",
+    "gap_id": "d3779c0f-a9c9-4728-a225-0c34df126f28",
     "topic": "Benchmarking & Evaluation",
     "title": "Struggle with consistency and verification",
     "description": "struggle with consistency and verification.",
-    "frequency": 2168,
-    "starter_idea": "Reproduce the paper's baseline experiment.",
+    "frequency": 764,
+    "starter_idea": "Fine-tune a CLIP model on a domain-specific image-caption dataset.",
     "gap_type": "explicit"
   }
 }

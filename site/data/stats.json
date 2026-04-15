@@ -1,69 +1,65 @@
 {
-  "total_papers": 66693,
-  "total_authors": 114383,
-  "total_topics": 21488,
-  "total_gaps": 766,
-  "total_labs": 17,
-  "total_universities": 25,
+  "total_papers": 15495,
+  "total_authors": 55870,
+  "total_topics": 8535,
+  "total_gaps": 96,
+  "total_labs": 12,
+  "total_universities": 23,
   "papers_by_venue": {
-    "ICLR": 5963,
-    "EMNLP": 7345,
-    "ACL": 6700,
-    "AAAI": 100,
-    "Findings": 10871,
-    "COLING": 2145,
-    "NeurIPS": 7253,
-    "COLM": 299,
-    "CVPR": 5069,
-    "EACL": 1658,
-    "ICCV": 2156,
-    "NAACL": 2680,
-    "arXiv": 4949,
-    "TACL": 516,
-    "ICML": 8989
+    "ICLR": 2635,
+    "EMNLP": 1520,
+    "ACL": 1455,
+    "AAAI": 36,
+    "Findings": 1349,
+    "COLING": 203,
+    "NeurIPS": 1723,
+    "COLM": 66,
+    "CVPR": 147,
+    "EACL": 244,
+    "ICCV": 49,
+    "NAACL": 528,
+    "TACL": 45,
+    "arXiv": 5495
   },
   "papers_by_source": {
-    "openreview": 13515,
-    "acl_anthology": 31915,
-    "semantic_scholar": 100,
-    "cvf": 7225,
-    "arxiv": 4949,
-    "pmlr": 8989
+    "openreview": 4424,
+    "acl_anthology": 5344,
+    "semantic_scholar": 36,
+    "cvf": 196,
+    "arxiv": 5495
   },
   "difficulty_distribution": {
-    "L4": 3790,
-    "L3": 14185,
-    "L1": 18977,
-    "L2": 29741
+    "L4": 1197,
+    "L3": 4012,
+    "L1": 5456,
+    "L2": 4830
   },
   "paper_type_distribution": {
-    "methods": 42131,
-    "benchmark": 7730,
-    "dataset": 10777,
-    "systems": 2482,
-    "theory": 1532,
-    "position": 539,
-    "empirical": 340,
-    "negative_result": 346,
-    "survey": 705,
-    "replication": 25,
-    "tutorial": 86
+    "methods": 7707,
+    "benchmark": 2826,
+    "dataset": 2834,
+    "systems": 1206,
+    "theory": 506,
+    "position": 149,
+    "empirical": 48,
+    "negative_result": 108,
+    "survey": 100,
+    "replication": 7,
+    "tutorial": 4
   },
   "papers_by_year": {
-    "2018": 1,
-    "2019": 1,
-    "2020": 2828,
-    "2021": 3640,
-    "2022": 5360,
-    "2023": 14638,
-    "2024": 17901,
-    "2025": 16364,
-    "2026": 5960
+    "2020": 58,
+    "2021": 161,
+    "2022": 419,
+    "2023": 1440,
+    "2024": 3001,
+    "2025": 4611,
+    "2026": 5805
   },
   "gaps_by_type": {
     "starter": 34,
     "pattern": 10,
-    "explicit": 722
+    "explicit": 52
   },
-  "generated_at": "2026-04-15T05:11:20.285993+00:00"
+  "generated_at": "2026-04-15T06:46:29.525738+00:00"
 }
