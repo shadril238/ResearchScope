@@ -47,7 +47,8 @@ _BUILTIN_RULES: list[tuple[str, str]] = [
      "State Space Models"),
 
     # ── Fine-tuning & Alignment ────────────────────────────────────────────────
-    (r"reinforcement learning from human feedback|rlhf\b|reward model|preference learning|dpo\b|ppo\b.*align",
+    (r"reinforcement learning from human feedback|rlhf\b|rlaif\b|reward model|preference learning|"
+     r"dpo\b|grpo\b|ppo\b.*align|direct preference|group relative policy|ai feedback",
      "RLHF & Preference Alignment"),
     (r"fine.tun|lora\b|peft\b|adapter\b.*train|parameter.efficient",
      "Fine-Tuning & PEFT"),

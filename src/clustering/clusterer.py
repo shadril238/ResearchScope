@@ -14,20 +14,71 @@ _CURRENT_YEAR = datetime.now(timezone.utc).year
 # ── Static topic metadata ─────────────────────────────────────────────────────
 
 _TOPIC_DIFFICULTY: dict[str, str] = {
-    "Large Language Models": "L2", "Transformer Architectures": "L2",
-    "Diffusion Models": "L3", "Reinforcement Learning": "L3",
-    "Graph Neural Networks": "L3", "Retrieval-Augmented Generation": "L2",
-    "Question Answering": "L1", "Machine Translation": "L1",
-    "Text-to-Image Generation": "L2", "Computer Vision": "L2",
-    "Speech Recognition": "L2", "Speech Synthesis": "L2",
-    "Code Generation & Synthesis": "L2",
-    "Federated & Privacy-Preserving Learning": "L3",
-    "Continual Learning": "L3", "Prompting & In-Context Learning": "L1",
-    "Model Compression & Efficiency": "L2", "Multimodal Learning": "L2",
-    "Text Summarization": "L1", "Deep Learning": "L2",
-    "Natural Language Generation": "L1", "Machine Learning": "L1",
-    "AI Safety & Alignment": "L2", "AI Agents & Tool Use": "L2",
-    "Information Retrieval": "L2", "Sentiment & Opinion Analysis": "L1",
+    # ── L1: Beginner — broad / introductory topics ────────────────────────────
+    "Machine Learning": "L1", "Artificial Intelligence": "L1",
+    "NLP": "L1", "Natural Language Generation": "L1",
+    "Question Answering": "L1", "QA": "L1",
+    "Text Summarization": "L1", "Summarization": "L1",
+    "Machine Translation": "L1", "Translation": "L1",
+    "Sentiment & Opinion Analysis": "L1", "Sentiment Analysis": "L1",
+    "Text Classification": "L1",
+    "Prompting & In-Context Learning": "L1", "Prompting": "L1",
+    "Benchmarking & Evaluation": "L1",
+    "Information Extraction": "L1", "IE": "L1",
+
+    # ── L2: Intermediate — requires solid ML foundations ─────────────────────
+    "Large Language Models": "L2", "LLMs": "L2",
+    "Transformer Architectures": "L2", "Transformers": "L2",
+    "Deep Learning": "L2", "Neural Networks": "L2",
+    "Computer Vision": "L2",
+    "Multimodal Learning": "L2", "Multimodal": "L2",
+    "Vision-Language Models": "L2",
+    "Retrieval-Augmented Generation": "L2", "RAG": "L2",
+    "Code Generation & Synthesis": "L2", "Code Generation": "L2",
+    "Fine-Tuning & PEFT": "L2",
+    "Model Compression & Efficiency": "L2", "Model Compression": "L2",
+    "AI Safety & Alignment": "L2",
+    "AI Agents & Tool Use": "L2", "AI Agents": "L2",
+    "Reasoning & Chain-of-Thought": "L2",
+    "Factuality & Hallucination": "L2",
+    "Interpretability & Explainability": "L2",
+    "Bias, Fairness & Ethics": "L2",
+    "Dialogue Systems": "L2",
+    "Speech Recognition": "L2", "Speech Synthesis": "L2", "Speech": "L2",
+    "Robotics": "L2", "Robotics & Embodied AI": "L2",
+    "Information Retrieval": "L2",
+    "Text-to-Image Generation": "L2", "Image Generation": "L2",
+    "Video Understanding & Generation": "L2",
+    "Object Detection & Segmentation": "L2",
+    "Self-Supervised & Contrastive Learning": "L2",
+    "Knowledge Graphs & Representation": "L2",
+    "Long-Context Modeling": "L2",
+    "Document Understanding": "L2",
+    "Text Embeddings & Semantic Similarity": "L2",
+    "Human-Computer Interaction": "L2",
+    "Adversarial Robustness": "L2",
+    "Biomedical & Clinical AI": "L2",
+    "3D Vision & Scene Understanding": "L2",
+    "Structured Data & Tables": "L2",
+    "Legal AI": "L2",
+    "Software Engineering": "L2",
+
+    # ── L3: Advanced — requires strong math/systems background ───────────────
+    "Diffusion Models": "L3",
+    "Reinforcement Learning": "L3", "RL": "L3",
+    "RLHF & Preference Alignment": "L3",   # DPO, GRPO, RLAIF, PPO-based alignment
+    "Graph Neural Networks": "L3", "GNN": "L3",
+    "Mixture of Experts": "L3",
+    "State Space Models": "L3",             # Mamba, SSM, S4
+    "Continual Learning": "L3",
+    "Federated & Privacy-Preserving Learning": "L3", "Federated Learning": "L3",
+    "Multi-Agent Systems": "L3",
+    "Optimization": "L3",
+    "Cryptography & Security": "L3",
+    "Databases": "L3",
+
+    # ── L4: Frontier — cutting-edge, active research frontier ────────────────
+    # (new tags from future pipeline runs will land here as they emerge)
 }
 
 _LEVEL_TO_LABEL: dict[str, str] = {
