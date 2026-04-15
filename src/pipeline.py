@@ -121,18 +121,19 @@ def _enrich_affiliations_from_s2(papers: list[Paper], batch_size: int = 500) -> 
 
 _SITE_DATA = Path(__file__).parent.parent / "site" / "data"
 
+# Venues treated as arXiv / unclassified (not conference proceedings)
+_ARXIV_VENUES = {None, "", "arXiv", "Unknown"}
 
-def _load_existing_papers(max_age_days: int = 180) -> list[Paper]:
-    """Load previously collected papers from site/data/papers_db.json.
 
-    papers_db.json holds up to 10 000 papers (full accumulation store).
-    papers.json holds only the top 1 000 for the browser — not used here.
-    Only returns papers within the rolling window so the dataset doesn't grow
-    unboundedly.  New papers fetched this run take precedence in dedup.
-    """
+def _is_conference_paper(p: Paper) -> bool:
+    return p.venue not in _ARXIV_VENUES
+
+
+def _load_arxiv_papers(max_age_days: int = 180) -> list[Paper]:
+    """Load arXiv papers from papers_db.json, age-filtered to rolling window."""
     papers_file = _SITE_DATA / "papers_db.json"
-    # Fall back to papers.json if db file doesn't exist yet (first run)
     if not papers_file.exists():
+        # First-ever run — fall back to legacy papers.json
         papers_file = _SITE_DATA / "papers.json"
     if not papers_file.exists():
         return []
@@ -143,17 +144,35 @@ def _load_existing_papers(max_age_days: int = 180) -> list[Paper]:
             datetime.now(timezone.utc) - timedelta(days=max_age_days)
         ).strftime("%Y-%m-%d")
         all_existing = [Paper.from_dict(d) for d in raw]
+        # Only keep arXiv papers within the rolling window
         kept = [
             p for p in all_existing
-            if (p.published_date or "9999-01-01") >= cutoff
+            if not _is_conference_paper(p)
+            and (p.published_date or "9999-01-01") >= cutoff
         ]
         log.info(
-            "Loaded %d existing papers (%d within %d-day window)",
+            "Loaded %d arXiv papers from DB (%d within %d-day window)",
             len(all_existing), len(kept), max_age_days,
         )
         return kept
     except Exception as exc:
-        log.warning("Could not load existing papers: %s", exc)
+        log.warning("Could not load arXiv papers: %s", exc)
+        return []
+
+
+def _load_conference_papers() -> list[Paper]:
+    """Load all conference papers from conferences_db.json — they never expire."""
+    conf_file = _SITE_DATA / "conferences_db.json"
+    if not conf_file.exists():
+        return []
+    try:
+        with open(conf_file, encoding="utf-8") as fh:
+            raw = json.load(fh)
+        papers = [Paper.from_dict(d) for d in raw]
+        log.info("Loaded %d conference papers from DB", len(papers))
+        return papers
+    except Exception as exc:
+        log.warning("Could not load conference papers: %s", exc)
         return []
 
 
@@ -329,12 +348,19 @@ def run_pipeline(
 
     # ── Accumulate existing papers ────────────────────────────────────────────
     if accumulate:
-        existing = _load_existing_papers(max_age_days=max_age_days)
-        if existing:
-            # New papers first — dedup keeps most complete, so freshly scored
-            # versions of the same paper will naturally win if more complete.
-            all_papers = all_papers + existing
-            log.info("Total with existing: %d papers", len(all_papers))
+        if conferences_only:
+            # Conference sync: accumulate existing conference papers (no expiry)
+            # and also bring in arXiv papers so the site output stays complete.
+            existing_conf  = _load_conference_papers()
+            existing_arxiv = _load_arxiv_papers(max_age_days=max_age_days)
+            all_papers = all_papers + existing_conf + existing_arxiv
+        else:
+            # Daily arXiv run: accumulate existing arXiv (age-filtered)
+            # and bring in conference papers so they stay in the frontend output.
+            existing_arxiv = _load_arxiv_papers(max_age_days=max_age_days)
+            existing_conf  = _load_conference_papers()
+            all_papers = all_papers + existing_arxiv + existing_conf
+        log.info("Total with existing: %d papers", len(all_papers))
 
     # ── Stage 1b: Enrich arXiv papers with S2 affiliations ───────────────────
     arxiv_papers = [p for p in all_papers if p.source == "arxiv" and not p.affiliations_raw]

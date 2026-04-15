@@ -89,8 +89,9 @@ _BROAD_KWORDS = re.compile(
 )
 
 _HOT_TAGS = {
-    "LLMs", "Transformers", "Diffusion Models", "RAG", "Multimodal",
-    "Code Generation", "AI Safety & Alignment", "AI Agents",
+    "Large Language Models", "Transformer Architectures", "Diffusion Models",
+    "Retrieval-Augmented Generation", "Multimodal Learning",
+    "Code Generation & Synthesis", "AI Safety & Alignment", "AI Agents & Tool Use",
 }
 
 

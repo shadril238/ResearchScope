@@ -38,7 +38,7 @@ jobs:
 
       - name: Run pipeline
         run: |
-          python src/pipeline.py
+          python src/pipeline.py --skip-conferences
         env:
           PYTHONPATH: ${{ github.workspace }}
 

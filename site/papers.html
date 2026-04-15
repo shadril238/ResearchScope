@@ -69,7 +69,28 @@
 
 <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
   <h1 class="text-2xl font-bold mb-2">📄 Papers</h1>
-  <p class="text-sm mb-6" style="color:var(--rs-muted)">Scored by importance, readability, and content potential. Click any row to expand.</p>
+  <p class="text-sm mb-4" style="color:var(--rs-muted)">Scored by importance, readability, and content potential. Click any row to expand.
+    <button onclick="document.getElementById('scoring-explainer').classList.toggle('hidden')"
+      class="ml-2 text-xs font-semibold underline" style="color:var(--rs-primary)">How scoring works ↓</button>
+  </p>
+  <div id="scoring-explainer" class="hidden rs-card p-4 mb-4 text-sm" style="color:var(--rs-text)">
+    <p class="font-bold mb-2">📊 How Papers Are Scored (0–10)</p>
+    <div class="grid grid-cols-1 sm:grid-cols-3 gap-3">
+      <div>
+        <p class="font-semibold">⭐ Paper Score</p>
+        <p style="color:var(--rs-muted)">Overall quality: citation impact, recency, venue rank (A* > A > arXiv), topic relevance, and completeness of metadata.</p>
+      </div>
+      <div>
+        <p class="font-semibold">📖 Read First Score</p>
+        <p style="color:var(--rs-muted)">How worth reading this paper is right now: novelty signal, trending topic alignment, and how recently it was published.</p>
+      </div>
+      <div>
+        <p class="font-semibold">🎙 Content Potential</p>
+        <p style="color:var(--rs-muted)">How well-suited the paper is for content creation: clarity of contribution, broad appeal, and available abstract quality.</p>
+      </div>
+    </div>
+    <p class="mt-2 text-xs" style="color:var(--rs-muted)">Scores are computed automatically from metadata — not expert peer review. Conference papers (ICLR, NeurIPS, etc.) receive a venue bonus.</p>
+  </div>
 
   <!-- Filters -->
   <div class="rs-card p-4 mb-4">
@@ -145,7 +166,7 @@
   </p>
   <p class="mt-2">
     <a href="https://github.com/kishormorol/ResearchScope" target="_blank" class="hover:underline" style="color:var(--rs-primary)">GitHub</a>
-    &middot; <a href="ROADMAP.md" class="hover:underline" style="color:var(--rs-primary)">Roadmap</a>
+    &middot; <a href="https://github.com/kishormorol/ResearchScope/blob/main/ROADMAP.md" class="hover:underline" style="color:var(--rs-primary)">Roadmap</a>
     &middot; MIT License &copy; 2026 Md Kishor Morol
   </p>
 </footer>

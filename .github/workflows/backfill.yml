@@ -47,7 +47,7 @@ jobs:
           if [ "${{ github.event.inputs.skip_conferences }}" = "true" ]; then
             SKIP_FLAG="--skip-conferences"
           fi
-          python src/pipeline.py --backfill-from ${{ github.event.inputs.from_date }} $SKIP_FLAG
+          python src/pipeline.py --backfill-from "${{ github.event.inputs.from_date }}" $SKIP_FLAG
         env:
           PYTHONPATH: ${{ github.workspace }}
           SEMANTIC_SCHOLAR_KEY: ${{ secrets.SEMANTIC_SCHOLAR_KEY }}

@@ -64,11 +64,19 @@ jobs:
       - name: Verify output
         run: |
           python -c "
-          import json
+          import json, os
           papers = json.load(open('site/data/papers.json'))
-          print(f'{len(papers)} papers in frontend slice')
+          arxiv  = [p for p in papers if p.get('venue') in (None,'','arXiv','Unknown')]
+          conf   = [p for p in papers if p.get('venue') not in (None,'','arXiv','Unknown')]
+          print(f'papers.json: {len(arxiv)} arXiv + {len(conf)} conference = {len(papers)} total')
           db = json.load(open('site/data/papers_db.json'))
-          print(f'{len(db)} papers in DB')
+          print(f'papers_db.json: {len(db)} arXiv papers')
+          conf_db_path = 'site/data/conferences_db.json'
+          if os.path.exists(conf_db_path):
+              cdb = json.load(open(conf_db_path))
+              print(f'conferences_db.json: {len(cdb)} conference papers')
+          else:
+              print('conferences_db.json: not present yet (run conference-sync to populate)')
           "
 
       - name: Commit updated data

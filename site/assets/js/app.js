@@ -54,7 +54,7 @@ function difficultyBadge(d) {
 }
 
 function scoreBadge(score) {
-  return `<span class="badge badge-score">⭐ ${(+score || 0).toFixed(1)}</span>`;
+  return `<span class="badge badge-score score-badge-tip" title="Paper score (0–10): weighted by citation impact, recency, venue rank, topic relevance, and content quality">⭐ ${(+score || 0).toFixed(1)}</span>`;
 }
 
 function tagChips(tags) {
@@ -364,7 +364,7 @@ function pickPaperOfTheDay(papers, poolSize = 150) {
   if (!papers || !papers.length) return null;
   const pool = papers.slice(0, Math.min(poolSize, papers.length));
   const today  = new Date();
-  const startOfYear = new Date(today.getFullYear(), 0, 0);
+  const startOfYear = new Date(today.getFullYear(), 0, 1);
   const dayOfYear = Math.floor((today - startOfYear) / 86400000);
   return pool[dayOfYear % pool.length];
 }
@@ -465,7 +465,7 @@ document.addEventListener('DOMContentLoaded', () => {
       mobileMenu.classList.toggle('hidden');
       iconOpen.classList.toggle('hidden', !isOpen);
       iconClose.classList.toggle('hidden', isOpen);
-      mobileBtn.setAttribute('aria-expanded', String(isOpen));
+      mobileBtn.setAttribute('aria-expanded', String(!isOpen));
     });
 
     // Close menu when a link is tapped

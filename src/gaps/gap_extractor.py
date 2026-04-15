@@ -58,12 +58,12 @@ _PATTERN_SIGNALS: list[tuple[str, re.Pattern[str]]] = [
 # ── Layer 3: Starter idea templates ──────────────────────────────────────────
 
 _STARTER_TEMPLATES: dict[str, list[str]] = {
-    "LLMs": [
+    "Large Language Models": [
         "Fine-tune an open-source LLM on a domain-specific dataset and evaluate factuality.",
         "Build a RAG pipeline and compare retrieval strategies on a small test set.",
         "Measure LLM calibration: does the model know what it doesn't know?",
     ],
-    "Transformers": [
+    "Transformer Architectures": [
         "Implement a Transformer from scratch in PyTorch.",
         "Visualise attention heads on your own text samples.",
         "Compare different positional encoding schemes on a text classification task.",
@@ -72,7 +72,7 @@ _STARTER_TEMPLATES: dict[str, list[str]] = {
         "Train a small diffusion model on a custom image dataset (e.g. 64x64 icons).",
         "Evaluate how conditioning signal quality affects generation diversity.",
     ],
-    "RL": [
+    "Reinforcement Learning": [
         "Train a DQN agent on a simple OpenAI Gym environment.",
         "Add reward shaping to reduce sample inefficiency on a gridworld task.",
         "Compare PPO and REINFORCE on a continuous-action environment.",
@@ -82,22 +82,25 @@ _STARTER_TEMPLATES: dict[str, list[str]] = {
         "Implement data augmentation techniques and measure their impact.",
         "Reproduce a CIFAR-10 baseline with a modern architecture.",
     ],
-    "Multimodal": [
+    "Multimodal Learning": [
         "Fine-tune a CLIP model on a domain-specific image-caption dataset.",
         "Evaluate vision-language models on your own image set.",
     ],
-    "Code Generation": [
+    "Code Generation & Synthesis": [
         "Evaluate open-source code LLMs on a custom set of algorithmic problems.",
         "Build a test-case generator to evaluate code correctness automatically.",
     ],
-    "NLP": [
-        "Build a text classification pipeline with scikit-learn as a baseline.",
-        "Evaluate tokenisation strategies on a low-resource language.",
-        "Create an annotation tool for a small domain-specific dataset.",
+    "Retrieval-Augmented Generation": [
+        "Build a RAG pipeline and compare different chunking and retrieval strategies.",
+        "Evaluate how knowledge freshness affects LLM answer quality in a RAG setup.",
     ],
     "AI Safety & Alignment": [
         "Red-team a small open-source LLM with structured adversarial prompts.",
         "Measure refusal rates across different safety-sensitive categories.",
+    ],
+    "AI Agents & Tool Use": [
+        "Build a simple tool-using agent and evaluate it on a benchmark task.",
+        "Compare ReAct and plan-then-execute prompting strategies.",
     ],
     "_default": [
         "Reproduce the paper's baseline experiment.",

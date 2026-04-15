@@ -20,9 +20,13 @@ class SiteGenerator:
 
     SITE_DATA_DIR = Path(__file__).parent.parent.parent / "site" / "data"
 
-    # Max papers written to papers.json (served to browsers)
-    MAX_FRONTEND_PAPERS = 1000
-    # Max papers kept in papers_db.json (accumulation store, not served)
+    # Venues treated as arXiv / unclassified (not conference proceedings)
+    _ARXIV_VENUES = {"arXiv", "Unknown", "", None}
+
+    # Frontend slice sizes — 500 arXiv + 500 conference = 1 000 total
+    MAX_FRONTEND_ARXIV = 500
+    MAX_FRONTEND_CONF  = 500
+    # Max papers per type kept in each DB (accumulation store, not browser-served)
     MAX_DB_PAPERS = 10_000
 
     def generate(
@@ -38,16 +42,35 @@ class SiteGenerator:
     ) -> None:
         os.makedirs(output_dir, exist_ok=True)
 
-        # papers are already sorted by paper_score descending from the pipeline
-        frontend_papers = papers[: self.MAX_FRONTEND_PAPERS]
-        db_papers       = papers[: self.MAX_DB_PAPERS]
+        # papers are already sorted by paper_score descending from the pipeline.
+        # Split into arXiv and conference pools — each has its own DB and size cap.
+        arxiv_papers = [p for p in papers if p.venue in self._ARXIV_VENUES]
+        conf_papers  = [p for p in papers if p.venue not in self._ARXIV_VENUES]
 
-        # Full DB — used by the next pipeline run for accumulation (not browser-served)
-        self._write(output_dir, "papers_db.json",   [p.to_dict() for p in db_papers])
-        # Frontend slice — slim version, strips heavy creator-content fields
-        self._write(output_dir, "papers.json",      [self._slim(p) for p in frontend_papers])
-        # Ultra-light search index — title/abstract snippet/authors/venue only
-        self._write(output_dir, "search_index.json",[self._search_entry(p) for p in db_papers])
+        # ── Persistent stores (committed to git, used by next pipeline run) ──────
+        # arXiv store — rolling, age-filtered by the pipeline before it arrives here
+        self._write(output_dir, "papers_db.json",
+                    [p.to_dict() for p in arxiv_papers[: self.MAX_DB_PAPERS]])
+        # Conference store — permanent, never expires
+        self._write(output_dir, "conferences_db.json",
+                    [p.to_dict() for p in conf_papers])
+
+        # ── Frontend slice — top 500 arXiv + top 500 conference ─────────────────
+        frontend_papers = (
+            arxiv_papers[: self.MAX_FRONTEND_ARXIV]
+            + conf_papers[: self.MAX_FRONTEND_CONF]
+        )
+        self._write(output_dir, "papers.json",
+                    [self._slim(p) for p in frontend_papers])
+
+        # ── Conferences page — all conference papers ─────────────────────────────
+        self._write(output_dir, "conferences.json",
+                    [self._slim(p) for p in conf_papers])
+
+        # ── Search index — all papers (arXiv DB + conference) ───────────────────
+        all_db = arxiv_papers[: self.MAX_DB_PAPERS] + conf_papers
+        self._write(output_dir, "search_index.json",
+                    [self._search_entry(p) for p in all_db])
 
         self._write(output_dir, "authors.json",     [a.to_dict() for a in authors])
         self._write(output_dir, "topics.json",      [t.to_dict() for t in topics])
@@ -101,19 +124,14 @@ class SiteGenerator:
             json.dump(data, fh, indent=2, ensure_ascii=False, default=str)
 
     # Files kept in the pipeline output dir but NOT served to the browser
-    _DB_ONLY_FILES = {"papers_db.json"}
+    _DB_ONLY_FILES = {"papers_db.json", "conferences_db.json"}
 
     def _mirror_to_site(self, output_dir: str) -> None:
         site_data = self.SITE_DATA_DIR
         site_data.mkdir(parents=True, exist_ok=True)
         src = Path(output_dir)
         for json_file in src.glob("*.json"):
-            if json_file.name in self._DB_ONLY_FILES:
-                # Copy to site/data/ for accumulation (committed to git) but
-                # it is never fetched by the frontend JS.
-                shutil.copy2(json_file, site_data / json_file.name)
-            else:
-                shutil.copy2(json_file, site_data / json_file.name)
+            shutil.copy2(json_file, site_data / json_file.name)
 
     @staticmethod
     def _stats(

@@ -14,14 +14,20 @@ _CURRENT_YEAR = datetime.now(timezone.utc).year
 # ── Static topic metadata ─────────────────────────────────────────────────────
 
 _TOPIC_DIFFICULTY: dict[str, str] = {
-    "LLMs": "L2", "Transformers": "L2", "Diffusion Models": "L3", "RL": "L3",
-    "GNN": "L3", "RAG": "L2", "QA": "L1", "Translation": "L1", "IE": "L2",
-    "Sentiment Analysis": "L1", "Image Generation": "L2", "Computer Vision": "L2",
-    "Speech": "L2", "Code Generation": "L2", "Federated Learning": "L3",
-    "Continual Learning": "L3", "Prompting": "L1", "Model Compression": "L2",
-    "Multimodal": "L2", "Summarization": "L1", "Deep Learning": "L2",
-    "NLP": "L1", "Machine Learning": "L1", "AI Safety & Alignment": "L2",
-    "AI Agents": "L2", "Information Retrieval": "L2",
+    "Large Language Models": "L2", "Transformer Architectures": "L2",
+    "Diffusion Models": "L3", "Reinforcement Learning": "L3",
+    "Graph Neural Networks": "L3", "Retrieval-Augmented Generation": "L2",
+    "Question Answering": "L1", "Machine Translation": "L1",
+    "Text-to-Image Generation": "L2", "Computer Vision": "L2",
+    "Speech Recognition": "L2", "Speech Synthesis": "L2",
+    "Code Generation & Synthesis": "L2",
+    "Federated & Privacy-Preserving Learning": "L3",
+    "Continual Learning": "L3", "Prompting & In-Context Learning": "L1",
+    "Model Compression & Efficiency": "L2", "Multimodal Learning": "L2",
+    "Text Summarization": "L1", "Deep Learning": "L2",
+    "Natural Language Generation": "L1", "Machine Learning": "L1",
+    "AI Safety & Alignment": "L2", "AI Agents & Tool Use": "L2",
+    "Information Retrieval": "L2", "Sentiment & Opinion Analysis": "L1",
 }
 
 _LEVEL_TO_LABEL: dict[str, str] = {
@@ -29,18 +35,18 @@ _LEVEL_TO_LABEL: dict[str, str] = {
 }
 
 _PREREQUISITES: dict[str, list[str]] = {
-    "Transformers":            ["Deep Learning", "NLP"],
-    "LLMs":                    ["Transformers", "NLP"],
-    "Diffusion Models":        ["Deep Learning", "Image Generation"],
-    "RL":                      ["Machine Learning"],
-    "GNN":                     ["Deep Learning", "Machine Learning"],
-    "RAG":                     ["LLMs", "Information Retrieval"],
-    "Federated Learning":      ["Machine Learning"],
-    "Continual Learning":      ["Machine Learning", "Deep Learning"],
-    "AI Safety & Alignment":   ["LLMs", "RL"],
-    "AI Agents":               ["LLMs", "RL"],
-    "Multimodal":              ["Transformers", "Computer Vision"],
-    "Code Generation":         ["LLMs"],
+    "Transformer Architectures":          ["Deep Learning"],
+    "Large Language Models":              ["Transformer Architectures"],
+    "Diffusion Models":                   ["Deep Learning", "Text-to-Image Generation"],
+    "Reinforcement Learning":             ["Machine Learning"],
+    "Graph Neural Networks":              ["Deep Learning", "Machine Learning"],
+    "Retrieval-Augmented Generation":     ["Large Language Models", "Information Retrieval"],
+    "Federated & Privacy-Preserving Learning": ["Machine Learning"],
+    "Continual Learning":                 ["Machine Learning", "Deep Learning"],
+    "AI Safety & Alignment":              ["Large Language Models", "Reinforcement Learning"],
+    "AI Agents & Tool Use":               ["Large Language Models", "Reinforcement Learning"],
+    "Multimodal Learning":                ["Transformer Architectures", "Computer Vision"],
+    "Code Generation & Synthesis":        ["Large Language Models"],
 }
 
 _TOPIC_KEYWORDS: dict[str, list[str]] = {
@@ -56,8 +62,9 @@ _TOPIC_KEYWORDS: dict[str, list[str]] = {
 
 # ── Trend keywords: topics that signal cutting-edge / trending work ───────────
 _TRENDING_TOPICS = {
-    "LLMs", "Diffusion Models", "RAG", "Multimodal", "AI Safety & Alignment",
-    "AI Agents", "Code Generation",
+    "Large Language Models", "Diffusion Models", "Retrieval-Augmented Generation",
+    "Multimodal Learning", "AI Safety & Alignment", "AI Agents & Tool Use",
+    "Code Generation & Synthesis",
 }
 
 
