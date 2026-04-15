@@ -20,7 +20,8 @@ from sklearn.feature_extraction.text import TfidfVectorizer
 
 
 ROOT = Path(__file__).resolve().parents[2]
-DEFAULT_OUTPUT = ROOT / "site" / "data" / "conference_recommender.json"
+DEFAULT_OUTPUT = ROOT / "data" / "conference_recommender.json"
+SITE_OUTPUT = ROOT / "site" / "data" / "conference_recommender.json"
 DEADLINES_PAGE = ROOT / "site" / "deadlines.html"
 
 STOP_WORDS = {
@@ -599,6 +600,10 @@ def main() -> None:
 
     write_json(args.output, data)
     print(f"wrote {args.output}")
+
+    if args.output == DEFAULT_OUTPUT:
+        write_json(SITE_OUTPUT, data)
+        print(f"wrote {SITE_OUTPUT}")
 
 
 if __name__ == "__main__":

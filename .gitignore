@@ -208,3 +208,4 @@ __marimo__/
 
 # ResearchScope generated data (keep .gitkeep, ignore JSON outputs)
 data/*.json
+!data/conference_recommender.json

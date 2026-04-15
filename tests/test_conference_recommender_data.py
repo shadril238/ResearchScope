@@ -8,12 +8,17 @@ from src.sitegen import conference_recommender
 
 
 ROOT = Path(__file__).resolve().parents[1]
-RECOMMENDER_INDEX = ROOT / "site" / "data" / "conference_recommender.json"
+RECOMMENDER_INDEX = ROOT / "data" / "conference_recommender.json"
+SITE_RECOMMENDER_INDEX = ROOT / "site" / "data" / "conference_recommender.json"
 
 
 def test_conference_recommender_uses_standard_data_outputs():
     assert conference_recommender.DEFAULT_OUTPUT == RECOMMENDER_INDEX
-    assert RECOMMENDER_INDEX.exists()
+    assert conference_recommender.SITE_OUTPUT == SITE_RECOMMENDER_INDEX
+
+
+def test_conference_recommender_site_copy_exists_for_static_pages():
+    assert SITE_RECOMMENDER_INDEX.exists()
 
 
 def test_conference_recommender_index_schema():
