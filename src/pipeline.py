@@ -245,7 +245,11 @@ def run_pipeline(
         try:
             fetched = arxiv.fetch_today(max_results=today_max)
             log.info("    → %d papers", len(fetched))
-            all_papers.extend(fetched)
+            if fetched:
+                all_papers.extend(fetched)
+            else:
+                log.warning("  [arxiv] fetch_today returned 0 papers — falling back to queries")
+                today_mode = False
         except Exception as exc:
             log.warning("  [arxiv] fetch_today failed: %s — falling back to queries", exc)
             today_mode = False  # fall through to keyword queries
