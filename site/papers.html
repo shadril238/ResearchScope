@@ -183,6 +183,64 @@ let allPapers = [];
 let currentPage = 1;
 const PAGE_SIZE = 25;
 
+// ── Tag normalisation map — merges duplicates/variants into canonical form ──
+const TAG_NORMALIZE = {
+  'Large Language Models': 'LLMs',
+  'large language models': 'LLMs',
+  'Benchmarking & Evaluation': 'Evaluation',
+  'Diffusion Models': 'Diffusion',
+  'diffusion models': 'Diffusion',
+  'Reasoning & Chain-of-Thought': 'Reasoning',
+  'Transformer Architectures': 'Transformers',
+  'AI Agents & Tool Use': 'AI Agents',
+  'AI Safety & Alignment': 'AI Safety',
+  'Adversarial Robustness': 'Adversarial',
+  '3D Vision & Scene Understanding': '3D Vision',
+  'Biomedical & Clinical AI': 'Biomedical AI',
+  'Code Generation & Synthesis': 'Code Generation',
+  'Dialogue Systems': 'Dialogue',
+  'Bias, Fairness & Ethics': 'Fairness & Ethics',
+  'Fine-Tuning & PEFT': 'Fine-Tuning',
+  'GNN': 'GNNs',
+  'Graph Neural Networks': 'GNNs',
+  'Information Extraction': 'Info Extraction',
+  'Interpretability & Explainability': 'Interpretability',
+  'Knowledge Graphs & Representation': 'Knowledge Graphs',
+  'meta learning': 'Meta Learning',
+  'Model Compression & Efficiency': 'Model Compression',
+  'Multimodal Learning': 'Multimodal',
+  'Object Detection & Segmentation': 'Object Detection',
+  'Prompting & In-Context Learning': 'Prompting',
+  'Retrieval-Augmented Generation': 'RAG',
+  'Reinforcement Learning': 'RL',
+  'reinforcement learning': 'RL',
+  'deep reinforcement learning': 'RL',
+  'RLHF & Preference Alignment': 'RLHF',
+  'Robotics & Embodied AI': 'Robotics',
+  'Self-Supervised & Contrastive Learning': 'Self-Supervised',
+  'Speech Recognition': 'Speech',
+  'ASR': 'Speech',
+  'State Space Models': 'SSMs',
+  'Text-to-Image Generation': 'Text-to-Image',
+  'transfer learning': 'Transfer Learning',
+  'Vision-Language Models': 'VLMs',
+  'Video Understanding & Generation': 'Video AI',
+  'IR': 'Information Retrieval',
+  'NLG': 'Natural Language Generation',
+  'Federated & Privacy-Preserving Learning': 'Federated Learning',
+  'Text Embeddings & Semantic Similarity': 'Embeddings',
+};
+
+function normalizeTags(tags) {
+  const seen = new Set();
+  const result = [];
+  for (const t of (tags || [])) {
+    const canonical = TAG_NORMALIZE[t] || t;
+    if (!seen.has(canonical)) { seen.add(canonical); result.push(canonical); }
+  }
+  return result;
+}
+
 function renderRows(papers) {
   const tbody = document.getElementById('papers-body');
   const start = (currentPage - 1) * PAGE_SIZE;
@@ -268,6 +326,14 @@ function toggleDetail(i) {
   if (row) row.classList.toggle('open');
 }
 
+// ── Pagination ────────────────────────────────────────────────────────────
+function goToPage(p) {
+  currentPage = p;
+  renderRows(filteredPapers);
+  renderPaginator('paginator', currentPage, Math.ceil(filteredPapers.length / PAGE_SIZE), 'goToPage');
+  window.scrollTo({ top: 0, behavior: 'smooth' });
+}
+
 function applyFilters() {
   const q      = document.getElementById('search-input').value.toLowerCase();
   const tag    = document.getElementById('filter-tag').value;
@@ -300,8 +366,7 @@ function applyFilters() {
 
   currentPage = 1;
   renderRows(filteredPapers);
-  renderPaginator('paginator', currentPage, Math.ceil(filteredPapers.length / PAGE_SIZE),
-    `function(p){currentPage=p;renderRows(filteredPapers);}`);
+  renderPaginator('paginator', currentPage, Math.ceil(filteredPapers.length / PAGE_SIZE), 'goToPage');
 }
 
 const debouncedFilter = debounce(applyFilters, 200);
@@ -312,11 +377,14 @@ const debouncedFilter = debounce(applyFilters, 200);
     document.getElementById('papers-body').innerHTML = `<tr><td colspan="6"><div class="empty-state"><p>No papers yet. Run the pipeline.</p></div></td></tr>`;
     return;
   }
+
+  // Normalise tags on every paper in-place before any rendering or filtering
+  papers.forEach(p => { p.tags = normalizeTags(p.tags); });
   allPapers = papers;
 
-  // Only show tags that appear in ≥3 papers — filters junk/noise tags
+  // Build tag filter — count after normalisation so merged tags accumulate correctly
   const tagCount = {};
-  papers.forEach(p => (p.tags||[]).forEach(t => { tagCount[t] = (tagCount[t]||0) + 1; }));
+  papers.forEach(p => p.tags.forEach(t => { tagCount[t] = (tagCount[t]||0) + 1; }));
   const tagSel = document.getElementById('filter-tag');
   Object.keys(tagCount).filter(t => tagCount[t] >= 3).sort()
     .forEach(t => { const o = document.createElement('option'); o.value = t; o.textContent = `${t} (${tagCount[t]})`; tagSel.appendChild(o); });
