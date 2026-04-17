@@ -1,5 +1,5 @@
 {
-  "date": "2026-04-16",
+  "date": "2026-04-17",
   "top_papers": [
     {
       "id": "arxiv:2604.08537v1",
@@ -38,8 +38,8 @@
       "year": 2026,
       "tags": [
         "LLMs",
-        "Large Language Models",
-        "Artificial Intelligence"
+        "Artificial Intelligence",
+        "Large Language Models"
       ],
       "paper_score": 8.6,
       "read_first_score": 4.2,
@@ -64,7 +64,7 @@
         "RLHF",
         "AI Agents",
         "Summarization",
-        "Artificial Intelligence"
+        "Reinforcement Learning"
       ],
       "paper_score": 8.15,
       "read_first_score": 5.35,
@@ -100,29 +100,29 @@
       "paper_url": "http://arxiv.org/abs/2604.00852v1"
     },
     {
-      "id": "arxiv:2604.11095v1",
-      "title": "Bottleneck Tokens for Unified Multimodal Retrieval",
+      "id": "arxiv:2604.14973v1",
+      "title": "Robustness of Vision Foundation Models to Common Perturbations",
       "authors": [
-        "Siyu Sun",
-        "Jing Ren",
-        "Zhaohe Liao"
+        "Hongbin Liu",
+        "Zhengyuan Jiang",
+        "Cheng Hong"
       ],
       "venue": "arXiv",
       "year": 2026,
       "tags": [
-        "LLMs",
         "Fine-Tuning",
-        "Multimodal",
-        "Artificial Intelligence"
+        "Adversarial",
+        "Computer Vision",
+        "Cryptography & Security"
       ],
-      "paper_score": 7.7,
-      "read_first_score": 3.85,
-      "content_potential_score": 0.0,
-      "difficulty_level": "L3",
-      "why_it_matters": "Bottleneck Tokens for Unified Multimodal Retrieval represents a meaningful contribution to its field and opens new research directions.",
-      "one_line_takeaway": "Architecturally, we introduce Bottleneck Tokens (BToks), a small set of learnable tokens that serve as a fixed-capacity…",
-      "content_hook": "A new paper that could change how we think about LLMs.",
-      "paper_url": "http://arxiv.org/abs/2604.11095v1"
+      "paper_score": 8.0,
+      "read_first_score": 4.75,
+      "content_potential_score": 1.8,
+      "difficulty_level": "L2",
+      "why_it_matters": "Robustness of Vision Foundation Models to Common Perturbations advances machine perception, enabling better visual understanding in real-world applications.",
+      "one_line_takeaway": "In this work, we present the first systematic study on foundation models' robustness to such perturbations.",
+      "content_hook": "A new paper that could change how we think about Fine-Tuning.",
+      "paper_url": "http://arxiv.org/abs/2604.14973v1"
     }
   ],
   "underrated_paper": {
@@ -141,7 +141,7 @@
     "topics": [
       "LLMs",
       "Reasoning",
-      "Large Language Models"
+      "Reasoning & Chain-of-Thought"
     ],
     "reason": "Rising researcher with momentum score 9.0/10."
   },
@@ -149,7 +149,7 @@
     "lab_id": "meta_ai__fair",
     "name": "Meta AI (FAIR)",
     "momentum_score": 10.0,
-    "paper_count": 873,
+    "paper_count": 886,
     "topics": [
       "Fine-Tuning",
       "Info Extraction",
@@ -160,15 +160,15 @@
     "topic_id": "llms",
     "name": "LLMs",
     "trend_score": 10.0,
-    "paper_count": 5294,
+    "paper_count": 5425,
     "gap_summary": "No explicit gaps extracted yet for LLMs."
   },
   "research_gap": {
-    "gap_id": "181cb495-72ab-43c8-8d15-4c402eba6d45",
+    "gap_id": "b23e5183-cf97-49c9-9018-d2c3b919df24",
     "topic": "LLMs",
     "title": "Fail to explicitly capture the intercorrelations among them",
     "description": "fail to explicitly capture the intercorrelations among them.",
-    "frequency": 1232,
+    "frequency": 1262,
     "starter_idea": "Fine-tune an open-source LLM on a domain-specific dataset and evaluate factuality.",
     "gap_type": "explicit"
   }
