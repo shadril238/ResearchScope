@@ -1,6 +1,6 @@
 [
   {
-    "gap_id": "2b027301-7bcf-469c-a07a-50dab86b1703",
+    "gap_id": "adfa8468-4658-4765-9521-7aad4750f220",
     "topic": "LLMs",
     "title": "Starter idea: Fine-tune an open-source LLM on a domain-specific dataset an…",
     "description": "Beginner-friendly research direction in LLMs. Based on 5425 tracked papers in this area. Idea: Fine-tune an open-source LLM on a domain-specific dataset and evaluate factuality.",
@@ -20,7 +20,7 @@
       "Build a RAG pipeline and compare retrieval strategies on a small test set.",
       "Measure LLM calibration: does the model know what it doesn't know?"
     ],
-    "id": "2b027301-7bcf-469c-a07a-50dab86b1703",
+    "id": "adfa8468-4658-4765-9521-7aad4750f220",
     "source_paper_ids": [
       "openreview:CkgKSqZbuC",
       "openreview:t9U3LW7JVX",
@@ -30,7 +30,7 @@
     ]
   },
   {
-    "gap_id": "f45f5592-9eb1-4125-8d38-4feacc2dfbfb",
+    "gap_id": "00b4f41f-27aa-4c47-9173-b46889463729",
     "topic": "LLMs",
     "title": "Starter idea: Build a RAG pipeline and compare retrieval strategies on a s…",
     "description": "Beginner-friendly research direction in LLMs. Based on 5425 tracked papers in this area. Idea: Build a RAG pipeline and compare retrieval strategies on a small test set.",
@@ -50,7 +50,7 @@
       "Build a RAG pipeline and compare retrieval strategies on a small test set.",
       "Measure LLM calibration: does the model know what it doesn't know?"
     ],
-    "id": "f45f5592-9eb1-4125-8d38-4feacc2dfbfb",
+    "id": "00b4f41f-27aa-4c47-9173-b46889463729",
     "source_paper_ids": [
       "openreview:CkgKSqZbuC",
       "openreview:t9U3LW7JVX",
@@ -60,10 +60,10 @@
     ]
   },
   {
-    "gap_id": "a624fac0-7597-40ee-b97d-bde985239816",
-    "topic": "Local Linearity",
+    "gap_id": "7e5acd95-c710-452c-a5c7-59618ea52a9f",
+    "topic": "Object-centric learning",
     "title": "Weak robustness testing",
-    "description": "Pattern detected across 1935 papers: 'Weak robustness testing' is a recurring challenge in Local Linearity research. Papers frequently mention this as a limitation or unsolved problem.",
+    "description": "Pattern detected across 1935 papers: 'Weak robustness testing' is a recurring challenge in Object-centric learning research. Papers frequently mention this as a limitation or unsolved problem.",
     "evidence_paper_ids": [
       "openreview:CkgKSqZbuC",
       "openreview:t9U3LW7JVX",
@@ -78,13 +78,14 @@
     ],
     "gap_type": "pattern",
     "confidence": 0.9,
-    "starter_idea": "Build a RAG pipeline and compare different chunking and retrieval strategies.",
+    "starter_idea": "Fine-tune an open-source LLM on a domain-specific dataset and evaluate factuality.",
     "frequency": 1935,
     "suggested_projects": [
-      "Build a RAG pipeline and compare different chunking and retrieval strategies.",
-      "Evaluate how knowledge freshness affects LLM answer quality in a RAG setup."
+      "Fine-tune an open-source LLM on a domain-specific dataset and evaluate factuality.",
+      "Build a RAG pipeline and compare retrieval strategies on a small test set.",
+      "Measure LLM calibration: does the model know what it doesn't know?"
     ],
-    "id": "a624fac0-7597-40ee-b97d-bde985239816",
+    "id": "7e5acd95-c710-452c-a5c7-59618ea52a9f",
     "source_paper_ids": [
       "openreview:CkgKSqZbuC",
       "openreview:t9U3LW7JVX",
@@ -99,7 +100,7 @@
     ]
   },
   {
-    "gap_id": "b23e5183-cf97-49c9-9018-d2c3b919df24",
+    "gap_id": "51d88e6f-1a2e-4d24-ba0d-ecdf48c3808d",
     "topic": "LLMs",
     "title": "Fail to explicitly capture the intercorrelations among them",
     "description": "fail to explicitly capture the intercorrelations among them.",
@@ -498,6 +499,7 @@
       "openreview:US9k5TXVLZ",
       "acl:2022.naacl-main.185",
       "acl:2024.findings-acl.864",
+      "arxiv:2604.14969v1",
       "arxiv:2604.14147v1",
       "arxiv:2604.12913v1",
       "arxiv:2604.10923v1",
@@ -536,7 +538,6 @@
       "acl:2024.findings-emnlp.458",
       "acl:2024.findings-emnlp.549",
       "acl:2024.eacl-long.145",
-      "arxiv:2604.14969v1",
       "arxiv:2604.03724v1",
       "arxiv:2604.06019v1",
       "openreview:9AcG3Tsyoq",
@@ -835,6 +836,7 @@
       "acl:2025.acl-industry.3",
       "acl:2025.acl-industry.76",
       "acl:2025.acl-industry.107",
+      "arxiv:2604.14866v1",
       "arxiv:2604.12220v1",
       "arxiv:2604.11004v1",
       "arxiv:2604.08999v1",
@@ -938,7 +940,6 @@
       "acl:2022.acl-long.550",
       "acl:2024.findings-acl.117",
       "acl:2024.findings-emnlp.64",
-      "arxiv:2604.14866v1",
       "openreview:6xfe4IVcOu",
       "openreview:iX1RjVQODj",
       "openreview:bzs4uPLXvi",
@@ -958,6 +959,7 @@
       "arxiv:2604.06367v1",
       "arxiv:2604.05172v2",
       "arxiv:2604.02434v1",
+      "arxiv:2604.14749v1",
       "arxiv:2604.13648v1",
       "arxiv:2604.12231v1",
       "arxiv:2604.11699v1",
@@ -973,10 +975,10 @@
       "arxiv:2604.01941v1",
       "arxiv:2604.10708v1",
       "arxiv:2604.10504v1",
-      "arxiv:2604.14749v1",
       "arxiv:2604.05766v1",
       "arxiv:2604.04468v1",
       "arxiv:2604.04465v1",
+      "arxiv:2604.15037v1",
       "arxiv:2604.14044v1",
       "arxiv:2604.13804v1",
       "arxiv:2604.13692v1",
@@ -1008,11 +1010,13 @@
       "arxiv:2604.00395v1",
       "arxiv:2604.11269v1",
       "arxiv:2604.10590v1",
-      "arxiv:2604.15037v1",
       "arxiv:2604.12512v1",
       "arxiv:2604.12506v1",
       "arxiv:2604.00778v1",
       "arxiv:2604.12634v1",
+      "arxiv:2604.15203v1",
+      "arxiv:2604.14989v1",
+      "arxiv:2604.14710v1",
       "arxiv:2604.13924v1",
       "arxiv:2604.13756v1",
       "arxiv:2604.13593v1",
@@ -1094,12 +1098,16 @@
       "arxiv:2604.12126v1",
       "arxiv:2604.12060v1",
       "arxiv:2604.13175v1",
-      "arxiv:2604.04323v1",
-      "arxiv:2604.15203v1",
-      "arxiv:2604.14989v1",
-      "arxiv:2604.14710v1",
       "arxiv:2604.14325v1",
       "arxiv:2604.14265v1",
+      "arxiv:2604.04323v1",
+      "arxiv:2604.15149v1",
+      "arxiv:2604.15136v1",
+      "arxiv:2604.14902v1",
+      "arxiv:2604.14881v1",
+      "arxiv:2604.14712v1",
+      "arxiv:2604.14646v1",
+      "arxiv:2604.14576v1",
       "arxiv:2604.14069v1",
       "arxiv:2604.14030v1",
       "arxiv:2604.13979v1",
@@ -1192,17 +1200,15 @@
       "arxiv:2604.10410v1",
       "arxiv:2604.13331v1",
       "arxiv:2604.13271v1",
-      "arxiv:2604.15149v1",
-      "arxiv:2604.15136v1",
-      "arxiv:2604.14902v1",
-      "arxiv:2604.14881v1",
-      "arxiv:2604.14712v1",
-      "arxiv:2604.14646v1",
-      "arxiv:2604.14576v1",
       "arxiv:2604.14475v1",
       "arxiv:2604.14362v1",
       "arxiv:2604.13940v1",
       "arxiv:2604.01520v1",
+      "arxiv:2604.15306v1",
+      "arxiv:2604.15163v1",
+      "arxiv:2604.14785v1",
+      "arxiv:2604.14641v1",
+      "arxiv:2604.14531v1",
       "arxiv:2604.13777v1",
       "arxiv:2604.13666v1",
       "arxiv:2604.13559v1",
@@ -1301,11 +1307,6 @@
       "arxiv:2604.13346v1",
       "arxiv:2604.13345v1",
       "arxiv:2604.13318v1",
-      "arxiv:2604.15306v1",
-      "arxiv:2604.15163v1",
-      "arxiv:2604.14785v1",
-      "arxiv:2604.14641v1",
-      "arxiv:2604.14531v1",
       "arxiv:2604.14401v1",
       "arxiv:2604.14267v1",
       "arxiv:2604.14256v1",
@@ -1315,6 +1316,7 @@
       "arxiv:2604.01461v1",
       "arxiv:2604.02377v1",
       "arxiv:2604.11283v1",
+      "arxiv:2604.14843v1",
       "arxiv:2604.13955v1",
       "arxiv:2604.12944v1",
       "arxiv:2604.12337v1",
@@ -1362,7 +1364,6 @@
       "arxiv:2604.12018v1",
       "arxiv:2604.13321v1",
       "arxiv:2604.13298v1",
-      "arxiv:2604.14843v1",
       "arxiv:2604.14437v1",
       "arxiv:2604.14414v1",
       "arxiv:2604.14317v1"
@@ -1376,7 +1377,7 @@
       "Build a RAG pipeline and compare retrieval strategies on a small test set.",
       "Measure LLM calibration: does the model know what it doesn't know?"
     ],
-    "id": "b23e5183-cf97-49c9-9018-d2c3b919df24",
+    "id": "51d88e6f-1a2e-4d24-ba0d-ecdf48c3808d",
     "source_paper_ids": [
       "openreview:CkgKSqZbuC",
       "acl:2024.emnlp-main.958",
@@ -1772,6 +1773,7 @@
       "openreview:US9k5TXVLZ",
       "acl:2022.naacl-main.185",
       "acl:2024.findings-acl.864",
+      "arxiv:2604.14969v1",
       "arxiv:2604.14147v1",
       "arxiv:2604.12913v1",
       "arxiv:2604.10923v1",
@@ -1810,7 +1812,6 @@
       "acl:2024.findings-emnlp.458",
       "acl:2024.findings-emnlp.549",
       "acl:2024.eacl-long.145",
-      "arxiv:2604.14969v1",
       "arxiv:2604.03724v1",
       "arxiv:2604.06019v1",
       "openreview:9AcG3Tsyoq",
@@ -2109,6 +2110,7 @@
       "acl:2025.acl-industry.3",
       "acl:2025.acl-industry.76",
       "acl:2025.acl-industry.107",
+      "arxiv:2604.14866v1",
       "arxiv:2604.12220v1",
       "arxiv:2604.11004v1",
       "arxiv:2604.08999v1",
@@ -2212,7 +2214,6 @@
       "acl:2022.acl-long.550",
       "acl:2024.findings-acl.117",
       "acl:2024.findings-emnlp.64",
-      "arxiv:2604.14866v1",
       "openreview:6xfe4IVcOu",
       "openreview:iX1RjVQODj",
       "openreview:bzs4uPLXvi",
@@ -2232,6 +2233,7 @@
       "arxiv:2604.06367v1",
       "arxiv:2604.05172v2",
       "arxiv:2604.02434v1",
+      "arxiv:2604.14749v1",
       "arxiv:2604.13648v1",
       "arxiv:2604.12231v1",
       "arxiv:2604.11699v1",
@@ -2247,10 +2249,10 @@
       "arxiv:2604.01941v1",
       "arxiv:2604.10708v1",
       "arxiv:2604.10504v1",
-      "arxiv:2604.14749v1",
       "arxiv:2604.05766v1",
       "arxiv:2604.04468v1",
       "arxiv:2604.04465v1",
+      "arxiv:2604.15037v1",
       "arxiv:2604.14044v1",
       "arxiv:2604.13804v1",
       "arxiv:2604.13692v1",
@@ -2282,11 +2284,13 @@
       "arxiv:2604.00395v1",
       "arxiv:2604.11269v1",
       "arxiv:2604.10590v1",
-      "arxiv:2604.15037v1",
       "arxiv:2604.12512v1",
       "arxiv:2604.12506v1",
       "arxiv:2604.00778v1",
       "arxiv:2604.12634v1",
+      "arxiv:2604.15203v1",
+      "arxiv:2604.14989v1",
+      "arxiv:2604.14710v1",
       "arxiv:2604.13924v1",
       "arxiv:2604.13756v1",
       "arxiv:2604.13593v1",
@@ -2368,12 +2372,16 @@
       "arxiv:2604.12126v1",
       "arxiv:2604.12060v1",
       "arxiv:2604.13175v1",
-      "arxiv:2604.04323v1",
-      "arxiv:2604.15203v1",
-      "arxiv:2604.14989v1",
-      "arxiv:2604.14710v1",
       "arxiv:2604.14325v1",
       "arxiv:2604.14265v1",
+      "arxiv:2604.04323v1",
+      "arxiv:2604.15149v1",
+      "arxiv:2604.15136v1",
+      "arxiv:2604.14902v1",
+      "arxiv:2604.14881v1",
+      "arxiv:2604.14712v1",
+      "arxiv:2604.14646v1",
+      "arxiv:2604.14576v1",
       "arxiv:2604.14069v1",
       "arxiv:2604.14030v1",
       "arxiv:2604.13979v1",
@@ -2466,17 +2474,15 @@
       "arxiv:2604.10410v1",
       "arxiv:2604.13331v1",
       "arxiv:2604.13271v1",
-      "arxiv:2604.15149v1",
-      "arxiv:2604.15136v1",
-      "arxiv:2604.14902v1",
-      "arxiv:2604.14881v1",
-      "arxiv:2604.14712v1",
-      "arxiv:2604.14646v1",
-      "arxiv:2604.14576v1",
       "arxiv:2604.14475v1",
       "arxiv:2604.14362v1",
       "arxiv:2604.13940v1",
       "arxiv:2604.01520v1",
+      "arxiv:2604.15306v1",
+      "arxiv:2604.15163v1",
+      "arxiv:2604.14785v1",
+      "arxiv:2604.14641v1",
+      "arxiv:2604.14531v1",
       "arxiv:2604.13777v1",
       "arxiv:2604.13666v1",
       "arxiv:2604.13559v1",
@@ -2575,11 +2581,6 @@
       "arxiv:2604.13346v1",
       "arxiv:2604.13345v1",
       "arxiv:2604.13318v1",
-      "arxiv:2604.15306v1",
-      "arxiv:2604.15163v1",
-      "arxiv:2604.14785v1",
-      "arxiv:2604.14641v1",
-      "arxiv:2604.14531v1",
       "arxiv:2604.14401v1",
       "arxiv:2604.14267v1",
       "arxiv:2604.14256v1",
@@ -2589,6 +2590,7 @@
       "arxiv:2604.01461v1",
       "arxiv:2604.02377v1",
       "arxiv:2604.11283v1",
+      "arxiv:2604.14843v1",
       "arxiv:2604.13955v1",
       "arxiv:2604.12944v1",
       "arxiv:2604.12337v1",
@@ -2636,14 +2638,13 @@
       "arxiv:2604.12018v1",
       "arxiv:2604.13321v1",
       "arxiv:2604.13298v1",
-      "arxiv:2604.14843v1",
       "arxiv:2604.14437v1",
       "arxiv:2604.14414v1",
       "arxiv:2604.14317v1"
     ]
   },
   {
-    "gap_id": "aefd2f84-e367-4055-bee4-08f06377f42d",
+    "gap_id": "22deca1a-6159-49e8-bb1f-af67230ff0d7",
     "topic": "Transformers",
     "title": "Starter idea: Implement a Transformer from scratch in PyTorch.",
     "description": "Beginner-friendly research direction in Transformers. Based on 1250 tracked papers in this area. Idea: Implement a Transformer from scratch in PyTorch.",
@@ -2663,7 +2664,7 @@
       "Visualise attention heads on your own text samples.",
       "Compare different positional encoding schemes on a text classification task."
     ],
-    "id": "aefd2f84-e367-4055-bee4-08f06377f42d",
+    "id": "22deca1a-6159-49e8-bb1f-af67230ff0d7",
     "source_paper_ids": [
       "openreview:Oxpkn0YLG1",
       "s2:78555152f5806f3ce54f9fd0ee12ae3c905b2cb8",
@@ -2673,7 +2674,7 @@
     ]
   },
   {
-    "gap_id": "431949e1-b1bd-4412-b329-fa7269964da7",
+    "gap_id": "f337831a-e153-4cf3-b9ca-060fe80d6c28",
     "topic": "Transformers",
     "title": "Starter idea: Visualise attention heads on your own text samples.",
     "description": "Beginner-friendly research direction in Transformers. Based on 1250 tracked papers in this area. Idea: Visualise attention heads on your own text samples.",
@@ -2693,7 +2694,7 @@
       "Visualise attention heads on your own text samples.",
       "Compare different positional encoding schemes on a text classification task."
     ],
-    "id": "431949e1-b1bd-4412-b329-fa7269964da7",
+    "id": "f337831a-e153-4cf3-b9ca-060fe80d6c28",
     "source_paper_ids": [
       "openreview:Oxpkn0YLG1",
       "s2:78555152f5806f3ce54f9fd0ee12ae3c905b2cb8",
@@ -2703,7 +2704,7 @@
     ]
   },
   {
-    "gap_id": "2599eed8-f621-4144-b387-e8c667b918aa",
+    "gap_id": "c05b2ec1-1623-4151-bd94-3049d5236ae5",
     "topic": "Multimodal",
     "title": "Starter idea: Fine-tune a CLIP model on a domain-specific image-caption da…",
     "description": "Beginner-friendly research direction in Multimodal. Based on 1208 tracked papers in this area. Idea: Fine-tune a CLIP model on a domain-specific image-caption dataset.",
@@ -2722,7 +2723,7 @@
       "Fine-tune a CLIP model on a domain-specific image-caption dataset.",
       "Evaluate vision-language models on your own image set."
     ],
-    "id": "2599eed8-f621-4144-b387-e8c667b918aa",
+    "id": "c05b2ec1-1623-4151-bd94-3049d5236ae5",
     "source_paper_ids": [
       "openreview:QiJuMJl0QS",
       "acl:2026.eacl-long.248",
@@ -2732,7 +2733,7 @@
     ]
   },
   {
-    "gap_id": "d82f5b26-ab09-41be-9660-80797679d3b4",
+    "gap_id": "519a0c64-0054-41ac-82d7-e38ac98c708f",
     "topic": "Multimodal",
     "title": "Starter idea: Evaluate vision-language models on your own image set.",
     "description": "Beginner-friendly research direction in Multimodal. Based on 1208 tracked papers in this area. Idea: Evaluate vision-language models on your own image set.",
@@ -2751,7 +2752,7 @@
       "Fine-tune a CLIP model on a domain-specific image-caption dataset.",
       "Evaluate vision-language models on your own image set."
     ],
-    "id": "d82f5b26-ab09-41be-9660-80797679d3b4",
+    "id": "519a0c64-0054-41ac-82d7-e38ac98c708f",
     "source_paper_ids": [
       "openreview:QiJuMJl0QS",
       "acl:2026.eacl-long.248",
@@ -2761,7 +2762,7 @@
     ]
   },
   {
-    "gap_id": "d745f97a-0a6d-4d6c-98aa-fc10f5dda37a",
+    "gap_id": "453a0b5a-8ae4-4731-9772-5626ef85d420",
     "topic": "Large Language Models",
     "title": "Starter idea: Fine-tune an open-source LLM on a domain-specific dataset an…",
     "description": "Beginner-friendly research direction in Large Language Models. Based on 1137 tracked papers in this area. Idea: Fine-tune an open-source LLM on a domain-specific dataset and evaluate factuality.",
@@ -2781,7 +2782,7 @@
       "Build a RAG pipeline and compare retrieval strategies on a small test set.",
       "Measure LLM calibration: does the model know what it doesn't know?"
     ],
-    "id": "d745f97a-0a6d-4d6c-98aa-fc10f5dda37a",
+    "id": "453a0b5a-8ae4-4731-9772-5626ef85d420",
     "source_paper_ids": [
       "acl:2025.emnlp-main.969",
       "acl:2025.emnlp-main.1631",
@@ -2791,7 +2792,7 @@
     ]
   },
   {
-    "gap_id": "84822c32-be34-40e4-aeca-29413916a209",
+    "gap_id": "5c08deac-e91e-4e0b-87f0-bba70b939f46",
     "topic": "Large Language Models",
     "title": "Starter idea: Build a RAG pipeline and compare retrieval strategies on a s…",
     "description": "Beginner-friendly research direction in Large Language Models. Based on 1137 tracked papers in this area. Idea: Build a RAG pipeline and compare retrieval strategies on a small test set.",
@@ -2811,7 +2812,7 @@
       "Build a RAG pipeline and compare retrieval strategies on a small test set.",
       "Measure LLM calibration: does the model know what it doesn't know?"
     ],
-    "id": "84822c32-be34-40e4-aeca-29413916a209",
+    "id": "5c08deac-e91e-4e0b-87f0-bba70b939f46",
     "source_paper_ids": [
       "acl:2025.emnlp-main.969",
       "acl:2025.emnlp-main.1631",
@@ -2821,7 +2822,7 @@
     ]
   },
   {
-    "gap_id": "6bc40818-b76c-48c5-9e51-e438907739ae",
+    "gap_id": "55c2cb02-17b0-4b76-af3e-eed9d487adf8",
     "topic": "RL",
     "title": "Starter idea: Train a DQN agent on a simple OpenAI Gym environment.",
     "description": "Beginner-friendly research direction in RL. Based on 913 tracked papers in this area. Idea: Train a DQN agent on a simple OpenAI Gym environment.",
@@ -2841,7 +2842,7 @@
       "Add reward shaping to reduce sample inefficiency on a gridworld task.",
       "Compare PPO and REINFORCE on a continuous-action environment."
     ],
-    "id": "6bc40818-b76c-48c5-9e51-e438907739ae",
+    "id": "55c2cb02-17b0-4b76-af3e-eed9d487adf8",
     "source_paper_ids": [
       "openreview:0AumdfLzpK",
       "openreview:AhjTu2aiiW",
@@ -2851,7 +2852,7 @@
     ]
   },
   {
-    "gap_id": "72cba120-2af3-4341-9954-d0a1ae06b1db",
+    "gap_id": "983e1b40-cf27-463d-b857-aaf2ba62b983",
     "topic": "RL",
     "title": "Starter idea: Add reward shaping to reduce sample inefficiency on a gridwo…",
     "description": "Beginner-friendly research direction in RL. Based on 913 tracked papers in this area. Idea: Add reward shaping to reduce sample inefficiency on a gridworld task.",
@@ -2871,7 +2872,7 @@
       "Add reward shaping to reduce sample inefficiency on a gridworld task.",
       "Compare PPO and REINFORCE on a continuous-action environment."
     ],
-    "id": "72cba120-2af3-4341-9954-d0a1ae06b1db",
+    "id": "983e1b40-cf27-463d-b857-aaf2ba62b983",
     "source_paper_ids": [
       "openreview:0AumdfLzpK",
       "openreview:AhjTu2aiiW",
@@ -2881,13 +2882,13 @@
     ]
   },
   {
-    "gap_id": "347a9ac1-a17a-4196-96e7-4bb26ca690f2",
+    "gap_id": "2d9355c2-f1a9-46c8-97fa-05c5645be8fa",
     "topic": "Computer Vision",
     "title": "Starter idea: Train a classifier on a small custom dataset using transfer …",
     "description": "Beginner-friendly research direction in Computer Vision. Based on 804 tracked papers in this area. Idea: Train a classifier on a small custom dataset using transfer learning.",
     "evidence_paper_ids": [
-      "openreview:OCcfKzXded",
       "arxiv:2604.14973v1",
+      "openreview:OCcfKzXded",
       "arxiv:2604.05584v2",
       "arxiv:2604.04874v1",
       "arxiv:2604.14147v1"
@@ -2901,23 +2902,23 @@
       "Implement data augmentation techniques and measure their impact.",
       "Reproduce a CIFAR-10 baseline with a modern architecture."
     ],
-    "id": "347a9ac1-a17a-4196-96e7-4bb26ca690f2",
+    "id": "2d9355c2-f1a9-46c8-97fa-05c5645be8fa",
     "source_paper_ids": [
-      "openreview:OCcfKzXded",
       "arxiv:2604.14973v1",
+      "openreview:OCcfKzXded",
       "arxiv:2604.05584v2",
       "arxiv:2604.04874v1",
       "arxiv:2604.14147v1"
     ]
   },
   {
-    "gap_id": "6c788ea6-6800-4f11-9fd5-23114fd29f62",
+    "gap_id": "184ee7b3-a604-4c42-9c6e-a81d4634e8d9",
     "topic": "Computer Vision",
     "title": "Starter idea: Implement data augmentation techniques and measure their imp…",
     "description": "Beginner-friendly research direction in Computer Vision. Based on 804 tracked papers in this area. Idea: Implement data augmentation techniques and measure their impact.",
     "evidence_paper_ids": [
-      "openreview:OCcfKzXded",
       "arxiv:2604.14973v1",
+      "openreview:OCcfKzXded",
       "arxiv:2604.05584v2",
       "arxiv:2604.04874v1",
       "arxiv:2604.14147v1"
@@ -2931,17 +2932,17 @@
       "Implement data augmentation techniques and measure their impact.",
       "Reproduce a CIFAR-10 baseline with a modern architecture."
     ],
-    "id": "6c788ea6-6800-4f11-9fd5-23114fd29f62",
+    "id": "184ee7b3-a604-4c42-9c6e-a81d4634e8d9",
     "source_paper_ids": [
-      "openreview:OCcfKzXded",
       "arxiv:2604.14973v1",
+      "openreview:OCcfKzXded",
       "arxiv:2604.05584v2",
       "arxiv:2604.04874v1",
       "arxiv:2604.14147v1"
     ]
   },
   {
-    "gap_id": "2b18f16f-1638-4829-bb7a-69bfd48bb811",
+    "gap_id": "dc98dd47-4004-476c-b82b-639a219126b5",
     "topic": "Transformer Architectures",
     "title": "Starter idea: Implement a Transformer from scratch in PyTorch.",
     "description": "Beginner-friendly research direction in Transformer Architectures. Based on 772 tracked papers in this area. Idea: Implement a Transformer from scratch in PyTorch.",
@@ -2961,7 +2962,7 @@
       "Visualise attention heads on your own text samples.",
       "Compare different positional encoding schemes on a text classification task."
     ],
-    "id": "2b18f16f-1638-4829-bb7a-69bfd48bb811",
+    "id": "dc98dd47-4004-476c-b82b-639a219126b5",
     "source_paper_ids": [
       "openreview:Oxpkn0YLG1",
       "openreview:UENQuayzr1",
@@ -2971,7 +2972,7 @@
     ]
   },
   {
-    "gap_id": "05e342d4-89e9-4b44-95aa-9b5481537a3f",
+    "gap_id": "ea0f4361-c0bc-43e8-9380-618084dfe054",
     "topic": "Transformer Architectures",
     "title": "Starter idea: Visualise attention heads on your own text samples.",
     "description": "Beginner-friendly research direction in Transformer Architectures. Based on 772 tracked papers in this area. Idea: Visualise attention heads on your own text samples.",
@@ -2991,7 +2992,7 @@
       "Visualise attention heads on your own text samples.",
       "Compare different positional encoding schemes on a text classification task."
     ],
-    "id": "05e342d4-89e9-4b44-95aa-9b5481537a3f",
+    "id": "ea0f4361-c0bc-43e8-9380-618084dfe054",
     "source_paper_ids": [
       "openreview:Oxpkn0YLG1",
       "openreview:UENQuayzr1",
@@ -3001,10 +3002,10 @@
     ]
   },
   {
-    "gap_id": "4d87d546-0ea4-4ed4-8ef2-031d05187a17",
-    "topic": "Machine Learning",
+    "gap_id": "5cbe5cca-54c9-4e0a-b42d-6c3acdeb2859",
+    "topic": "SSMs",
     "title": "Dataset bias / fairness",
-    "description": "Pattern detected across 755 papers: 'Dataset bias / fairness' is a recurring challenge in Machine Learning research. Papers frequently mention this as a limitation or unsolved problem.",
+    "description": "Pattern detected across 755 papers: 'Dataset bias / fairness' is a recurring challenge in SSMs research. Papers frequently mention this as a limitation or unsolved problem.",
     "evidence_paper_ids": [
       "openreview:WQV9kB1qSU",
       "openreview:6bDJ3CIm5w",
@@ -3019,13 +3020,14 @@
     ],
     "gap_type": "pattern",
     "confidence": 0.9,
-    "starter_idea": "Build a RAG pipeline and compare different chunking and retrieval strategies.",
+    "starter_idea": "Fine-tune an open-source LLM on a domain-specific dataset and evaluate factuality.",
     "frequency": 755,
     "suggested_projects": [
-      "Build a RAG pipeline and compare different chunking and retrieval strategies.",
-      "Evaluate how knowledge freshness affects LLM answer quality in a RAG setup."
+      "Fine-tune an open-source LLM on a domain-specific dataset and evaluate factuality.",
+      "Build a RAG pipeline and compare retrieval strategies on a small test set.",
+      "Measure LLM calibration: does the model know what it doesn't know?"
     ],
-    "id": "4d87d546-0ea4-4ed4-8ef2-031d05187a17",
+    "id": "5cbe5cca-54c9-4e0a-b42d-6c3acdeb2859",
     "source_paper_ids": [
       "openreview:WQV9kB1qSU",
       "openreview:6bDJ3CIm5w",
@@ -3040,7 +3042,7 @@
     ]
   },
   {
-    "gap_id": "ffc27fe8-d35f-4554-b68c-534721304369",
+    "gap_id": "fa6fbd43-21ef-4249-bba2-dfaa9f8372bb",
     "topic": "Diffusion Models",
     "title": "Starter idea: Train a small diffusion model on a custom image dataset (e.g…",
     "description": "Beginner-friendly research direction in Diffusion Models. Based on 672 tracked papers in this area. Idea: Train a small diffusion model on a custom image dataset (e.g. 64x64 icons).",
@@ -3059,7 +3061,7 @@
       "Train a small diffusion model on a custom image dataset (e.g. 64x64 icons).",
       "Evaluate how conditioning signal quality affects generation diversity."
     ],
-    "id": "ffc27fe8-d35f-4554-b68c-534721304369",
+    "id": "fa6fbd43-21ef-4249-bba2-dfaa9f8372bb",
     "source_paper_ids": [
       "openreview:DAO2BFzMfy",
       "openreview:MOFwt8OeXr",
@@ -3069,7 +3071,7 @@
     ]
   },
   {
-    "gap_id": "b315ee16-8fad-4621-9d41-5cc6c6c25e81",
+    "gap_id": "d2fa1e97-ecae-40c4-bf61-d8c6be9f3697",
     "topic": "Diffusion Models",
     "title": "Starter idea: Evaluate how conditioning signal quality affects generation …",
     "description": "Beginner-friendly research direction in Diffusion Models. Based on 672 tracked papers in this area. Idea: Evaluate how conditioning signal quality affects generation diversity.",
@@ -3088,7 +3090,7 @@
       "Train a small diffusion model on a custom image dataset (e.g. 64x64 icons).",
       "Evaluate how conditioning signal quality affects generation diversity."
     ],
-    "id": "b315ee16-8fad-4621-9d41-5cc6c6c25e81",
+    "id": "d2fa1e97-ecae-40c4-bf61-d8c6be9f3697",
     "source_paper_ids": [
       "openreview:DAO2BFzMfy",
       "openreview:MOFwt8OeXr",
@@ -3098,7 +3100,7 @@
     ]
   },
   {
-    "gap_id": "82949097-9e2e-4275-9018-5be229a798b8",
+    "gap_id": "2b248bd7-3f81-419e-888e-0fc5872152d8",
     "topic": "AI Agents",
     "title": "Starter idea: Build a simple tool-using agent and evaluate it on a benchma…",
     "description": "Beginner-friendly research direction in AI Agents. Based on 643 tracked papers in this area. Idea: Build a simple tool-using agent and evaluate it on a benchmark task.",
@@ -3117,7 +3119,7 @@
       "Build a simple tool-using agent and evaluate it on a benchmark task.",
       "Compare ReAct and plan-then-execute prompting strategies."
     ],
-    "id": "82949097-9e2e-4275-9018-5be229a798b8",
+    "id": "2b248bd7-3f81-419e-888e-0fc5872152d8",
     "source_paper_ids": [
       "openreview:GLWf2fq0bX",
       "openreview:t9U3LW7JVX",
@@ -3127,7 +3129,7 @@
     ]
   },
   {
-    "gap_id": "91bf6da0-aa11-4dd4-9195-f4ab018cf869",
+    "gap_id": "b6afbfdf-b85b-4f67-be99-c5bd1ff16600",
     "topic": "AI Agents",
     "title": "Starter idea: Compare ReAct and plan-then-execute prompting strategies.",
     "description": "Beginner-friendly research direction in AI Agents. Based on 643 tracked papers in this area. Idea: Compare ReAct and plan-then-execute prompting strategies.",
@@ -3146,7 +3148,7 @@
       "Build a simple tool-using agent and evaluate it on a benchmark task.",
       "Compare ReAct and plan-then-execute prompting strategies."
     ],
-    "id": "91bf6da0-aa11-4dd4-9195-f4ab018cf869",
+    "id": "b6afbfdf-b85b-4f67-be99-c5bd1ff16600",
     "source_paper_ids": [
       "openreview:GLWf2fq0bX",
       "openreview:t9U3LW7JVX",
@@ -3156,10 +3158,10 @@
     ]
   },
   {
-    "gap_id": "f5aae393-e0d3-4595-aed4-079daf06ca79",
-    "topic": "Machine Learning",
+    "gap_id": "dffc4b29-c2cb-40bf-9007-190646c955fb",
+    "topic": "SSMs",
     "title": "Hallucination / factuality",
-    "description": "Pattern detected across 567 papers: 'Hallucination / factuality' is a recurring challenge in Machine Learning research. Papers frequently mention this as a limitation or unsolved problem.",
+    "description": "Pattern detected across 567 papers: 'Hallucination / factuality' is a recurring challenge in SSMs research. Papers frequently mention this as a limitation or unsolved problem.",
     "evidence_paper_ids": [
       "openreview:kN25ggeq1J",
       "acl:2024.emnlp-main.956",
@@ -3174,13 +3176,13 @@
     ],
     "gap_type": "pattern",
     "confidence": 0.9,
-    "starter_idea": "Build a RAG pipeline and compare different chunking and retrieval strategies.",
+    "starter_idea": "Fine-tune a CLIP model on a domain-specific image-caption dataset.",
     "frequency": 567,
     "suggested_projects": [
-      "Build a RAG pipeline and compare different chunking and retrieval strategies.",
-      "Evaluate how knowledge freshness affects LLM answer quality in a RAG setup."
+      "Fine-tune a CLIP model on a domain-specific image-caption dataset.",
+      "Evaluate vision-language models on your own image set."
     ],
-    "id": "f5aae393-e0d3-4595-aed4-079daf06ca79",
+    "id": "dffc4b29-c2cb-40bf-9007-190646c955fb",
     "source_paper_ids": [
       "openreview:kN25ggeq1J",
       "acl:2024.emnlp-main.956",
@@ -3195,7 +3197,7 @@
     ]
   },
   {
-    "gap_id": "729c2292-d446-4aae-a93f-e0e1dd9f7f70",
+    "gap_id": "c966c8f4-b420-41d0-a758-2346977c25ee",
     "topic": "Reinforcement Learning",
     "title": "Starter idea: Train a DQN agent on a simple OpenAI Gym environment.",
     "description": "Beginner-friendly research direction in Reinforcement Learning. Based on 512 tracked papers in this area. Idea: Train a DQN agent on a simple OpenAI Gym environment.",
@@ -3215,7 +3217,7 @@
       "Add reward shaping to reduce sample inefficiency on a gridworld task.",
       "Compare PPO and REINFORCE on a continuous-action environment."
     ],
-    "id": "729c2292-d446-4aae-a93f-e0e1dd9f7f70",
+    "id": "c966c8f4-b420-41d0-a758-2346977c25ee",
     "source_paper_ids": [
       "openreview:AhjTu2aiiW",
       "openreview:LjivA1SLZ6",
@@ -3225,7 +3227,7 @@
     ]
   },
   {
-    "gap_id": "3ad5273e-df61-47bc-9a1d-06579fe2e1f0",
+    "gap_id": "9a7dd481-7991-4154-81b2-bd2250dff6a8",
     "topic": "Reinforcement Learning",
     "title": "Starter idea: Add reward shaping to reduce sample inefficiency on a gridwo…",
     "description": "Beginner-friendly research direction in Reinforcement Learning. Based on 512 tracked papers in this area. Idea: Add reward shaping to reduce sample inefficiency on a gridworld task.",
@@ -3245,7 +3247,7 @@
       "Add reward shaping to reduce sample inefficiency on a gridworld task.",
       "Compare PPO and REINFORCE on a continuous-action environment."
     ],
-    "id": "3ad5273e-df61-47bc-9a1d-06579fe2e1f0",
+    "id": "9a7dd481-7991-4154-81b2-bd2250dff6a8",
     "source_paper_ids": [
       "openreview:AhjTu2aiiW",
       "openreview:LjivA1SLZ6",
@@ -3255,10 +3257,10 @@
     ]
   },
   {
-    "gap_id": "3e7bd711-ac26-4f64-93e6-6523f84f1115",
-    "topic": "Machine Learning",
+    "gap_id": "90f43704-89e9-4a7f-af23-458795f9e5f8",
+    "topic": "Image Generation",
     "title": "Limited multilinguality",
-    "description": "Pattern detected across 503 papers: 'Limited multilinguality' is a recurring challenge in Machine Learning research. Papers frequently mention this as a limitation or unsolved problem.",
+    "description": "Pattern detected across 503 papers: 'Limited multilinguality' is a recurring challenge in Image Generation research. Papers frequently mention this as a limitation or unsolved problem.",
     "evidence_paper_ids": [
       "acl:2024.emnlp-main.665",
       "acl:2025.findings-emnlp.1364",
@@ -3273,13 +3275,13 @@
     ],
     "gap_type": "pattern",
     "confidence": 0.9,
-    "starter_idea": "Build a RAG pipeline and compare different chunking and retrieval strategies.",
+    "starter_idea": "Fine-tune a CLIP model on a domain-specific image-caption dataset.",
     "frequency": 503,
     "suggested_projects": [
-      "Build a RAG pipeline and compare different chunking and retrieval strategies.",
-      "Evaluate how knowledge freshness affects LLM answer quality in a RAG setup."
+      "Fine-tune a CLIP model on a domain-specific image-caption dataset.",
+      "Evaluate vision-language models on your own image set."
     ],
-    "id": "3e7bd711-ac26-4f64-93e6-6523f84f1115",
+    "id": "90f43704-89e9-4a7f-af23-458795f9e5f8",
     "source_paper_ids": [
       "acl:2024.emnlp-main.665",
       "acl:2025.findings-emnlp.1364",
@@ -3294,7 +3296,7 @@
     ]
   },
   {
-    "gap_id": "0357fcc4-7262-4e4c-88b0-e98da78e7b32",
+    "gap_id": "251ebc81-0988-48ff-9305-7410348cbb97",
     "topic": "RAG",
     "title": "Starter idea: Build a RAG pipeline and compare different chunking and retr…",
     "description": "Beginner-friendly research direction in RAG. Based on 433 tracked papers in this area. Idea: Build a RAG pipeline and compare different chunking and retrieval strategies.",
@@ -3313,7 +3315,7 @@
       "Build a RAG pipeline and compare different chunking and retrieval strategies.",
       "Evaluate how knowledge freshness affects LLM answer quality in a RAG setup."
     ],
-    "id": "0357fcc4-7262-4e4c-88b0-e98da78e7b32",
+    "id": "251ebc81-0988-48ff-9305-7410348cbb97",
     "source_paper_ids": [
       "openreview:bkUvKPKafQ",
       "acl:2025.findings-emnlp.740",
@@ -3323,7 +3325,7 @@
     ]
   },
   {
-    "gap_id": "38b32a9a-2654-4697-8667-771c7dcfe12a",
+    "gap_id": "cfb503ff-a679-4f3f-9886-8e6d9c5cfef6",
     "topic": "RAG",
     "title": "Starter idea: Evaluate how knowledge freshness affects LLM answer quality …",
     "description": "Beginner-friendly research direction in RAG. Based on 433 tracked papers in this area. Idea: Evaluate how knowledge freshness affects LLM answer quality in a RAG setup.",
@@ -3342,7 +3344,7 @@
       "Build a RAG pipeline and compare different chunking and retrieval strategies.",
       "Evaluate how knowledge freshness affects LLM answer quality in a RAG setup."
     ],
-    "id": "38b32a9a-2654-4697-8667-771c7dcfe12a",
+    "id": "cfb503ff-a679-4f3f-9886-8e6d9c5cfef6",
     "source_paper_ids": [
       "openreview:bkUvKPKafQ",
       "acl:2025.findings-emnlp.740",
@@ -3352,10 +3354,10 @@
     ]
   },
   {
-    "gap_id": "d8777b2e-0427-4ead-bdab-6beb59d2ca37",
-    "topic": "Machine Learning",
+    "gap_id": "601421b4-9f65-45e7-9f2d-877ca7664cb5",
+    "topic": "SSMs",
     "title": "Narrow evaluation domains",
-    "description": "Pattern detected across 412 papers: 'Narrow evaluation domains' is a recurring challenge in Machine Learning research. Papers frequently mention this as a limitation or unsolved problem.",
+    "description": "Pattern detected across 412 papers: 'Narrow evaluation domains' is a recurring challenge in SSMs research. Papers frequently mention this as a limitation or unsolved problem.",
     "evidence_paper_ids": [
       "acl:2024.findings-acl.605",
       "cvf:Pal_Domain_Adaptive_Few-Shot_Open-Set_Learning_ICCV_2023_paper.html",
@@ -3370,13 +3372,13 @@
     ],
     "gap_type": "pattern",
     "confidence": 0.9,
-    "starter_idea": "Build a RAG pipeline and compare different chunking and retrieval strategies.",
+    "starter_idea": "Fine-tune a CLIP model on a domain-specific image-caption dataset.",
     "frequency": 412,
     "suggested_projects": [
-      "Build a RAG pipeline and compare different chunking and retrieval strategies.",
-      "Evaluate how knowledge freshness affects LLM answer quality in a RAG setup."
+      "Fine-tune a CLIP model on a domain-specific image-caption dataset.",
+      "Evaluate vision-language models on your own image set."
     ],
-    "id": "d8777b2e-0427-4ead-bdab-6beb59d2ca37",
+    "id": "601421b4-9f65-45e7-9f2d-877ca7664cb5",
     "source_paper_ids": [
       "acl:2024.findings-acl.605",
       "cvf:Pal_Domain_Adaptive_Few-Shot_Open-Set_Learning_ICCV_2023_paper.html",
@@ -3391,7 +3393,7 @@
     ]
   },
   {
-    "gap_id": "c41ab199-934d-406c-8279-ced56ae97a30",
+    "gap_id": "0efb6295-50a8-4982-9a04-5655de4d1570",
     "topic": "Multimodal Learning",
     "title": "Starter idea: Fine-tune a CLIP model on a domain-specific image-caption da…",
     "description": "Beginner-friendly research direction in Multimodal Learning. Based on 375 tracked papers in this area. Idea: Fine-tune a CLIP model on a domain-specific image-caption dataset.",
@@ -3410,7 +3412,7 @@
       "Fine-tune a CLIP model on a domain-specific image-caption dataset.",
       "Evaluate vision-language models on your own image set."
     ],
-    "id": "c41ab199-934d-406c-8279-ced56ae97a30",
+    "id": "0efb6295-50a8-4982-9a04-5655de4d1570",
     "source_paper_ids": [
       "openreview:QiJuMJl0QS",
       "acl:2026.eacl-long.248",
@@ -3420,7 +3422,7 @@
     ]
   },
   {
-    "gap_id": "a0bf3fb7-d88e-4eef-8d8c-10907c3f9adc",
+    "gap_id": "00a28667-8335-45e9-a3f9-3b6b9dbcfc31",
     "topic": "Multimodal Learning",
     "title": "Starter idea: Evaluate vision-language models on your own image set.",
     "description": "Beginner-friendly research direction in Multimodal Learning. Based on 375 tracked papers in this area. Idea: Evaluate vision-language models on your own image set.",
@@ -3439,7 +3441,7 @@
       "Fine-tune a CLIP model on a domain-specific image-caption dataset.",
       "Evaluate vision-language models on your own image set."
     ],
-    "id": "a0bf3fb7-d88e-4eef-8d8c-10907c3f9adc",
+    "id": "00a28667-8335-45e9-a3f9-3b6b9dbcfc31",
     "source_paper_ids": [
       "openreview:QiJuMJl0QS",
       "acl:2026.eacl-long.248",
@@ -3449,7 +3451,7 @@
     ]
   },
   {
-    "gap_id": "2498b9b2-9049-491b-915d-9e75ba97fcd0",
+    "gap_id": "afc0d88c-8750-47d7-bba4-54ac6fcd9d61",
     "topic": "AI Safety & Alignment",
     "title": "Starter idea: Red-team a small open-source LLM with structured adversarial…",
     "description": "Beginner-friendly research direction in AI Safety & Alignment. Based on 365 tracked papers in this area. Idea: Red-team a small open-source LLM with structured adversarial prompts.",
@@ -3468,7 +3470,7 @@
       "Red-team a small open-source LLM with structured adversarial prompts.",
       "Measure refusal rates across different safety-sensitive categories."
     ],
-    "id": "2498b9b2-9049-491b-915d-9e75ba97fcd0",
+    "id": "afc0d88c-8750-47d7-bba4-54ac6fcd9d61",
     "source_paper_ids": [
       "cvf:Wei_FREE_Faster_and_Better_Data-Free_Meta-Learning_CVPR_2024_paper.html",
       "openreview:e2ONKX6qzJ",
@@ -3478,7 +3480,7 @@
     ]
   },
   {
-    "gap_id": "38b07d07-10b4-429d-892b-f89ae1fa86b9",
+    "gap_id": "be0269ee-04e9-4f52-b7e8-b49e7e640b0a",
     "topic": "AI Safety & Alignment",
     "title": "Starter idea: Measure refusal rates across different safety-sensitive cate…",
     "description": "Beginner-friendly research direction in AI Safety & Alignment. Based on 365 tracked papers in this area. Idea: Measure refusal rates across different safety-sensitive categories.",
@@ -3497,7 +3499,7 @@
       "Red-team a small open-source LLM with structured adversarial prompts.",
       "Measure refusal rates across different safety-sensitive categories."
     ],
-    "id": "38b07d07-10b4-429d-892b-f89ae1fa86b9",
+    "id": "be0269ee-04e9-4f52-b7e8-b49e7e640b0a",
     "source_paper_ids": [
       "cvf:Wei_FREE_Faster_and_Better_Data-Free_Meta-Learning_CVPR_2024_paper.html",
       "openreview:e2ONKX6qzJ",
@@ -3507,10 +3509,10 @@
     ]
   },
   {
-    "gap_id": "220f7582-7ddb-493b-8d85-cff808a318c8",
-    "topic": "embeddings",
+    "gap_id": "0a2e07c9-9962-46f5-b63f-d1e427572b29",
+    "topic": "continual learning",
     "title": "Missing low-resource coverage",
-    "description": "Pattern detected across 324 papers: 'Missing low-resource coverage' is a recurring challenge in embeddings research. Papers frequently mention this as a limitation or unsolved problem.",
+    "description": "Pattern detected across 324 papers: 'Missing low-resource coverage' is a recurring challenge in continual learning research. Papers frequently mention this as a limitation or unsolved problem.",
     "evidence_paper_ids": [
       "openreview:TUKt7ag0qq",
       "acl:2024.findings-acl.605",
@@ -3525,13 +3527,13 @@
     ],
     "gap_type": "pattern",
     "confidence": 0.9,
-    "starter_idea": "Build a RAG pipeline and compare different chunking and retrieval strategies.",
+    "starter_idea": "Fine-tune a CLIP model on a domain-specific image-caption dataset.",
     "frequency": 324,
     "suggested_projects": [
-      "Build a RAG pipeline and compare different chunking and retrieval strategies.",
-      "Evaluate how knowledge freshness affects LLM answer quality in a RAG setup."
+      "Fine-tune a CLIP model on a domain-specific image-caption dataset.",
+      "Evaluate vision-language models on your own image set."
     ],
-    "id": "220f7582-7ddb-493b-8d85-cff808a318c8",
+    "id": "0a2e07c9-9962-46f5-b63f-d1e427572b29",
     "source_paper_ids": [
       "openreview:TUKt7ag0qq",
       "acl:2024.findings-acl.605",
@@ -3546,10 +3548,10 @@
     ]
   },
   {
-    "gap_id": "31df275a-a7db-401e-b310-94b45493f792",
-    "topic": "non-stationary MDPs",
+    "gap_id": "49dacc25-2759-4f4e-bef9-52ad805a05f9",
+    "topic": "two-sample testing",
     "title": "Lack of interpretability",
-    "description": "Pattern detected across 324 papers: 'Lack of interpretability' is a recurring challenge in non-stationary MDPs research. Papers frequently mention this as a limitation or unsolved problem.",
+    "description": "Pattern detected across 324 papers: 'Lack of interpretability' is a recurring challenge in two-sample testing research. Papers frequently mention this as a limitation or unsolved problem.",
     "evidence_paper_ids": [
       "openreview:Xlayxj2fWp",
       "openreview:zZ8fgXHkXi",
@@ -3564,13 +3566,13 @@
     ],
     "gap_type": "pattern",
     "confidence": 0.9,
-    "starter_idea": "Build a RAG pipeline and compare different chunking and retrieval strategies.",
+    "starter_idea": "Fine-tune a CLIP model on a domain-specific image-caption dataset.",
     "frequency": 324,
     "suggested_projects": [
-      "Build a RAG pipeline and compare different chunking and retrieval strategies.",
-      "Evaluate how knowledge freshness affects LLM answer quality in a RAG setup."
+      "Fine-tune a CLIP model on a domain-specific image-caption dataset.",
+      "Evaluate vision-language models on your own image set."
     ],
-    "id": "31df275a-a7db-401e-b310-94b45493f792",
+    "id": "49dacc25-2759-4f4e-bef9-52ad805a05f9",
     "source_paper_ids": [
       "openreview:Xlayxj2fWp",
       "openreview:zZ8fgXHkXi",
@@ -3585,7 +3587,7 @@
     ]
   },
   {
-    "gap_id": "0f83f6c5-8888-4581-9bd9-53a8a474918f",
+    "gap_id": "080633af-9d15-41ba-bb58-55c0a5cd65e1",
     "topic": "Code Generation",
     "title": "Starter idea: Evaluate open-source code LLMs on a custom set of algorithmi…",
     "description": "Beginner-friendly research direction in Code Generation. Based on 288 tracked papers in this area. Idea: Evaluate open-source code LLMs on a custom set of algorithmic problems.",
@@ -3604,7 +3606,7 @@
       "Evaluate open-source code LLMs on a custom set of algorithmic problems.",
       "Build a test-case generator to evaluate code correctness automatically."
     ],
-    "id": "0f83f6c5-8888-4581-9bd9-53a8a474918f",
+    "id": "080633af-9d15-41ba-bb58-55c0a5cd65e1",
     "source_paper_ids": [
       "acl:2025.emnlp-main.489",
       "acl:2023.emnlp-main.68",
@@ -3614,7 +3616,7 @@
     ]
   },
   {
-    "gap_id": "e04ffc50-e19a-48bf-9a0d-a3357b07aad5",
+    "gap_id": "306f0719-af4d-4baa-9bbc-699aef502bf9",
     "topic": "Code Generation",
     "title": "Starter idea: Build a test-case generator to evaluate code correctness aut…",
     "description": "Beginner-friendly research direction in Code Generation. Based on 288 tracked papers in this area. Idea: Build a test-case generator to evaluate code correctness automatically.",
@@ -3633,7 +3635,7 @@
       "Evaluate open-source code LLMs on a custom set of algorithmic problems.",
       "Build a test-case generator to evaluate code correctness automatically."
     ],
-    "id": "e04ffc50-e19a-48bf-9a0d-a3357b07aad5",
+    "id": "306f0719-af4d-4baa-9bbc-699aef502bf9",
     "source_paper_ids": [
       "acl:2025.emnlp-main.489",
       "acl:2023.emnlp-main.68",
@@ -3643,7 +3645,7 @@
     ]
   },
   {
-    "gap_id": "b3c9aa0a-50fa-4fae-b3bc-d6d75df6b591",
+    "gap_id": "0ae17ef7-b1b0-4971-864f-107bc5c69142",
     "topic": "Reasoning",
     "title": "Struggle with consistency and verification",
     "description": "struggle with consistency and verification.",
@@ -3741,6 +3743,7 @@
       "acl:2025.acl-long.1128",
       "acl:2025.acl-srw.23",
       "acl:2025.acl-industry.6",
+      "arxiv:2604.15127v1",
       "arxiv:2604.13934v1",
       "arxiv:2604.11402v1",
       "acl:2021.emnlp-main.582",
@@ -3760,7 +3763,6 @@
       "acl:2022.naacl-main.66",
       "acl:2022.emnlp-main.51",
       "acl:2021.findings-emnlp.350",
-      "arxiv:2604.15127v1",
       "acl:2023.findings-acl.629",
       "acl:2023.emnlp-main.908",
       "acl:2023.acl-long.733",
@@ -3781,6 +3783,8 @@
       "arxiv:2604.00696v1",
       "arxiv:2604.13993v1",
       "arxiv:2604.03208v1",
+      "arxiv:2604.14967v1",
+      "arxiv:2604.14550v1",
       "arxiv:2604.13395v1",
       "arxiv:2604.12660v1",
       "arxiv:2604.12379v1",
@@ -3802,8 +3806,8 @@
       "arxiv:2604.10718v1",
       "arxiv:2604.10508v1",
       "arxiv:2604.10449v1",
-      "arxiv:2604.14967v1",
-      "arxiv:2604.14550v1",
+      "arxiv:2604.14896v1",
+      "arxiv:2604.14847v1",
       "arxiv:2604.13010v1",
       "arxiv:2604.12665v1",
       "arxiv:2604.11135v1",
@@ -3846,8 +3850,8 @@
       "arxiv:2604.10500v1",
       "arxiv:2604.11991v1",
       "arxiv:2604.13197v1",
-      "arxiv:2604.14896v1",
-      "arxiv:2604.14847v1",
+      "arxiv:2604.14930v1",
+      "arxiv:2604.14501v1",
       "arxiv:2604.14144v1",
       "arxiv:2604.13942v1",
       "arxiv:2604.13448v1",
@@ -3875,9 +3879,8 @@
       "arxiv:2604.10567v1",
       "arxiv:2604.10493v1",
       "arxiv:2604.13313v1",
-      "arxiv:2604.14930v1",
-      "arxiv:2604.14501v1",
       "arxiv:2604.02171v1",
+      "arxiv:2604.14717v1",
       "arxiv:2604.13654v1",
       "arxiv:2604.12747v1",
       "arxiv:2604.11789v1",
@@ -3886,18 +3889,17 @@
       "arxiv:2604.02640v1",
       "arxiv:2604.02154v1",
       "arxiv:2604.02029v1",
-      "arxiv:2604.11594v1",
-      "arxiv:2604.14717v1"
+      "arxiv:2604.11594v1"
     ],
     "gap_type": "explicit",
     "confidence": 0.8,
-    "starter_idea": "Build a simple tool-using agent and evaluate it on a benchmark task.",
+    "starter_idea": "Fine-tune a CLIP model on a domain-specific image-caption dataset.",
     "frequency": 240,
     "suggested_projects": [
-      "Build a simple tool-using agent and evaluate it on a benchmark task.",
-      "Compare ReAct and plan-then-execute prompting strategies."
+      "Fine-tune a CLIP model on a domain-specific image-caption dataset.",
+      "Evaluate vision-language models on your own image set."
     ],
-    "id": "b3c9aa0a-50fa-4fae-b3bc-d6d75df6b591",
+    "id": "0ae17ef7-b1b0-4971-864f-107bc5c69142",
     "source_paper_ids": [
       "acl:2025.acl-long.1540",
       "openreview:9JCNPFL1f9",
@@ -3992,6 +3994,7 @@
       "acl:2025.acl-long.1128",
       "acl:2025.acl-srw.23",
       "acl:2025.acl-industry.6",
+      "arxiv:2604.15127v1",
       "arxiv:2604.13934v1",
       "arxiv:2604.11402v1",
       "acl:2021.emnlp-main.582",
@@ -4011,7 +4014,6 @@
       "acl:2022.naacl-main.66",
       "acl:2022.emnlp-main.51",
       "acl:2021.findings-emnlp.350",
-      "arxiv:2604.15127v1",
       "acl:2023.findings-acl.629",
       "acl:2023.emnlp-main.908",
       "acl:2023.acl-long.733",
@@ -4032,6 +4034,8 @@
       "arxiv:2604.00696v1",
       "arxiv:2604.13993v1",
       "arxiv:2604.03208v1",
+      "arxiv:2604.14967v1",
+      "arxiv:2604.14550v1",
       "arxiv:2604.13395v1",
       "arxiv:2604.12660v1",
       "arxiv:2604.12379v1",
@@ -4053,8 +4057,8 @@
       "arxiv:2604.10718v1",
       "arxiv:2604.10508v1",
       "arxiv:2604.10449v1",
-      "arxiv:2604.14967v1",
-      "arxiv:2604.14550v1",
+      "arxiv:2604.14896v1",
+      "arxiv:2604.14847v1",
       "arxiv:2604.13010v1",
       "arxiv:2604.12665v1",
       "arxiv:2604.11135v1",
@@ -4097,8 +4101,8 @@
       "arxiv:2604.10500v1",
       "arxiv:2604.11991v1",
       "arxiv:2604.13197v1",
-      "arxiv:2604.14896v1",
-      "arxiv:2604.14847v1",
+      "arxiv:2604.14930v1",
+      "arxiv:2604.14501v1",
       "arxiv:2604.14144v1",
       "arxiv:2604.13942v1",
       "arxiv:2604.13448v1",
@@ -4126,9 +4130,8 @@
       "arxiv:2604.10567v1",
       "arxiv:2604.10493v1",
       "arxiv:2604.13313v1",
-      "arxiv:2604.14930v1",
-      "arxiv:2604.14501v1",
       "arxiv:2604.02171v1",
+      "arxiv:2604.14717v1",
       "arxiv:2604.13654v1",
       "arxiv:2604.12747v1",
       "arxiv:2604.11789v1",
@@ -4137,15 +4140,14 @@
       "arxiv:2604.02640v1",
       "arxiv:2604.02154v1",
       "arxiv:2604.02029v1",
-      "arxiv:2604.11594v1",
-      "arxiv:2604.14717v1"
+      "arxiv:2604.11594v1"
     ]
   },
   {
-    "gap_id": "af8e0a10-49fa-4e79-9dac-1a1425794186",
-    "topic": "Efficient-AI",
+    "gap_id": "8dcd59ba-b05b-4340-b731-2dad907d2635",
+    "topic": "Image Generation",
     "title": "High compute cost",
-    "description": "Pattern detected across 211 papers: 'High compute cost' is a recurring challenge in Efficient-AI research. Papers frequently mention this as a limitation or unsolved problem.",
+    "description": "Pattern detected across 211 papers: 'High compute cost' is a recurring challenge in Image Generation research. Papers frequently mention this as a limitation or unsolved problem.",
     "evidence_paper_ids": [
       "openreview:RJpAz15D0S",
       "acl:2025.acl-long.1225",
@@ -4160,13 +4162,13 @@
     ],
     "gap_type": "pattern",
     "confidence": 0.9,
-    "starter_idea": "Build a RAG pipeline and compare different chunking and retrieval strategies.",
+    "starter_idea": "Fine-tune a CLIP model on a domain-specific image-caption dataset.",
     "frequency": 211,
     "suggested_projects": [
-      "Build a RAG pipeline and compare different chunking and retrieval strategies.",
-      "Evaluate how knowledge freshness affects LLM answer quality in a RAG setup."
+      "Fine-tune a CLIP model on a domain-specific image-caption dataset.",
+      "Evaluate vision-language models on your own image set."
     ],
-    "id": "af8e0a10-49fa-4e79-9dac-1a1425794186",
+    "id": "8dcd59ba-b05b-4340-b731-2dad907d2635",
     "source_paper_ids": [
       "openreview:RJpAz15D0S",
       "acl:2025.acl-long.1225",
@@ -4181,7 +4183,7 @@
     ]
   },
   {
-    "gap_id": "7df83547-592c-44c7-84ff-12822c99625f",
+    "gap_id": "70247d13-6e2a-4393-9f03-ddb38fc2a6dd",
     "topic": "Retrieval-Augmented Generation",
     "title": "Starter idea: Build a RAG pipeline and compare different chunking and retr…",
     "description": "Beginner-friendly research direction in Retrieval-Augmented Generation. Based on 175 tracked papers in this area. Idea: Build a RAG pipeline and compare different chunking and retrieval strategies.",
@@ -4200,7 +4202,7 @@
       "Build a RAG pipeline and compare different chunking and retrieval strategies.",
       "Evaluate how knowledge freshness affects LLM answer quality in a RAG setup."
     ],
-    "id": "7df83547-592c-44c7-84ff-12822c99625f",
+    "id": "70247d13-6e2a-4393-9f03-ddb38fc2a6dd",
     "source_paper_ids": [
       "openreview:bkUvKPKafQ",
       "acl:2025.acl-long.220",
@@ -4210,7 +4212,7 @@
     ]
   },
   {
-    "gap_id": "cc0d1257-b621-45c5-b870-227edb988464",
+    "gap_id": "20f94caf-16ce-4fdc-87c9-d2969824c819",
     "topic": "Retrieval-Augmented Generation",
     "title": "Starter idea: Evaluate how knowledge freshness affects LLM answer quality …",
     "description": "Beginner-friendly research direction in Retrieval-Augmented Generation. Based on 175 tracked papers in this area. Idea: Evaluate how knowledge freshness affects LLM answer quality in a RAG setup.",
@@ -4229,7 +4231,7 @@
       "Build a RAG pipeline and compare different chunking and retrieval strategies.",
       "Evaluate how knowledge freshness affects LLM answer quality in a RAG setup."
     ],
-    "id": "cc0d1257-b621-45c5-b870-227edb988464",
+    "id": "20f94caf-16ce-4fdc-87c9-d2969824c819",
     "source_paper_ids": [
       "openreview:bkUvKPKafQ",
       "acl:2025.acl-long.220",
@@ -4239,10 +4241,10 @@
     ]
   },
   {
-    "gap_id": "9d79294e-28b2-43a3-baed-0743f68b3dff",
-    "topic": "Machine Learning",
+    "gap_id": "2627f723-b60a-44fa-8b11-70077d3dd252",
+    "topic": "SSMs",
     "title": "Missing long-form evaluation",
-    "description": "Pattern detected across 168 papers: 'Missing long-form evaluation' is a recurring challenge in Machine Learning research. Papers frequently mention this as a limitation or unsolved problem.",
+    "description": "Pattern detected across 168 papers: 'Missing long-form evaluation' is a recurring challenge in SSMs research. Papers frequently mention this as a limitation or unsolved problem.",
     "evidence_paper_ids": [
       "openreview:4M9f8VMt2C",
       "acl:2025.acl-long.779",
@@ -4257,13 +4259,13 @@
     ],
     "gap_type": "pattern",
     "confidence": 0.9,
-    "starter_idea": "Build a RAG pipeline and compare different chunking and retrieval strategies.",
+    "starter_idea": "Fine-tune a CLIP model on a domain-specific image-caption dataset.",
     "frequency": 168,
     "suggested_projects": [
-      "Build a RAG pipeline and compare different chunking and retrieval strategies.",
-      "Evaluate how knowledge freshness affects LLM answer quality in a RAG setup."
+      "Fine-tune a CLIP model on a domain-specific image-caption dataset.",
+      "Evaluate vision-language models on your own image set."
     ],
-    "id": "9d79294e-28b2-43a3-baed-0743f68b3dff",
+    "id": "2627f723-b60a-44fa-8b11-70077d3dd252",
     "source_paper_ids": [
       "openreview:4M9f8VMt2C",
       "acl:2025.acl-long.779",
@@ -4278,7 +4280,7 @@
     ]
   },
   {
-    "gap_id": "6ef64aad-aabe-47e1-ab15-1c7ebcadc095",
+    "gap_id": "3c3d6c51-d6c5-46d7-b229-601cd4428a0a",
     "topic": "AI Agents & Tool Use",
     "title": "Starter idea: Build a simple tool-using agent and evaluate it on a benchma…",
     "description": "Beginner-friendly research direction in AI Agents & Tool Use. Based on 130 tracked papers in this area. Idea: Build a simple tool-using agent and evaluate it on a benchmark task.",
@@ -4297,7 +4299,7 @@
       "Build a simple tool-using agent and evaluate it on a benchmark task.",
       "Compare ReAct and plan-then-execute prompting strategies."
     ],
-    "id": "6ef64aad-aabe-47e1-ab15-1c7ebcadc095",
+    "id": "3c3d6c51-d6c5-46d7-b229-601cd4428a0a",
     "source_paper_ids": [
       "acl:2025.acl-long.1354",
       "acl:2025.findings-emnlp.23",
@@ -4307,7 +4309,7 @@
     ]
   },
   {
-    "gap_id": "d39d2779-a1d0-4dde-9a9a-4c4ffac42f89",
+    "gap_id": "922352d8-f7f7-4865-a321-83ae7662cb71",
     "topic": "AI Agents & Tool Use",
     "title": "Starter idea: Compare ReAct and plan-then-execute prompting strategies.",
     "description": "Beginner-friendly research direction in AI Agents & Tool Use. Based on 130 tracked papers in this area. Idea: Compare ReAct and plan-then-execute prompting strategies.",
@@ -4326,7 +4328,7 @@
       "Build a simple tool-using agent and evaluate it on a benchmark task.",
       "Compare ReAct and plan-then-execute prompting strategies."
     ],
-    "id": "d39d2779-a1d0-4dde-9a9a-4c4ffac42f89",
+    "id": "922352d8-f7f7-4865-a321-83ae7662cb71",
     "source_paper_ids": [
       "acl:2025.acl-long.1354",
       "acl:2025.findings-emnlp.23",
@@ -4336,7 +4338,7 @@
     ]
   },
   {
-    "gap_id": "e9ad6934-fd32-4f77-829d-2642aee64663",
+    "gap_id": "4200fac1-da53-4073-8260-4c6d58c21c18",
     "topic": "AI Safety",
     "title": "Fail to cover sufficiently large and diverse sets of jailbreak attacks",
     "description": "fail to cover sufficiently large and diverse sets of jailbreak attacks, leading to the widespread deployment of unsafe LLMs.",
@@ -4402,6 +4404,7 @@
       "arxiv:2604.08461v1",
       "arxiv:2604.07884v1",
       "arxiv:2604.01618v1",
+      "arxiv:2604.14795v1",
       "arxiv:2604.13518v1",
       "arxiv:2604.11552v1",
       "arxiv:2604.09330v1",
@@ -4414,8 +4417,8 @@
       "arxiv:2604.01727v1",
       "arxiv:2604.01598v1",
       "arxiv:2604.10677v1",
-      "arxiv:2604.14795v1",
       "arxiv:2604.01169v1",
+      "arxiv:2604.15121v1",
       "arxiv:2604.12616v1",
       "arxiv:2604.12239v1",
       "arxiv:2604.11689v1",
@@ -4433,9 +4436,8 @@
       "arxiv:2604.01834v1",
       "arxiv:2604.01675v1",
       "arxiv:2604.01479v2",
-      "arxiv:2604.15121v1",
-      "arxiv:2604.06099v1",
       "arxiv:2604.15151v1",
+      "arxiv:2604.06099v1",
       "arxiv:2604.12990v1",
       "arxiv:2604.12255v1",
       "arxiv:2604.11806v1",
@@ -4469,7 +4471,7 @@
       "Red-team a small open-source LLM with structured adversarial prompts.",
       "Measure refusal rates across different safety-sensitive categories."
     ],
-    "id": "e9ad6934-fd32-4f77-829d-2642aee64663",
+    "id": "4200fac1-da53-4073-8260-4c6d58c21c18",
     "source_paper_ids": [
       "openreview:zZ8fgXHkXi",
       "openreview:LQzN6TRFg9",
@@ -4532,6 +4534,7 @@
       "arxiv:2604.08461v1",
       "arxiv:2604.07884v1",
       "arxiv:2604.01618v1",
+      "arxiv:2604.14795v1",
       "arxiv:2604.13518v1",
       "arxiv:2604.11552v1",
       "arxiv:2604.09330v1",
@@ -4544,8 +4547,8 @@
       "arxiv:2604.01727v1",
       "arxiv:2604.01598v1",
       "arxiv:2604.10677v1",
-      "arxiv:2604.14795v1",
       "arxiv:2604.01169v1",
+      "arxiv:2604.15121v1",
       "arxiv:2604.12616v1",
       "arxiv:2604.12239v1",
       "arxiv:2604.11689v1",
@@ -4563,9 +4566,8 @@
       "arxiv:2604.01834v1",
       "arxiv:2604.01675v1",
       "arxiv:2604.01479v2",
-      "arxiv:2604.15121v1",
-      "arxiv:2604.06099v1",
       "arxiv:2604.15151v1",
+      "arxiv:2604.06099v1",
       "arxiv:2604.12990v1",
       "arxiv:2604.12255v1",
       "arxiv:2604.11806v1",
@@ -4593,7 +4595,7 @@
     ]
   },
   {
-    "gap_id": "3ae17121-9faf-47f7-af7a-bd99cd30edc2",
+    "gap_id": "bd415889-5d36-4fb2-8117-cdf39cc04f3b",
     "topic": "Fine-Tuning",
     "title": "Open challenge in Fine-Tuning",
     "description": "fail to fully leverage prior knowledge to facilitate new task learning.",
@@ -4650,6 +4652,7 @@
       "openreview:Q7s8mFWqsx",
       "acl:2025.emnlp-main.666",
       "acl:2025.emnlp-main.886",
+      "arxiv:2604.14648v1",
       "arxiv:2604.10951v1",
       "acl:2026.findings-eacl.314",
       "acl:2026.eacl-industry.40",
@@ -4661,7 +4664,6 @@
       "openreview:ZeaTvXw080",
       "openreview:8KQzoD5XAr",
       "acl:2020.acl-main.197",
-      "arxiv:2604.14648v1",
       "openreview:9k0krNzvlV",
       "acl:2023.findings-emnlp.726",
       "acl:2023.findings-emnlp.842",
@@ -4677,6 +4679,7 @@
       "arxiv:2604.03540v2",
       "arxiv:2604.03476v1",
       "arxiv:2604.00903v1",
+      "arxiv:2604.14769v1",
       "arxiv:2604.13841v1",
       "arxiv:2604.13509v1",
       "arxiv:2604.12765v1",
@@ -4684,7 +4687,6 @@
       "arxiv:2604.10962v1",
       "arxiv:2604.02429v1",
       "arxiv:2604.02009v1",
-      "arxiv:2604.14769v1",
       "arxiv:2604.13826v1",
       "arxiv:2604.09366v1",
       "arxiv:2604.08313v1",
@@ -4717,7 +4719,7 @@
       "Write a blog post explaining the gap and possible directions.",
       "Run an ablation study removing one component of the method."
     ],
-    "id": "3ae17121-9faf-47f7-af7a-bd99cd30edc2",
+    "id": "bd415889-5d36-4fb2-8117-cdf39cc04f3b",
     "source_paper_ids": [
       "openreview:GLWf2fq0bX",
       "openreview:ylhiMfpqkm",
@@ -4771,6 +4773,7 @@
       "openreview:Q7s8mFWqsx",
       "acl:2025.emnlp-main.666",
       "acl:2025.emnlp-main.886",
+      "arxiv:2604.14648v1",
       "arxiv:2604.10951v1",
       "acl:2026.findings-eacl.314",
       "acl:2026.eacl-industry.40",
@@ -4782,7 +4785,6 @@
       "openreview:ZeaTvXw080",
       "openreview:8KQzoD5XAr",
       "acl:2020.acl-main.197",
-      "arxiv:2604.14648v1",
       "openreview:9k0krNzvlV",
       "acl:2023.findings-emnlp.726",
       "acl:2023.findings-emnlp.842",
@@ -4798,6 +4800,7 @@
       "arxiv:2604.03540v2",
       "arxiv:2604.03476v1",
       "arxiv:2604.00903v1",
+      "arxiv:2604.14769v1",
       "arxiv:2604.13841v1",
       "arxiv:2604.13509v1",
       "arxiv:2604.12765v1",
@@ -4805,7 +4808,6 @@
       "arxiv:2604.10962v1",
       "arxiv:2604.02429v1",
       "arxiv:2604.02009v1",
-      "arxiv:2604.14769v1",
       "arxiv:2604.13826v1",
       "arxiv:2604.09366v1",
       "arxiv:2604.08313v1",
@@ -4830,7 +4832,7 @@
     ]
   },
   {
-    "gap_id": "06d31a34-4afb-4881-a792-23956a2f61d9",
+    "gap_id": "1bed434c-adf1-49ce-b0b5-6a7be96b4729",
     "topic": "Transformers",
     "title": "Limitations and advance the utility of np models as general regressors",
     "description": "limitations and advance the utility of NP models as general regressors, we introduce Dimension Agnostic Neural Process (DANP).",
@@ -4893,13 +4895,13 @@
       "arxiv:2604.05515v1",
       "arxiv:2604.13186v1",
       "arxiv:2604.00927v1",
+      "arxiv:2604.14563v1",
       "arxiv:2604.11348v1",
       "arxiv:2604.07994v2",
       "arxiv:2604.06816v2",
       "arxiv:2604.04513v1",
       "arxiv:2604.04086v1",
       "arxiv:2604.02659v1",
-      "arxiv:2604.14563v1",
       "arxiv:2604.13389v1",
       "arxiv:2604.09132v1",
       "arxiv:2604.08045v1",
@@ -4924,7 +4926,7 @@
       "Visualise attention heads on your own text samples.",
       "Compare different positional encoding schemes on a text classification task."
     ],
-    "id": "06d31a34-4afb-4881-a792-23956a2f61d9",
+    "id": "1bed434c-adf1-49ce-b0b5-6a7be96b4729",
     "source_paper_ids": [
       "openreview:uGJxl2odR0",
       "openreview:BfUugGfBE5",
@@ -4984,13 +4986,13 @@
       "arxiv:2604.05515v1",
       "arxiv:2604.13186v1",
       "arxiv:2604.00927v1",
+      "arxiv:2604.14563v1",
       "arxiv:2604.11348v1",
       "arxiv:2604.07994v2",
       "arxiv:2604.06816v2",
       "arxiv:2604.04513v1",
       "arxiv:2604.04086v1",
       "arxiv:2604.02659v1",
-      "arxiv:2604.14563v1",
       "arxiv:2604.13389v1",
       "arxiv:2604.09132v1",
       "arxiv:2604.08045v1",
@@ -5008,7 +5010,7 @@
     ]
   },
   {
-    "gap_id": "eb2983c5-d7a6-47d6-9b48-f06579e568f7",
+    "gap_id": "1876f7f1-6217-4b0c-acbd-650dbba1d33d",
     "topic": "Code Generation & Synthesis",
     "title": "Starter idea: Evaluate open-source code LLMs on a custom set of algorithmi…",
     "description": "Beginner-friendly research direction in Code Generation & Synthesis. Based on 79 tracked papers in this area. Idea: Evaluate open-source code LLMs on a custom set of algorithmic problems.",
@@ -5027,7 +5029,7 @@
       "Evaluate open-source code LLMs on a custom set of algorithmic problems.",
       "Build a test-case generator to evaluate code correctness automatically."
     ],
-    "id": "eb2983c5-d7a6-47d6-9b48-f06579e568f7",
+    "id": "1876f7f1-6217-4b0c-acbd-650dbba1d33d",
     "source_paper_ids": [
       "acl:2025.acl-long.1038",
       "acl:2025.findings-emnlp.268",
@@ -5037,7 +5039,7 @@
     ]
   },
   {
-    "gap_id": "367d9ac2-08d3-4b05-b774-61bda8d0f50d",
+    "gap_id": "b0e9fb31-6788-42e6-88bb-92c18b3c1130",
     "topic": "Code Generation & Synthesis",
     "title": "Starter idea: Build a test-case generator to evaluate code correctness aut…",
     "description": "Beginner-friendly research direction in Code Generation & Synthesis. Based on 79 tracked papers in this area. Idea: Build a test-case generator to evaluate code correctness automatically.",
@@ -5056,7 +5058,7 @@
       "Evaluate open-source code LLMs on a custom set of algorithmic problems.",
       "Build a test-case generator to evaluate code correctness automatically."
     ],
-    "id": "367d9ac2-08d3-4b05-b774-61bda8d0f50d",
+    "id": "b0e9fb31-6788-42e6-88bb-92c18b3c1130",
     "source_paper_ids": [
       "acl:2025.acl-long.1038",
       "acl:2025.findings-emnlp.268",
@@ -5066,7 +5068,7 @@
     ]
   },
   {
-    "gap_id": "1b855a11-c792-4703-a2af-52b1e1388d40",
+    "gap_id": "56bb0ffd-ace0-4f78-8e78-26e8e809dfd8",
     "topic": "Prompting",
     "title": "Limitation",
     "description": "limitation, we propose RelAdapter, a context-aware adapter for few-shot relation learning in KGs designed to enhance the adaptation process in meta-learning.",
@@ -5156,7 +5158,7 @@
       "Write a blog post explaining the gap and possible directions.",
       "Run an ablation study removing one component of the method."
     ],
-    "id": "1b855a11-c792-4703-a2af-52b1e1388d40",
+    "id": "56bb0ffd-ace0-4f78-8e78-26e8e809dfd8",
     "source_paper_ids": [
       "acl:2024.emnlp-main.970",
       "openreview:Z8dr422vtr",
@@ -5235,7 +5237,7 @@
     ]
   },
   {
-    "gap_id": "9afb4de3-837a-497e-a944-ed11241dff96",
+    "gap_id": "f4d0c1b2-be55-4171-a9b0-bbb714603da8",
     "topic": "Evaluation",
     "title": "Difficult to evaluate the effectiveness of the algorithms",
     "description": "difficult to evaluate the effectiveness of the algorithms.",
@@ -5280,11 +5282,11 @@
       "acl:2022.coling-1.173",
       "openreview:spDUv05cEq",
       "acl:2023.acl-long.28",
+      "arxiv:2604.14560v1",
       "arxiv:2604.13522v1",
       "arxiv:2604.08499v1",
       "arxiv:2604.07775v1",
       "arxiv:2604.05794v1",
-      "arxiv:2604.14560v1",
       "arxiv:2604.14004v1",
       "arxiv:2604.10862v1",
       "arxiv:2604.07664v1",
@@ -5307,23 +5309,24 @@
       "arxiv:2604.01870v1",
       "arxiv:2604.13262v1",
       "arxiv:2604.13251v1",
+      "arxiv:2604.15145v1",
       "arxiv:2604.14137v1",
       "arxiv:2604.09505v1",
-      "arxiv:2604.15145v1",
+      "arxiv:2604.14558v1",
       "arxiv:2604.11162v1",
-      "arxiv:2604.03456v1",
-      "arxiv:2604.14558v1"
+      "arxiv:2604.03456v1"
     ],
     "gap_type": "explicit",
     "confidence": 0.8,
-    "starter_idea": "Train a classifier on a small custom dataset using transfer learning.",
+    "starter_idea": "Reproduce the paper's baseline experiment.",
     "frequency": 73,
     "suggested_projects": [
-      "Train a classifier on a small custom dataset using transfer learning.",
-      "Implement data augmentation techniques and measure their impact.",
-      "Reproduce a CIFAR-10 baseline with a modern architecture."
+      "Reproduce the paper's baseline experiment.",
+      "Apply the method to a new domain dataset.",
+      "Write a blog post explaining the gap and possible directions.",
+      "Run an ablation study removing one component of the method."
     ],
-    "id": "9afb4de3-837a-497e-a944-ed11241dff96",
+    "id": "f4d0c1b2-be55-4171-a9b0-bbb714603da8",
     "source_paper_ids": [
       "openreview:FtX6oAW7Dd",
       "acl:2025.emnlp-main.907",
@@ -5365,11 +5368,11 @@
       "acl:2022.coling-1.173",
       "openreview:spDUv05cEq",
       "acl:2023.acl-long.28",
+      "arxiv:2604.14560v1",
       "arxiv:2604.13522v1",
       "arxiv:2604.08499v1",
       "arxiv:2604.07775v1",
       "arxiv:2604.05794v1",
-      "arxiv:2604.14560v1",
       "arxiv:2604.14004v1",
       "arxiv:2604.10862v1",
       "arxiv:2604.07664v1",
@@ -5392,16 +5395,16 @@
       "arxiv:2604.01870v1",
       "arxiv:2604.13262v1",
       "arxiv:2604.13251v1",
+      "arxiv:2604.15145v1",
       "arxiv:2604.14137v1",
       "arxiv:2604.09505v1",
-      "arxiv:2604.15145v1",
+      "arxiv:2604.14558v1",
       "arxiv:2604.11162v1",
-      "arxiv:2604.03456v1",
-      "arxiv:2604.14558v1"
+      "arxiv:2604.03456v1"
     ]
   },
   {
-    "gap_id": "926965fa-fe45-4c0c-bbd0-3f8b197fb257",
+    "gap_id": "48aa48a8-9306-4fa0-a69f-ac29d610e461",
     "topic": "Multimodal",
     "title": "Limitations in distinguishing summaries from advanced mllms",
     "description": "limitations in distinguishing summaries from advanced MLLMs and their susceptibility to various bias.",
@@ -5455,9 +5458,9 @@
       "openreview:eUcyIe1AzY",
       "arxiv:2604.05748v1",
       "arxiv:2604.12356v1",
+      "arxiv:2604.14630v1",
       "arxiv:2604.07763v1",
       "arxiv:2604.10485v1",
-      "arxiv:2604.14630v1",
       "arxiv:2604.08074v1",
       "arxiv:2604.07786v1",
       "arxiv:2604.05007v1",
@@ -5487,7 +5490,7 @@
       "Fine-tune a CLIP model on a domain-specific image-caption dataset.",
       "Evaluate vision-language models on your own image set."
     ],
-    "id": "926965fa-fe45-4c0c-bbd0-3f8b197fb257",
+    "id": "48aa48a8-9306-4fa0-a69f-ac29d610e461",
     "source_paper_ids": [
       "acl:2025.findings-emnlp.794",
       "openreview:o3pJU5QCtv",
@@ -5538,9 +5541,9 @@
       "openreview:eUcyIe1AzY",
       "arxiv:2604.05748v1",
       "arxiv:2604.12356v1",
+      "arxiv:2604.14630v1",
       "arxiv:2604.07763v1",
       "arxiv:2604.10485v1",
-      "arxiv:2604.14630v1",
       "arxiv:2604.08074v1",
       "arxiv:2604.07786v1",
       "arxiv:2604.05007v1",
@@ -5564,7 +5567,7 @@
     ]
   },
   {
-    "gap_id": "ea73f9cd-801f-432f-94e8-994d84a33c3e",
+    "gap_id": "e6d56979-2820-450e-8ea8-8e76d5116bf9",
     "topic": "Info Extraction",
     "title": "Challenging to deal with novel privacy attributes",
     "description": "challenging to deal with novel privacy attributes and novel privacy attack models that are unavailable during the training phase.",
@@ -5617,8 +5620,8 @@
       "acl:2023.emnlp-main.829",
       "acl:2023.acl-long.607",
       "acl:2023.acl-long.801",
-      "arxiv:2604.10601v1",
       "arxiv:2604.14598v1",
+      "arxiv:2604.10601v1",
       "arxiv:2604.01315v1",
       "arxiv:2604.13853v1",
       "arxiv:2604.09484v1",
@@ -5651,7 +5654,7 @@
       "Write a blog post explaining the gap and possible directions.",
       "Run an ablation study removing one component of the method."
     ],
-    "id": "ea73f9cd-801f-432f-94e8-994d84a33c3e",
+    "id": "e6d56979-2820-450e-8ea8-8e76d5116bf9",
     "source_paper_ids": [
       "openreview:JYUN0vYjh9",
       "openreview:BqtoARyz7Y",
@@ -5701,8 +5704,8 @@
       "acl:2023.emnlp-main.829",
       "acl:2023.acl-long.607",
       "acl:2023.acl-long.801",
-      "arxiv:2604.10601v1",
       "arxiv:2604.14598v1",
+      "arxiv:2604.10601v1",
       "arxiv:2604.01315v1",
       "arxiv:2604.13853v1",
       "arxiv:2604.09484v1",
@@ -5727,7 +5730,7 @@
     ]
   },
   {
-    "gap_id": "6ffb0d6f-920c-4b5d-ad00-887f7be76ef0",
+    "gap_id": "805b8d93-9093-4f13-b50b-9202231b80b5",
     "topic": "RL",
     "title": "Limitation by learning two policies: one to solely explore",
     "description": "limitation by learning two policies: one to solely explore, and one to solely exploit.",
@@ -5784,18 +5787,18 @@
       "arxiv:2604.07072v1",
       "arxiv:2604.02728v1",
       "arxiv:2604.14465v1",
-      "arxiv:2604.11131v1",
-      "arxiv:2604.08960v1",
-      "arxiv:2604.04808v1",
       "arxiv:2604.15289v1",
       "arxiv:2604.14834v1",
       "arxiv:2604.14725v1",
+      "arxiv:2604.11131v1",
+      "arxiv:2604.08960v1",
+      "arxiv:2604.04808v1",
+      "arxiv:2604.14986v1",
       "arxiv:2604.07224v1",
       "arxiv:2604.07059v1",
       "arxiv:2604.05394v1",
-      "arxiv:2604.14986v1",
-      "arxiv:2604.07672v1",
-      "arxiv:2604.15201v1"
+      "arxiv:2604.15201v1",
+      "arxiv:2604.07672v1"
     ],
     "gap_type": "explicit",
     "confidence": 0.8,
@@ -5806,7 +5809,7 @@
       "Add reward shaping to reduce sample inefficiency on a gridworld task.",
       "Compare PPO and REINFORCE on a continuous-action environment."
     ],
-    "id": "6ffb0d6f-920c-4b5d-ad00-887f7be76ef0",
+    "id": "805b8d93-9093-4f13-b50b-9202231b80b5",
     "source_paper_ids": [
       "openreview:AhjTu2aiiW",
       "openreview:Rs6pzz21U4",
@@ -5860,25 +5863,25 @@
       "arxiv:2604.07072v1",
       "arxiv:2604.02728v1",
       "arxiv:2604.14465v1",
-      "arxiv:2604.11131v1",
-      "arxiv:2604.08960v1",
-      "arxiv:2604.04808v1",
       "arxiv:2604.15289v1",
       "arxiv:2604.14834v1",
       "arxiv:2604.14725v1",
+      "arxiv:2604.11131v1",
+      "arxiv:2604.08960v1",
+      "arxiv:2604.04808v1",
+      "arxiv:2604.14986v1",
       "arxiv:2604.07224v1",
       "arxiv:2604.07059v1",
       "arxiv:2604.05394v1",
-      "arxiv:2604.14986v1",
-      "arxiv:2604.07672v1",
-      "arxiv:2604.15201v1"
+      "arxiv:2604.15201v1",
+      "arxiv:2604.07672v1"
     ]
   },
   {
-    "gap_id": "273f6c53-6b33-4441-b2a2-a21016fa6a9c",
-    "topic": "most exciting inputs",
+    "gap_id": "a32bb796-f368-4bf5-9f1f-49009db86c8a",
+    "topic": "continual learning",
     "title": "Benchmark overfitting",
-    "description": "Pattern detected across 62 papers: 'Benchmark overfitting' is a recurring challenge in most exciting inputs research. Papers frequently mention this as a limitation or unsolved problem.",
+    "description": "Pattern detected across 62 papers: 'Benchmark overfitting' is a recurring challenge in continual learning research. Papers frequently mention this as a limitation or unsolved problem.",
     "evidence_paper_ids": [
       "acl:2021.naacl-main.206",
       "openreview:t8qcGXaepr",
@@ -5893,13 +5896,13 @@
     ],
     "gap_type": "pattern",
     "confidence": 0.9,
-    "starter_idea": "Train a small diffusion model on a custom image dataset (e.g. 64x64 icons).",
+    "starter_idea": "Fine-tune a CLIP model on a domain-specific image-caption dataset.",
     "frequency": 62,
     "suggested_projects": [
-      "Train a small diffusion model on a custom image dataset (e.g. 64x64 icons).",
-      "Evaluate how conditioning signal quality affects generation diversity."
+      "Fine-tune a CLIP model on a domain-specific image-caption dataset.",
+      "Evaluate vision-language models on your own image set."
     ],
-    "id": "273f6c53-6b33-4441-b2a2-a21016fa6a9c",
+    "id": "a32bb796-f368-4bf5-9f1f-49009db86c8a",
     "source_paper_ids": [
       "acl:2021.naacl-main.206",
       "openreview:t8qcGXaepr",
@@ -5914,7 +5917,7 @@
     ]
   },
   {
-    "gap_id": "0f9613df-fe63-4330-b289-32da78af8dc4",
+    "gap_id": "fd17f470-35ed-44d6-86f9-fa3c95b1ea12",
     "topic": "Diffusion",
     "title": "Open question whether it can be extended to visual rl",
     "description": "open question whether it can be extended to visual RL.",
@@ -5945,6 +5948,7 @@
       "openreview:0FK6tzqV76",
       "openreview:ZK1LoTo10R",
       "openreview:si37wk8U5D",
+      "arxiv:2604.14698v1",
       "openreview:vieIamY2Gi",
       "openreview:1moStpWGUj",
       "openreview:7rm3OcASkg",
@@ -5954,7 +5958,6 @@
       "openreview:2XkTz7gdpc",
       "openreview:OrtN9hPP7V",
       "acl:2025.acl-long.565",
-      "arxiv:2604.14698v1",
       "arxiv:2604.01693v1",
       "openreview:84WmbzikPP",
       "openreview:kRBQwlkFSP",
@@ -5969,11 +5972,11 @@
       "arxiv:2604.08088v1",
       "arxiv:2604.05700v1",
       "arxiv:2604.01666v1",
+      "arxiv:2604.14790v1",
+      "arxiv:2604.14613v1",
       "arxiv:2604.09058v1",
       "arxiv:2604.08357v2",
       "arxiv:2604.06133v1",
-      "arxiv:2604.14790v1",
-      "arxiv:2604.14613v1",
       "arxiv:2604.09106v1",
       "arxiv:2604.02889v1",
       "arxiv:2604.02447v1"
@@ -5986,7 +5989,7 @@
       "Train a small diffusion model on a custom image dataset (e.g. 64x64 icons).",
       "Evaluate how conditioning signal quality affects generation diversity."
     ],
-    "id": "0f9613df-fe63-4330-b289-32da78af8dc4",
+    "id": "fd17f470-35ed-44d6-86f9-fa3c95b1ea12",
     "source_paper_ids": [
       "openreview:MOFwt8OeXr",
       "openreview:vWR3KuiQur",
@@ -6014,6 +6017,7 @@
       "openreview:0FK6tzqV76",
       "openreview:ZK1LoTo10R",
       "openreview:si37wk8U5D",
+      "arxiv:2604.14698v1",
       "openreview:vieIamY2Gi",
       "openreview:1moStpWGUj",
       "openreview:7rm3OcASkg",
@@ -6023,7 +6027,6 @@
       "openreview:2XkTz7gdpc",
       "openreview:OrtN9hPP7V",
       "acl:2025.acl-long.565",
-      "arxiv:2604.14698v1",
       "arxiv:2604.01693v1",
       "openreview:84WmbzikPP",
       "openreview:kRBQwlkFSP",
@@ -6038,18 +6041,18 @@
       "arxiv:2604.08088v1",
       "arxiv:2604.05700v1",
       "arxiv:2604.01666v1",
+      "arxiv:2604.14790v1",
+      "arxiv:2604.14613v1",
       "arxiv:2604.09058v1",
       "arxiv:2604.08357v2",
       "arxiv:2604.06133v1",
-      "arxiv:2604.14790v1",
-      "arxiv:2604.14613v1",
       "arxiv:2604.09106v1",
       "arxiv:2604.02889v1",
       "arxiv:2604.02447v1"
     ]
   },
   {
-    "gap_id": "0262f7c7-fec3-4e52-b888-d6baa16fe00b",
+    "gap_id": "448a7254-90c6-41b0-a1a6-2be4507d7482",
     "topic": "Hallucination",
     "title": "Open challenge in Hallucination",
     "description": "fails to erase the interconnected knowledge it should remove or unintentionally erases irrelevant knowledge.",
@@ -6097,10 +6100,10 @@
       "arxiv:2604.04662v1",
       "arxiv:2604.00909v2",
       "arxiv:2604.10789v1",
+      "arxiv:2604.14548v1",
       "arxiv:2604.14062v1",
       "arxiv:2604.01001v1",
       "arxiv:2604.00829v2",
-      "arxiv:2604.14548v1",
       "arxiv:2604.12440v1",
       "arxiv:2604.04681v1",
       "arxiv:2604.14025v1",
@@ -6116,7 +6119,7 @@
       "Write a blog post explaining the gap and possible directions.",
       "Run an ablation study removing one component of the method."
     ],
-    "id": "0262f7c7-fec3-4e52-b888-d6baa16fe00b",
+    "id": "448a7254-90c6-41b0-a1a6-2be4507d7482",
     "source_paper_ids": [
       "acl:2025.emnlp-main.657",
       "openreview:S4YRCLbUK1",
@@ -6161,10 +6164,10 @@
       "arxiv:2604.04662v1",
       "arxiv:2604.00909v2",
       "arxiv:2604.10789v1",
+      "arxiv:2604.14548v1",
       "arxiv:2604.14062v1",
       "arxiv:2604.01001v1",
       "arxiv:2604.00829v2",
-      "arxiv:2604.14548v1",
       "arxiv:2604.12440v1",
       "arxiv:2604.04681v1",
       "arxiv:2604.14025v1",
@@ -6172,7 +6175,7 @@
     ]
   },
   {
-    "gap_id": "597941fa-fa88-43cb-9181-84593b74f956",
+    "gap_id": "1e72c6ff-d6dd-471f-b763-cb1c36b423fd",
     "topic": "Self-Supervised",
     "title": "Limitations",
     "description": "limitations, we propose ``CodeT5+'', a family of encoder-decoder LLMs for code in which component modules can be flexibly combined to suit a wide range of code tasks.",
@@ -6235,7 +6238,7 @@
       "Implement data augmentation techniques and measure their impact.",
       "Reproduce a CIFAR-10 baseline with a modern architecture."
     ],
-    "id": "597941fa-fa88-43cb-9181-84593b74f956",
+    "id": "1e72c6ff-d6dd-471f-b763-cb1c36b423fd",
     "source_paper_ids": [
       "acl:2023.emnlp-main.68",
       "openreview:jvEbQBxd8X",
@@ -6288,7 +6291,7 @@
     ]
   },
   {
-    "gap_id": "70fb2b68-d6d1-4621-a37f-0a0e5763eb8f",
+    "gap_id": "5aac5e4c-c080-4baa-94e8-25d2ee7225e8",
     "topic": "3D Vision",
     "title": "Open challenge in 3D Vision",
     "description": "fail to model these 3D non-rigid deformations caused by varied actions.",
@@ -6324,12 +6327,12 @@
       "openreview:XNA3Mnnbvb",
       "arxiv:2604.11685v1",
       "arxiv:2604.09324v1",
+      "arxiv:2604.14782v1",
       "arxiv:2604.08760v1",
       "arxiv:2604.05402v1",
       "arxiv:2604.10573v1",
       "arxiv:2604.11983v1",
       "arxiv:2604.13333v1",
-      "arxiv:2604.14782v1",
       "arxiv:2604.02586v1",
       "arxiv:2604.07728v1",
       "arxiv:2604.05780v1",
@@ -6348,7 +6351,7 @@
       "Implement data augmentation techniques and measure their impact.",
       "Reproduce a CIFAR-10 baseline with a modern architecture."
     ],
-    "id": "70fb2b68-d6d1-4621-a37f-0a0e5763eb8f",
+    "id": "5aac5e4c-c080-4baa-94e8-25d2ee7225e8",
     "source_paper_ids": [
       "openreview:pqeWzZTrZY",
       "openreview:hJIEtJlvhL",
@@ -6381,12 +6384,12 @@
       "openreview:XNA3Mnnbvb",
       "arxiv:2604.11685v1",
       "arxiv:2604.09324v1",
+      "arxiv:2604.14782v1",
       "arxiv:2604.08760v1",
       "arxiv:2604.05402v1",
       "arxiv:2604.10573v1",
       "arxiv:2604.11983v1",
       "arxiv:2604.13333v1",
-      "arxiv:2604.14782v1",
       "arxiv:2604.02586v1",
       "arxiv:2604.07728v1",
       "arxiv:2604.05780v1",
@@ -6398,7 +6401,7 @@
     ]
   },
   {
-    "gap_id": "f919ff65-ed87-4871-887c-c12abb304f18",
+    "gap_id": "f8fa37f6-48a1-44db-bf30-e0a05e86183b",
     "topic": "Robotics",
     "title": "Struggle with novel, unseen ones due to variability",
     "description": "struggle with novel, unseen ones due to variability.",
@@ -6432,6 +6435,9 @@
       "arxiv:2604.04055v1",
       "arxiv:2604.00428v1",
       "arxiv:2604.10579v1",
+      "arxiv:2604.15168v1",
+      "arxiv:2604.14914v1",
+      "arxiv:2604.14545v1",
       "arxiv:2604.05226v1",
       "arxiv:2604.02706v1",
       "arxiv:2604.02256v1",
@@ -6439,9 +6445,6 @@
       "arxiv:2604.01776v1",
       "arxiv:2604.00752v1",
       "arxiv:2604.13325v1",
-      "arxiv:2604.15168v1",
-      "arxiv:2604.14914v1",
-      "arxiv:2604.14545v1",
       "arxiv:2604.12857v1",
       "arxiv:2604.12293v1",
       "arxiv:2604.05260v1",
@@ -6457,7 +6460,7 @@
       "Write a blog post explaining the gap and possible directions.",
       "Run an ablation study removing one component of the method."
     ],
-    "id": "f919ff65-ed87-4871-887c-c12abb304f18",
+    "id": "f8fa37f6-48a1-44db-bf30-e0a05e86183b",
     "source_paper_ids": [
       "openreview:qPzYF2EpXb",
       "openreview:qhkEOCcVX9",
@@ -6488,6 +6491,9 @@
       "arxiv:2604.04055v1",
       "arxiv:2604.00428v1",
       "arxiv:2604.10579v1",
+      "arxiv:2604.15168v1",
+      "arxiv:2604.14914v1",
+      "arxiv:2604.14545v1",
       "arxiv:2604.05226v1",
       "arxiv:2604.02706v1",
       "arxiv:2604.02256v1",
@@ -6495,9 +6501,6 @@
       "arxiv:2604.01776v1",
       "arxiv:2604.00752v1",
       "arxiv:2604.13325v1",
-      "arxiv:2604.15168v1",
-      "arxiv:2604.14914v1",
-      "arxiv:2604.14545v1",
       "arxiv:2604.12857v1",
       "arxiv:2604.12293v1",
       "arxiv:2604.05260v1",
@@ -6505,7 +6508,7 @@
     ]
   },
   {
-    "gap_id": "b0213eb2-9992-4b55-828a-4998f3e716ba",
+    "gap_id": "670e1dc7-3d43-427c-beb2-822d2d66f6b6",
     "topic": "VLMs",
     "title": "Open challenge in VLMs",
     "description": "limitations due to the poor image reconstruction quality of their discrete tokenizers and the prohibitive training costs associated with generating 1024px images.",
@@ -6559,7 +6562,7 @@
       "Write a blog post explaining the gap and possible directions.",
       "Run an ablation study removing one component of the method."
     ],
-    "id": "b0213eb2-9992-4b55-828a-4998f3e716ba",
+    "id": "670e1dc7-3d43-427c-beb2-822d2d66f6b6",
     "source_paper_ids": [
       "openreview:q5sOv4xQe4",
       "openreview:juuyW8B8ig",
@@ -6602,7 +6605,7 @@
     ]
   },
   {
-    "gap_id": "a4f9f984-f145-4429-abad-2730da628fca",
+    "gap_id": "dca3277f-9abe-4892-88f6-5dc10b534af0",
     "topic": "NLP",
     "title": "Open challenge in NLP",
     "description": "limitations by enabling the use of smaller models for online tasks while still benefiting from the performance of larger models offline.",
@@ -6638,21 +6641,22 @@
       "acl:2023.acl-long.762",
       "acl:2023.acl-long.787",
       "arxiv:2604.05192v1",
-      "arxiv:2604.12442v1",
       "arxiv:2604.15097v1",
+      "arxiv:2604.12442v1",
+      "arxiv:2604.09008v1",
       "arxiv:2604.04542v1"
     ],
     "gap_type": "explicit",
     "confidence": 0.8,
     "starter_idea": "Reproduce the paper's baseline experiment.",
-    "frequency": 34,
+    "frequency": 35,
     "suggested_projects": [
       "Reproduce the paper's baseline experiment.",
       "Apply the method to a new domain dataset.",
       "Write a blog post explaining the gap and possible directions.",
       "Run an ablation study removing one component of the method."
     ],
-    "id": "a4f9f984-f145-4429-abad-2730da628fca",
+    "id": "dca3277f-9abe-4892-88f6-5dc10b534af0",
     "source_paper_ids": [
       "acl:2025.acl-long.1237",
       "acl:2024.emnlp-industry.29",
@@ -6685,13 +6689,14 @@
       "acl:2023.acl-long.762",
       "acl:2023.acl-long.787",
       "arxiv:2604.05192v1",
-      "arxiv:2604.12442v1",
       "arxiv:2604.15097v1",
+      "arxiv:2604.12442v1",
+      "arxiv:2604.09008v1",
       "arxiv:2604.04542v1"
     ]
   },
   {
-    "gap_id": "ec3a963a-613d-4f6b-8c04-00266d48c195",
+    "gap_id": "11b37bc7-b772-4196-9370-fc89252271d3",
     "topic": "Object Detection",
     "title": "Fail to accurately predict the shape of the unknown classes",
     "description": "fail to accurately predict the shape of the unknown classes.",
@@ -6725,8 +6730,8 @@
       "arxiv:2604.01589v1",
       "arxiv:2604.01550v1",
       "arxiv:2604.08711v1",
-      "arxiv:2604.03317v2",
       "arxiv:2604.14720v1",
+      "arxiv:2604.03317v2",
       "arxiv:2604.08868v1",
       "arxiv:2604.03839v1",
       "arxiv:2604.03176v1"
@@ -6740,7 +6745,7 @@
       "Implement data augmentation techniques and measure their impact.",
       "Reproduce a CIFAR-10 baseline with a modern architecture."
     ],
-    "id": "ec3a963a-613d-4f6b-8c04-00266d48c195",
+    "id": "11b37bc7-b772-4196-9370-fc89252271d3",
     "source_paper_ids": [
       "cvf:Choe_Open-Set_Domain_Adaptation_for_Semantic_Segmentation_CVPR_2024_paper.html",
       "openreview:jd5GokdySz",
@@ -6771,15 +6776,15 @@
       "arxiv:2604.01589v1",
       "arxiv:2604.01550v1",
       "arxiv:2604.08711v1",
-      "arxiv:2604.03317v2",
       "arxiv:2604.14720v1",
+      "arxiv:2604.03317v2",
       "arxiv:2604.08868v1",
       "arxiv:2604.03839v1",
       "arxiv:2604.03176v1"
     ]
   },
   {
-    "gap_id": "ecff639d-cd9e-4beb-98ee-54ef568ae2bf",
+    "gap_id": "bbd8867d-9968-458e-a10b-a957f7f4d94d",
     "topic": "Text-to-Image",
     "title": "Open challenge in Text-to-Image",
     "description": "struggle with producing high-quality results or necessitate per-object optimization in such few-view settings due to the insufficient information provided.",
@@ -6824,7 +6829,7 @@
       "Write a blog post explaining the gap and possible directions.",
       "Run an ablation study removing one component of the method."
     ],
-    "id": "ecff639d-cd9e-4beb-98ee-54ef568ae2bf",
+    "id": "bbd8867d-9968-458e-a10b-a957f7f4d94d",
     "source_paper_ids": [
       "openreview:sZNBYvunEr",
       "openreview:zKlFXV87Pp",
@@ -6858,7 +6863,83 @@
     ]
   },
   {
-    "gap_id": "c582247a-d7e0-4a7a-a26f-7bd0c4201bd1",
+    "gap_id": "19588c0b-3029-456b-b687-56baa8cabfd2",
+    "topic": "Computer Vision",
+    "title": "Difficult to replicate highly popular styles",
+    "description": "difficult to replicate highly popular styles, such as cyberpunk, failing to achieve effects like realistic LED emissions.",
+    "evidence_paper_ids": [
+      "arxiv:2604.11006v1",
+      "arxiv:2604.06883v1",
+      "arxiv:2604.04136v1",
+      "arxiv:2604.01603v1",
+      "arxiv:2604.08047v1",
+      "arxiv:2604.11332v1",
+      "arxiv:2604.13856v1",
+      "arxiv:2604.12923v1",
+      "arxiv:2604.12856v1",
+      "arxiv:2604.07477v1",
+      "arxiv:2604.06939v1",
+      "arxiv:2604.13294v1",
+      "arxiv:2604.13918v1",
+      "arxiv:2604.13688v1",
+      "arxiv:2604.11444v1",
+      "arxiv:2604.04707v1",
+      "arxiv:2604.13028v1",
+      "arxiv:2604.08924v1",
+      "arxiv:2604.06467v1",
+      "arxiv:2604.14800v1",
+      "arxiv:2604.12273v1",
+      "arxiv:2604.09018v1",
+      "arxiv:2604.04477v1",
+      "arxiv:2604.03353v1",
+      "arxiv:2604.05877v1",
+      "arxiv:2604.07803v1",
+      "arxiv:2604.07656v1",
+      "arxiv:2604.10765v1"
+    ],
+    "gap_type": "explicit",
+    "confidence": 0.8,
+    "starter_idea": "Train a classifier on a small custom dataset using transfer learning.",
+    "frequency": 28,
+    "suggested_projects": [
+      "Train a classifier on a small custom dataset using transfer learning.",
+      "Implement data augmentation techniques and measure their impact.",
+      "Reproduce a CIFAR-10 baseline with a modern architecture."
+    ],
+    "id": "19588c0b-3029-456b-b687-56baa8cabfd2",
+    "source_paper_ids": [
+      "arxiv:2604.11006v1",
+      "arxiv:2604.06883v1",
+      "arxiv:2604.04136v1",
+      "arxiv:2604.01603v1",
+      "arxiv:2604.08047v1",
+      "arxiv:2604.11332v1",
+      "arxiv:2604.13856v1",
+      "arxiv:2604.12923v1",
+      "arxiv:2604.12856v1",
+      "arxiv:2604.07477v1",
+      "arxiv:2604.06939v1",
+      "arxiv:2604.13294v1",
+      "arxiv:2604.13918v1",
+      "arxiv:2604.13688v1",
+      "arxiv:2604.11444v1",
+      "arxiv:2604.04707v1",
+      "arxiv:2604.13028v1",
+      "arxiv:2604.08924v1",
+      "arxiv:2604.06467v1",
+      "arxiv:2604.14800v1",
+      "arxiv:2604.12273v1",
+      "arxiv:2604.09018v1",
+      "arxiv:2604.04477v1",
+      "arxiv:2604.03353v1",
+      "arxiv:2604.05877v1",
+      "arxiv:2604.07803v1",
+      "arxiv:2604.07656v1",
+      "arxiv:2604.10765v1"
+    ]
+  },
+  {
+    "gap_id": "d847d84a-d844-4958-81c3-b456c6a4da6b",
     "topic": "Fairness & Ethics",
     "title": "Challenging to effectively",
     "description": "challenging to effectively and efficiently exploit partially directed acyclic graphs (PDAGs) to achieve interventional fairness.",
@@ -6901,7 +6982,7 @@
       "Write a blog post explaining the gap and possible directions.",
       "Run an ablation study removing one component of the method."
     ],
-    "id": "c582247a-d7e0-4a7a-a26f-7bd0c4201bd1",
+    "id": "d847d84a-d844-4958-81c3-b456c6a4da6b",
     "source_paper_ids": [
       "openreview:NhyDfZXjQX",
       "openreview:uDXFOurrHM",
@@ -6933,7 +7014,7 @@
     ]
   },
   {
-    "gap_id": "1cc9f07c-eda6-4219-b09b-6500e222fb87",
+    "gap_id": "e3ad75e1-79de-4b46-b9d6-ed32dfb1ed14",
     "topic": "SSMs",
     "title": "Fail to deliver good performance",
     "description": "fail to deliver good performance, even with extensive fine-tuning.",
@@ -6957,11 +7038,11 @@
       "arxiv:2604.04395v1",
       "arxiv:2604.13426v1",
       "arxiv:2604.08435v1",
+      "arxiv:2604.14811v1",
       "arxiv:2604.11709v1",
       "arxiv:2604.03650v1",
-      "arxiv:2604.14811v1",
-      "arxiv:2604.00601v1",
       "arxiv:2604.14526v1",
+      "arxiv:2604.00601v1",
       "arxiv:2604.05923v1",
       "arxiv:2604.02903v1",
       "arxiv:2604.12437v1"
@@ -6975,7 +7056,7 @@
       "Visualise attention heads on your own text samples.",
       "Compare different positional encoding schemes on a text classification task."
     ],
-    "id": "1cc9f07c-eda6-4219-b09b-6500e222fb87",
+    "id": "e3ad75e1-79de-4b46-b9d6-ed32dfb1ed14",
     "source_paper_ids": [
       "openreview:eWiGn0Fcdx",
       "acl:2024.emnlp-main.541",
@@ -6996,18 +7077,18 @@
       "arxiv:2604.04395v1",
       "arxiv:2604.13426v1",
       "arxiv:2604.08435v1",
+      "arxiv:2604.14811v1",
       "arxiv:2604.11709v1",
       "arxiv:2604.03650v1",
-      "arxiv:2604.14811v1",
-      "arxiv:2604.00601v1",
       "arxiv:2604.14526v1",
+      "arxiv:2604.00601v1",
       "arxiv:2604.05923v1",
       "arxiv:2604.02903v1",
       "arxiv:2604.12437v1"
     ]
   },
   {
-    "gap_id": "6aa0e06d-4fe1-4568-9b70-d60d452ffb5c",
+    "gap_id": "42dd975e-7e8a-47b4-ab89-0e986f446b6f",
     "topic": "GNNs",
     "title": "Struggle with increasingly large-scale",
     "description": "struggle with increasingly large-scale, imbalanced, and noisy datasets, lacking a unified dataset pruning solution.",
@@ -7048,7 +7129,7 @@
       "Add reward shaping to reduce sample inefficiency on a gridworld task.",
       "Compare PPO and REINFORCE on a continuous-action environment."
     ],
-    "id": "6aa0e06d-4fe1-4568-9b70-d60d452ffb5c",
+    "id": "42dd975e-7e8a-47b4-ab89-0e986f446b6f",
     "source_paper_ids": [
       "openreview:O97BzlN9Wh",
       "openreview:UlJcZoawgU",
@@ -7079,7 +7160,7 @@
     ]
   },
   {
-    "gap_id": "f4abecd0-bdf5-4a38-884f-462518ff97fe",
+    "gap_id": "57212d1d-6936-485c-9dab-f827cc857206",
     "topic": "Biomedical AI",
     "title": "Fail to represent substructures beyond their known motif set",
     "description": "fail to represent substructures beyond their known motif set, posing a fundamental limitation for discovering novel compounds.",
@@ -7102,8 +7183,8 @@
       "arxiv:2604.09450v1",
       "arxiv:2604.11305v1",
       "arxiv:2604.03564v1",
-      "arxiv:2604.03197v1",
       "arxiv:2604.14534v1",
+      "arxiv:2604.03197v1",
       "arxiv:2604.03478v1",
       "arxiv:2604.13951v1",
       "arxiv:2604.11640v1",
@@ -7119,7 +7200,7 @@
       "Write a blog post explaining the gap and possible directions.",
       "Run an ablation study removing one component of the method."
     ],
-    "id": "f4abecd0-bdf5-4a38-884f-462518ff97fe",
+    "id": "57212d1d-6936-485c-9dab-f827cc857206",
     "source_paper_ids": [
       "openreview:5FXKgOxmb2",
       "openreview:wHFaAH3E8z",
@@ -7139,8 +7220,8 @@
       "arxiv:2604.09450v1",
       "arxiv:2604.11305v1",
       "arxiv:2604.03564v1",
-      "arxiv:2604.03197v1",
       "arxiv:2604.14534v1",
+      "arxiv:2604.03197v1",
       "arxiv:2604.03478v1",
       "arxiv:2604.13951v1",
       "arxiv:2604.11640v1",
@@ -7148,7 +7229,7 @@
     ]
   },
   {
-    "gap_id": "7fae3bea-38e4-4aa7-b143-229f814d2a70",
+    "gap_id": "c9c50826-2cd2-45ba-811c-c53171f9d7eb",
     "topic": "MoE",
     "title": "Difficult to train",
     "description": "difficult to train.",
@@ -7173,8 +7254,8 @@
       "arxiv:2604.09047v1",
       "arxiv:2604.04127v1",
       "arxiv:2604.01053v1",
-      "arxiv:2604.06715v1",
       "arxiv:2604.15009v1",
+      "arxiv:2604.06715v1",
       "arxiv:2604.04829v1"
     ],
     "gap_type": "explicit",
@@ -7187,7 +7268,7 @@
       "Write a blog post explaining the gap and possible directions.",
       "Run an ablation study removing one component of the method."
     ],
-    "id": "7fae3bea-38e4-4aa7-b143-229f814d2a70",
+    "id": "c9c50826-2cd2-45ba-811c-c53171f9d7eb",
     "source_paper_ids": [
       "openreview:iiYadgKHwo",
       "acl:2024.findings-acl.410",
@@ -7209,13 +7290,13 @@
       "arxiv:2604.09047v1",
       "arxiv:2604.04127v1",
       "arxiv:2604.01053v1",
-      "arxiv:2604.06715v1",
       "arxiv:2604.15009v1",
+      "arxiv:2604.06715v1",
       "arxiv:2604.04829v1"
     ]
   },
   {
-    "gap_id": "1f7fda5b-342c-4f52-b0dc-5bad4ac498ce",
+    "gap_id": "aeee3289-b8b6-49af-8c28-b88bc35d17ac",
     "topic": "AI Agents",
     "title": "Challenging to detect and mitigate",
     "description": "challenging to detect and mitigate.",
@@ -7229,16 +7310,16 @@
       "arxiv:2604.13452v1",
       "arxiv:2604.07240v1",
       "arxiv:2604.00704v1",
-      "arxiv:2604.06107v1",
       "arxiv:2604.14583v1",
+      "arxiv:2604.06107v1",
       "arxiv:2604.14254v1",
+      "arxiv:2604.15001v1",
       "arxiv:2604.08523v1",
       "arxiv:2604.07695v1",
       "arxiv:2604.03938v1",
       "arxiv:2604.03400v1",
       "arxiv:2604.01480v1",
       "arxiv:2604.01437v1",
-      "arxiv:2604.15001v1",
       "arxiv:2604.09409v1",
       "arxiv:2604.08898v1",
       "arxiv:2604.06323v2",
@@ -7252,7 +7333,7 @@
       "Build a simple tool-using agent and evaluate it on a benchmark task.",
       "Compare ReAct and plan-then-execute prompting strategies."
     ],
-    "id": "1f7fda5b-342c-4f52-b0dc-5bad4ac498ce",
+    "id": "aeee3289-b8b6-49af-8c28-b88bc35d17ac",
     "source_paper_ids": [
       "openreview:xMOLUzo2Lk",
       "acl:2024.findings-acl.268",
@@ -7263,16 +7344,16 @@
       "arxiv:2604.13452v1",
       "arxiv:2604.07240v1",
       "arxiv:2604.00704v1",
-      "arxiv:2604.06107v1",
       "arxiv:2604.14583v1",
+      "arxiv:2604.06107v1",
       "arxiv:2604.14254v1",
+      "arxiv:2604.15001v1",
       "arxiv:2604.08523v1",
       "arxiv:2604.07695v1",
       "arxiv:2604.03938v1",
       "arxiv:2604.03400v1",
       "arxiv:2604.01480v1",
       "arxiv:2604.01437v1",
-      "arxiv:2604.15001v1",
       "arxiv:2604.09409v1",
       "arxiv:2604.08898v1",
       "arxiv:2604.06323v2",
@@ -7280,71 +7361,7 @@
     ]
   },
   {
-    "gap_id": "34633178-5918-44bf-87b8-d8bb9329d2f3",
-    "topic": "Computer Vision",
-    "title": "Difficult to replicate highly popular styles",
-    "description": "difficult to replicate highly popular styles, such as cyberpunk, failing to achieve effects like realistic LED emissions.",
-    "evidence_paper_ids": [
-      "arxiv:2604.11006v1",
-      "arxiv:2604.06883v1",
-      "arxiv:2604.04136v1",
-      "arxiv:2604.01603v1",
-      "arxiv:2604.08047v1",
-      "arxiv:2604.13856v1",
-      "arxiv:2604.12923v1",
-      "arxiv:2604.12856v1",
-      "arxiv:2604.07477v1",
-      "arxiv:2604.06939v1",
-      "arxiv:2604.13294v1",
-      "arxiv:2604.13918v1",
-      "arxiv:2604.11444v1",
-      "arxiv:2604.13028v1",
-      "arxiv:2604.08924v1",
-      "arxiv:2604.06467v1",
-      "arxiv:2604.12273v1",
-      "arxiv:2604.09018v1",
-      "arxiv:2604.04477v1",
-      "arxiv:2604.03353v1",
-      "arxiv:2604.14800v1",
-      "arxiv:2604.07656v1"
-    ],
-    "gap_type": "explicit",
-    "confidence": 0.8,
-    "starter_idea": "Train a classifier on a small custom dataset using transfer learning.",
-    "frequency": 22,
-    "suggested_projects": [
-      "Train a classifier on a small custom dataset using transfer learning.",
-      "Implement data augmentation techniques and measure their impact.",
-      "Reproduce a CIFAR-10 baseline with a modern architecture."
-    ],
-    "id": "34633178-5918-44bf-87b8-d8bb9329d2f3",
-    "source_paper_ids": [
-      "arxiv:2604.11006v1",
-      "arxiv:2604.06883v1",
-      "arxiv:2604.04136v1",
-      "arxiv:2604.01603v1",
-      "arxiv:2604.08047v1",
-      "arxiv:2604.13856v1",
-      "arxiv:2604.12923v1",
-      "arxiv:2604.12856v1",
-      "arxiv:2604.07477v1",
-      "arxiv:2604.06939v1",
-      "arxiv:2604.13294v1",
-      "arxiv:2604.13918v1",
-      "arxiv:2604.11444v1",
-      "arxiv:2604.13028v1",
-      "arxiv:2604.08924v1",
-      "arxiv:2604.06467v1",
-      "arxiv:2604.12273v1",
-      "arxiv:2604.09018v1",
-      "arxiv:2604.04477v1",
-      "arxiv:2604.03353v1",
-      "arxiv:2604.14800v1",
-      "arxiv:2604.07656v1"
-    ]
-  },
-  {
-    "gap_id": "e9d52a98-48e4-40ce-bb4c-7b64825c83de",
+    "gap_id": "fb79fc9d-1b3b-4a1f-9c22-0a42fa4d62d1",
     "topic": "Model Compression",
     "title": "Open challenge in Model Compression",
     "description": "open problem: Its use has primarily been limited to relatively small-scale ML problems, such as sample-wise adversarial attack generation.",
@@ -7379,7 +7396,7 @@
       "Write a blog post explaining the gap and possible directions.",
       "Run an ablation study removing one component of the method."
     ],
-    "id": "e9d52a98-48e4-40ce-bb4c-7b64825c83de",
+    "id": "fb79fc9d-1b3b-4a1f-9c22-0a42fa4d62d1",
     "source_paper_ids": [
       "openreview:qBWhjsNPEY",
       "openreview:1RrOtCmuKr",
@@ -7403,65 +7420,7 @@
     ]
   },
   {
-    "gap_id": "c90d3259-10ff-4745-b69b-21003ae95e4a",
-    "topic": "Artificial Intelligence",
-    "title": "Future work on domain robustness",
-    "description": "future work on domain robustness.",
-    "evidence_paper_ids": [
-      "arxiv:2604.11332v1",
-      "arxiv:2604.03782v1",
-      "arxiv:2604.13688v1",
-      "arxiv:2604.04727v1",
-      "arxiv:2604.04707v1",
-      "arxiv:2604.11422v1",
-      "arxiv:2604.07386v1",
-      "arxiv:2604.10458v1",
-      "arxiv:2604.04736v1",
-      "arxiv:2604.04364v1",
-      "arxiv:2604.02131v1",
-      "arxiv:2604.03321v1",
-      "arxiv:2604.01469v1",
-      "arxiv:2604.05877v1",
-      "arxiv:2604.09008v1",
-      "arxiv:2604.07803v1",
-      "arxiv:2604.06411v1",
-      "arxiv:2604.02476v1",
-      "arxiv:2604.10765v1"
-    ],
-    "gap_type": "explicit",
-    "confidence": 0.8,
-    "starter_idea": "Train a classifier on a small custom dataset using transfer learning.",
-    "frequency": 19,
-    "suggested_projects": [
-      "Train a classifier on a small custom dataset using transfer learning.",
-      "Implement data augmentation techniques and measure their impact.",
-      "Reproduce a CIFAR-10 baseline with a modern architecture."
-    ],
-    "id": "c90d3259-10ff-4745-b69b-21003ae95e4a",
-    "source_paper_ids": [
-      "arxiv:2604.11332v1",
-      "arxiv:2604.03782v1",
-      "arxiv:2604.13688v1",
-      "arxiv:2604.04727v1",
-      "arxiv:2604.04707v1",
-      "arxiv:2604.11422v1",
-      "arxiv:2604.07386v1",
-      "arxiv:2604.10458v1",
-      "arxiv:2604.04736v1",
-      "arxiv:2604.04364v1",
-      "arxiv:2604.02131v1",
-      "arxiv:2604.03321v1",
-      "arxiv:2604.01469v1",
-      "arxiv:2604.05877v1",
-      "arxiv:2604.09008v1",
-      "arxiv:2604.07803v1",
-      "arxiv:2604.06411v1",
-      "arxiv:2604.02476v1",
-      "arxiv:2604.10765v1"
-    ]
-  },
-  {
-    "gap_id": "b16d2987-7d8b-4323-bf71-2c91536224ae",
+    "gap_id": "43d23bce-561e-4260-a85e-3a01476dedaa",
     "topic": "Continual Learning",
     "title": "Limitation can be addressed through continual learning (cl)",
     "description": "limitation can be addressed through continual learning (CL), wherein the CL model can continuously learn and advance over time.",
@@ -7495,7 +7454,7 @@
       "Write a blog post explaining the gap and possible directions.",
       "Run an ablation study removing one component of the method."
     ],
-    "id": "b16d2987-7d8b-4323-bf71-2c91536224ae",
+    "id": "43d23bce-561e-4260-a85e-3a01476dedaa",
     "source_paper_ids": [
       "openreview:6jjAYmppGQ",
       "openreview:f65RuQgVlp",
@@ -7518,7 +7477,7 @@
     ]
   },
   {
-    "gap_id": "6f2ca9fc-f94f-4a82-8e68-641163b8ed5f",
+    "gap_id": "54f3e997-9587-40cf-a2ae-796b60ef80f0",
     "topic": "Long Context",
     "title": "Limitation",
     "description": "limitation, we introduce _**MambaExtend**_, a novel framework designed to significantly enhance the context extension capabilities of Mamba.",
@@ -7550,7 +7509,7 @@
       "Visualise attention heads on your own text samples.",
       "Compare different positional encoding schemes on a text classification task."
     ],
-    "id": "6f2ca9fc-f94f-4a82-8e68-641163b8ed5f",
+    "id": "54f3e997-9587-40cf-a2ae-796b60ef80f0",
     "source_paper_ids": [
       "openreview:LgzRo1RpLS",
       "acl:2025.emnlp-main.1737",
@@ -7572,7 +7531,7 @@
     ]
   },
   {
-    "gap_id": "86850fea-a738-4008-ad38-572e0e8432f0",
+    "gap_id": "f849f66c-5069-4cc3-8d33-0c8199300489",
     "topic": "Video AI",
     "title": "Limitations",
     "description": "limitations, we propose a 2D human video generation framework, named ShowMaker, capable of generating high-fidelity half-body conversational videos via fine-grained diffusion modeling.",
@@ -7605,7 +7564,7 @@
       "Write a blog post explaining the gap and possible directions.",
       "Run an ablation study removing one component of the method."
     ],
-    "id": "86850fea-a738-4008-ad38-572e0e8432f0",
+    "id": "f849f66c-5069-4cc3-8d33-0c8199300489",
     "source_paper_ids": [
       "openreview:lpxdG0hk4H",
       "cvf:Nguyen_HIG_Hierarchical_Interlacement_Graph_Approach_to_Scene_Graph_Generation_in_CVPR_2024_paper.html",
@@ -7627,15 +7586,16 @@
     ]
   },
   {
-    "gap_id": "e644d645-aa9f-4a0a-8425-0918c97209a8",
+    "gap_id": "0fea57d9-b4d4-4a74-9573-1b605e7db7d5",
     "topic": "Human-Computer Interaction",
     "title": "Struggle with facilitating exploration",
     "description": "struggle with facilitating exploration.",
     "evidence_paper_ids": [
       "arxiv:2604.08385v1",
+      "arxiv:2604.14791v1",
       "arxiv:2604.07299v1",
       "arxiv:2604.02096v1",
-      "arxiv:2604.14791v1",
+      "arxiv:2604.14980v1",
       "arxiv:2604.11067v1",
       "arxiv:2604.09241v1",
       "arxiv:2604.09395v1",
@@ -7643,12 +7603,11 @@
       "arxiv:2604.05658v1",
       "arxiv:2604.05349v1",
       "arxiv:2604.00856v1",
-      "arxiv:2604.14980v1",
       "arxiv:2604.04926v1",
+      "arxiv:2604.15058v1",
       "arxiv:2604.12349v1",
       "arxiv:2604.08079v1",
-      "arxiv:2604.04319v1",
-      "arxiv:2604.15058v1"
+      "arxiv:2604.04319v1"
     ],
     "gap_type": "explicit",
     "confidence": 0.8,
@@ -7660,12 +7619,13 @@
       "Write a blog post explaining the gap and possible directions.",
       "Run an ablation study removing one component of the method."
     ],
-    "id": "e644d645-aa9f-4a0a-8425-0918c97209a8",
+    "id": "0fea57d9-b4d4-4a74-9573-1b605e7db7d5",
     "source_paper_ids": [
       "arxiv:2604.08385v1",
+      "arxiv:2604.14791v1",
       "arxiv:2604.07299v1",
       "arxiv:2604.02096v1",
-      "arxiv:2604.14791v1",
+      "arxiv:2604.14980v1",
       "arxiv:2604.11067v1",
       "arxiv:2604.09241v1",
       "arxiv:2604.09395v1",
@@ -7673,16 +7633,15 @@
       "arxiv:2604.05658v1",
       "arxiv:2604.05349v1",
       "arxiv:2604.00856v1",
-      "arxiv:2604.14980v1",
       "arxiv:2604.04926v1",
+      "arxiv:2604.15058v1",
       "arxiv:2604.12349v1",
       "arxiv:2604.08079v1",
-      "arxiv:2604.04319v1",
-      "arxiv:2604.15058v1"
+      "arxiv:2604.04319v1"
     ]
   },
   {
-    "gap_id": "c7b77c52-c902-4805-b3af-31b34c69b3ab",
+    "gap_id": "bcb8f056-06c2-47cb-9108-92daecc5124b",
     "topic": "Interpretability",
     "title": "Open challenge in Interpretability",
     "description": "open questions exist:  Are there interpretable characteristics of forget sets that substantially affect the difficulty of the problem?",
@@ -7692,9 +7651,9 @@
       "acl:2025.acl-long.809",
       "openreview:pTeOOKnjGM",
       "arxiv:2604.12028v1",
+      "arxiv:2604.14883v1",
       "arxiv:2604.11279v1",
       "arxiv:2604.08739v1",
-      "arxiv:2604.14883v1",
       "arxiv:2604.11749v1",
       "arxiv:2604.11223v1",
       "arxiv:2604.07266v1",
@@ -7714,16 +7673,16 @@
       "Write a blog post explaining the gap and possible directions.",
       "Run an ablation study removing one component of the method."
     ],
-    "id": "c7b77c52-c902-4805-b3af-31b34c69b3ab",
+    "id": "bcb8f056-06c2-47cb-9108-92daecc5124b",
     "source_paper_ids": [
       "openreview:QAbhLBF72K",
       "openreview:RJG8ar4wHA",
       "acl:2025.acl-long.809",
       "openreview:pTeOOKnjGM",
       "arxiv:2604.12028v1",
+      "arxiv:2604.14883v1",
       "arxiv:2604.11279v1",
       "arxiv:2604.08739v1",
-      "arxiv:2604.14883v1",
       "arxiv:2604.11749v1",
       "arxiv:2604.11223v1",
       "arxiv:2604.07266v1",
@@ -7735,7 +7694,7 @@
     ]
   },
   {
-    "gap_id": "04a55cd0-790f-4c6b-9074-20888de8b14e",
+    "gap_id": "a5643e42-6c29-437f-b5bc-f781418f1b9e",
     "topic": "Dialogue",
     "title": "Fail to capture the diverse feedback encountered in multi-turn interactions",
     "description": "fail to capture the diverse feedback encountered in multi-turn interactions, limiting our ability to evaluate LLMs in these contexts.",
@@ -7767,7 +7726,7 @@
       "Write a blog post explaining the gap and possible directions.",
       "Run an ablation study removing one component of the method."
     ],
-    "id": "04a55cd0-790f-4c6b-9074-20888de8b14e",
+    "id": "a5643e42-6c29-437f-b5bc-f781418f1b9e",
     "source_paper_ids": [
       "openreview:rpouyo09V0",
       "acl:2025.emnlp-main.605",
@@ -7788,7 +7747,7 @@
     ]
   },
   {
-    "gap_id": "8be3106f-5082-4459-8075-47c0590b03ec",
+    "gap_id": "9a64f748-2b7b-4b6b-b114-bd07b3891ba6",
     "topic": "Federated Learning",
     "title": "Yet to be resolved",
     "description": "yet to be resolved.",
@@ -7805,22 +7764,21 @@
       "openreview:XKv29sMyjF",
       "arxiv:2604.02616v1",
       "arxiv:2604.12968v1",
-      "arxiv:2604.10423v1",
       "arxiv:2604.14886v1",
-      "arxiv:2604.07132v1",
-      "arxiv:2604.15063v1"
+      "arxiv:2604.10423v1",
+      "arxiv:2604.15063v1",
+      "arxiv:2604.07132v1"
     ],
     "gap_type": "explicit",
     "confidence": 0.8,
-    "starter_idea": "Reproduce the paper's baseline experiment.",
+    "starter_idea": "Train a classifier on a small custom dataset using transfer learning.",
     "frequency": 16,
     "suggested_projects": [
-      "Reproduce the paper's baseline experiment.",
-      "Apply the method to a new domain dataset.",
-      "Write a blog post explaining the gap and possible directions.",
-      "Run an ablation study removing one component of the method."
+      "Train a classifier on a small custom dataset using transfer learning.",
+      "Implement data augmentation techniques and measure their impact.",
+      "Reproduce a CIFAR-10 baseline with a modern architecture."
     ],
-    "id": "8be3106f-5082-4459-8075-47c0590b03ec",
+    "id": "9a64f748-2b7b-4b6b-b114-bd07b3891ba6",
     "source_paper_ids": [
       "openreview:AYiRHZirD2",
       "openreview:7uPnuoYqac",
@@ -7834,14 +7792,14 @@
       "openreview:XKv29sMyjF",
       "arxiv:2604.02616v1",
       "arxiv:2604.12968v1",
-      "arxiv:2604.10423v1",
       "arxiv:2604.14886v1",
-      "arxiv:2604.07132v1",
-      "arxiv:2604.15063v1"
+      "arxiv:2604.10423v1",
+      "arxiv:2604.15063v1",
+      "arxiv:2604.07132v1"
     ]
   },
   {
-    "gap_id": "2e7f6848-6bd0-4175-8712-a9316d4c16a3",
+    "gap_id": "83c36e4b-8a2f-4ae2-be48-58d40449c2f9",
     "topic": "RAG",
     "title": "Challenging to distinguish hard negative pairs effectively",
     "description": "challenging to distinguish hard negative pairs effectively.",
@@ -7870,7 +7828,7 @@
       "Build a RAG pipeline and compare different chunking and retrieval strategies.",
       "Evaluate how knowledge freshness affects LLM answer quality in a RAG setup."
     ],
-    "id": "2e7f6848-6bd0-4175-8712-a9316d4c16a3",
+    "id": "83c36e4b-8a2f-4ae2-be48-58d40449c2f9",
     "source_paper_ids": [
       "acl:2025.findings-emnlp.740",
       "acl:2025.findings-emnlp.1050",
@@ -7890,7 +7848,7 @@
     ]
   },
   {
-    "gap_id": "9e0dd37a-5ee3-4e9c-817c-8b915a5e4fb5",
+    "gap_id": "6ac0e9fb-f2ce-479f-a27c-5a4157eb7452",
     "topic": "Adversarial",
     "title": "Limitations: the accuracy of clean images noticeably decreases",
     "description": "limitations: the accuracy of clean images noticeably decreases, while the improvement in accuracy on adversarial examples is not substantial.",
@@ -7920,7 +7878,7 @@
       "Implement data augmentation techniques and measure their impact.",
       "Reproduce a CIFAR-10 baseline with a modern architecture."
     ],
-    "id": "9e0dd37a-5ee3-4e9c-817c-8b915a5e4fb5",
+    "id": "6ac0e9fb-f2ce-479f-a27c-5a4157eb7452",
     "source_paper_ids": [
       "openreview:jFa5KESW65",
       "openreview:BWAhEjXjeG",
@@ -7940,56 +7898,7 @@
     ]
   },
   {
-    "gap_id": "04def472-fc0a-4286-983c-b33ed5fa42af",
-    "topic": "Machine Learning",
-    "title": "Fail to do so within one hour",
-    "description": "fail to do so within one hour.",
-    "evidence_paper_ids": [
-      "arxiv:2604.11584v1",
-      "arxiv:2604.12095v1",
-      "arxiv:2604.13919v1",
-      "arxiv:2604.13738v1",
-      "arxiv:2604.07159v1",
-      "arxiv:2604.06525v1",
-      "arxiv:2604.10569v1",
-      "arxiv:2604.05324v1",
-      "arxiv:2604.03566v1",
-      "arxiv:2604.13291v1",
-      "arxiv:2604.14566v1",
-      "arxiv:2604.02581v1",
-      "arxiv:2604.01173v1",
-      "arxiv:2604.00543v1"
-    ],
-    "gap_type": "explicit",
-    "confidence": 0.8,
-    "starter_idea": "Reproduce the paper's baseline experiment.",
-    "frequency": 14,
-    "suggested_projects": [
-      "Reproduce the paper's baseline experiment.",
-      "Apply the method to a new domain dataset.",
-      "Write a blog post explaining the gap and possible directions.",
-      "Run an ablation study removing one component of the method."
-    ],
-    "id": "04def472-fc0a-4286-983c-b33ed5fa42af",
-    "source_paper_ids": [
-      "arxiv:2604.11584v1",
-      "arxiv:2604.12095v1",
-      "arxiv:2604.13919v1",
-      "arxiv:2604.13738v1",
-      "arxiv:2604.07159v1",
-      "arxiv:2604.06525v1",
-      "arxiv:2604.10569v1",
-      "arxiv:2604.05324v1",
-      "arxiv:2604.03566v1",
-      "arxiv:2604.13291v1",
-      "arxiv:2604.14566v1",
-      "arxiv:2604.02581v1",
-      "arxiv:2604.01173v1",
-      "arxiv:2604.00543v1"
-    ]
-  },
-  {
-    "gap_id": "1af57080-b324-46e5-8926-435516992b80",
+    "gap_id": "fbb6227c-1025-4500-b495-7f2ff5baa2d9",
     "topic": "RLHF",
     "title": "Limitations",
     "description": "limitations, we model RLHF as reinforcement learning with partially observed reward-states (PORRL).",
@@ -8016,7 +7925,7 @@
       "Fine-tune a CLIP model on a domain-specific image-caption dataset.",
       "Evaluate vision-language models on your own image set."
     ],
-    "id": "1af57080-b324-46e5-8926-435516992b80",
+    "id": "fbb6227c-1025-4500-b495-7f2ff5baa2d9",
     "source_paper_ids": [
       "openreview:OjAU0LLDbe",
       "openreview:6GATHdOi1x",
@@ -8034,7 +7943,7 @@
     ]
   },
   {
-    "gap_id": "5ab30b49-0fde-4d8e-b3ad-6793c12c1271",
+    "gap_id": "2b5308f6-fec5-4f35-998a-56f186f8e901",
     "topic": "Code Generation",
     "title": "Struggle with sub-optimal decision-making",
     "description": "struggle with sub-optimal decision-making, requiring either extensive manual intervention or inefficient compute scaling strategies.",
@@ -8060,7 +7969,7 @@
       "Evaluate open-source code LLMs on a custom set of algorithmic problems.",
       "Build a test-case generator to evaluate code correctness automatically."
     ],
-    "id": "5ab30b49-0fde-4d8e-b3ad-6793c12c1271",
+    "id": "2b5308f6-fec5-4f35-998a-56f186f8e901",
     "source_paper_ids": [
       "acl:2025.acl-long.973",
       "acl:2024.acl-long.619",
@@ -8077,7 +7986,89 @@
     ]
   },
   {
-    "gap_id": "f2badec2-2b50-4e47-bfb3-4fec4a372fcc",
+    "gap_id": "9cf7adcf-c071-4b76-a82d-fd82a247a73e",
+    "topic": "Artificial Intelligence",
+    "title": "Open challenge in Artificial Intelligence",
+    "description": "open problem whether the improved exact $\\mathcal{O}(1/t)$ rate is achievable.",
+    "evidence_paper_ids": [
+      "arxiv:2604.03782v1",
+      "arxiv:2604.12625v1",
+      "arxiv:2604.04727v1",
+      "arxiv:2604.11422v1",
+      "arxiv:2604.10458v1",
+      "arxiv:2604.04736v1",
+      "arxiv:2604.04364v1",
+      "arxiv:2604.02131v1",
+      "arxiv:2604.03321v1",
+      "arxiv:2604.02476v1"
+    ],
+    "gap_type": "explicit",
+    "confidence": 0.8,
+    "starter_idea": "Reproduce the paper's baseline experiment.",
+    "frequency": 10,
+    "suggested_projects": [
+      "Reproduce the paper's baseline experiment.",
+      "Apply the method to a new domain dataset.",
+      "Write a blog post explaining the gap and possible directions.",
+      "Run an ablation study removing one component of the method."
+    ],
+    "id": "9cf7adcf-c071-4b76-a82d-fd82a247a73e",
+    "source_paper_ids": [
+      "arxiv:2604.03782v1",
+      "arxiv:2604.12625v1",
+      "arxiv:2604.04727v1",
+      "arxiv:2604.11422v1",
+      "arxiv:2604.10458v1",
+      "arxiv:2604.04736v1",
+      "arxiv:2604.04364v1",
+      "arxiv:2604.02131v1",
+      "arxiv:2604.03321v1",
+      "arxiv:2604.02476v1"
+    ]
+  },
+  {
+    "gap_id": "3ab6eed4-8b49-43f9-8589-7c8a30aba88c",
+    "topic": "Machine Learning",
+    "title": "Open challenge in Machine Learning",
+    "description": "limitation by deriving the exact time-varying variance of the EWMA statistic for binary multiple-stream data, enabling adaptive control limits that ensure statistical rigor from the first sample.",
+    "evidence_paper_ids": [
+      "arxiv:2604.12095v1",
+      "arxiv:2604.13919v1",
+      "arxiv:2604.13738v1",
+      "arxiv:2604.07159v1",
+      "arxiv:2604.10569v1",
+      "arxiv:2604.14566v1",
+      "arxiv:2604.05324v1",
+      "arxiv:2604.13291v1",
+      "arxiv:2604.02581v1",
+      "arxiv:2604.00543v1"
+    ],
+    "gap_type": "explicit",
+    "confidence": 0.8,
+    "starter_idea": "Reproduce the paper's baseline experiment.",
+    "frequency": 10,
+    "suggested_projects": [
+      "Reproduce the paper's baseline experiment.",
+      "Apply the method to a new domain dataset.",
+      "Write a blog post explaining the gap and possible directions.",
+      "Run an ablation study removing one component of the method."
+    ],
+    "id": "3ab6eed4-8b49-43f9-8589-7c8a30aba88c",
+    "source_paper_ids": [
+      "arxiv:2604.12095v1",
+      "arxiv:2604.13919v1",
+      "arxiv:2604.13738v1",
+      "arxiv:2604.07159v1",
+      "arxiv:2604.10569v1",
+      "arxiv:2604.14566v1",
+      "arxiv:2604.05324v1",
+      "arxiv:2604.13291v1",
+      "arxiv:2604.02581v1",
+      "arxiv:2604.00543v1"
+    ]
+  },
+  {
+    "gap_id": "3126a9ce-3a4e-4a6c-a162-713ca580a54d",
     "topic": "Translation",
     "title": "Limitations",
     "description": "limitations, particularly in task diversity, test coverage, and linguistic scope.",
@@ -8100,7 +8091,7 @@
       "Add reward shaping to reduce sample inefficiency on a gridworld task.",
       "Compare PPO and REINFORCE on a continuous-action environment."
     ],
-    "id": "f2badec2-2b50-4e47-bfb3-4fec4a372fcc",
+    "id": "3126a9ce-3a4e-4a6c-a162-713ca580a54d",
     "source_paper_ids": [
       "acl:2025.naacl-long.570",
       "openreview:Rry1SeSOQL",
@@ -8113,7 +8104,7 @@
     ]
   },
   {
-    "gap_id": "ddec03e9-536f-4c82-acee-81cfa7c8c6c4",
+    "gap_id": "2ccb2781-945e-4391-bbc3-74fc9f36b4aa",
     "topic": "Knowledge Graphs",
     "title": "Struggle with capturing entity knowledge",
     "description": "struggle with capturing entity knowledge.",
@@ -8136,7 +8127,7 @@
       "Implement data augmentation techniques and measure their impact.",
       "Reproduce a CIFAR-10 baseline with a modern architecture."
     ],
-    "id": "ddec03e9-536f-4c82-acee-81cfa7c8c6c4",
+    "id": "2ccb2781-945e-4391-bbc3-74fc9f36b4aa",
     "source_paper_ids": [
       "acl:2025.findings-naacl.213",
       "acl:2024.findings-naacl.64",
@@ -8149,7 +8140,7 @@
     ]
   },
   {
-    "gap_id": "d77351e1-f00f-4e76-a509-6c69001fa020",
+    "gap_id": "f3a57250-faad-44cd-96a4-6822f8c83d6a",
     "topic": "QA",
     "title": "Open challenge in QA",
     "description": "fail to continuously learn new tasks without forgetting previous ones as they are re-trained throughout their lifetime, a challenge known as lifelong learning.",
@@ -8173,7 +8164,7 @@
       "Write a blog post explaining the gap and possible directions.",
       "Run an ablation study removing one component of the method."
     ],
-    "id": "d77351e1-f00f-4e76-a509-6c69001fa020",
+    "id": "f3a57250-faad-44cd-96a4-6822f8c83d6a",
     "source_paper_ids": [
       "acl:2020.emnlp-main.39",
       "acl:2024.emnlp-main.546",
@@ -8186,7 +8177,7 @@
     ]
   },
   {
-    "gap_id": "4147050d-1cee-4665-8309-6db5a90d52a8",
+    "gap_id": "9d6619cb-3d13-4564-a18e-6ed8891a0deb",
     "topic": "Summarization",
     "title": "Difficult to keep up with the latest scientific findings",
     "description": "difficult to keep up with the latest scientific findings.",
@@ -8210,7 +8201,7 @@
       "Write a blog post explaining the gap and possible directions.",
       "Run an ablation study removing one component of the method."
     ],
-    "id": "4147050d-1cee-4665-8309-6db5a90d52a8",
+    "id": "9d6619cb-3d13-4564-a18e-6ed8891a0deb",
     "source_paper_ids": [
       "acl:2023.eacl-main.72",
       "acl:2025.findings-acl.940",
@@ -8223,7 +8214,7 @@
     ]
   },
   {
-    "gap_id": "888a7637-3806-4e51-8756-5a363c7877b2",
+    "gap_id": "684d2f3e-7cdf-433f-a19a-7df15a6f9594",
     "topic": "NLG",
     "title": "Open problem in the clustering of bandits literature",
     "description": "open problem in the clustering of bandits literature.",
@@ -8246,7 +8237,7 @@
       "Write a blog post explaining the gap and possible directions.",
       "Run an ablation study removing one component of the method."
     ],
-    "id": "888a7637-3806-4e51-8756-5a363c7877b2",
+    "id": "684d2f3e-7cdf-433f-a19a-7df15a6f9594",
     "source_paper_ids": [
       "openreview:421D67DY3i",
       "acl:2025.acl-long.1327",
@@ -8258,7 +8249,7 @@
     ]
   },
   {
-    "gap_id": "c8b6d09a-5db0-4f82-a93c-689b77b6fc02",
+    "gap_id": "45543bba-b85f-42b6-8ff6-720c506b27c1",
     "topic": "Deep Learning",
     "title": "Limitations of late-fusion paradigms",
     "description": "limitations of late-fusion paradigms.",
@@ -8281,7 +8272,7 @@
       "Write a blog post explaining the gap and possible directions.",
       "Run an ablation study removing one component of the method."
     ],
-    "id": "c8b6d09a-5db0-4f82-a93c-689b77b6fc02",
+    "id": "45543bba-b85f-42b6-8ff6-720c506b27c1",
     "source_paper_ids": [
       "arxiv:2604.01889v1",
       "arxiv:2604.01305v1",
@@ -8293,50 +8284,87 @@
     ]
   },
   {
-    "gap_id": "3cc58166-d0d1-4b52-9dd1-ade9563c809b",
-    "topic": "IR",
-    "title": "Struggle with basic functionality",
-    "description": "struggle with basic functionality, such as arithmetic or factual lookup, where much simpler and smaller specialized models excel.",
-    "evidence_paper_ids": [
-      "openreview:Yacmpz84TH",
-      "arxiv:2604.15101v1",
-      "acl:2023.emnlp-main.83",
-      "arxiv:2604.08693v1",
-      "arxiv:2604.00411v1",
-      "arxiv:2604.00731v1"
-    ],
-    "gap_type": "explicit",
-    "confidence": 0.8,
-    "starter_idea": "Reproduce the paper's baseline experiment.",
-    "frequency": 6,
-    "suggested_projects": [
-      "Reproduce the paper's baseline experiment.",
-      "Apply the method to a new domain dataset.",
-      "Write a blog post explaining the gap and possible directions.",
-      "Run an ablation study removing one component of the method."
-    ],
-    "id": "3cc58166-d0d1-4b52-9dd1-ade9563c809b",
-    "source_paper_ids": [
-      "openreview:Yacmpz84TH",
-      "arxiv:2604.15101v1",
-      "acl:2023.emnlp-main.83",
-      "arxiv:2604.08693v1",
-      "arxiv:2604.00411v1",
-      "arxiv:2604.00731v1"
-    ]
-  },
-  {
-    "gap_id": "4e3bc49e-7061-453e-b6dc-d672a249e61c",
+    "gap_id": "b8563cf4-04af-4a02-a4ed-400e96929944",
     "topic": "Software Engineering",
-    "title": "Difficult to assess and govern due to structural complexity",
-    "description": "difficult to assess and govern due to structural complexity, fragmented measurement practices, and unclear responsibilities across system layers.",
+    "title": "Challenging to achieve with current practices",
+    "description": "challenging to achieve with current practices.",
     "evidence_paper_ids": [
+      "arxiv:2604.06290v1",
       "arxiv:2604.09307v1",
       "arxiv:2604.03024v1",
       "arxiv:2604.06709v1",
       "arxiv:2604.05006v1",
       "arxiv:2604.04047v2",
       "arxiv:2604.02077v1"
+    ],
+    "gap_type": "explicit",
+    "confidence": 0.8,
+    "starter_idea": "Reproduce the paper's baseline experiment.",
+    "frequency": 7,
+    "suggested_projects": [
+      "Reproduce the paper's baseline experiment.",
+      "Apply the method to a new domain dataset.",
+      "Write a blog post explaining the gap and possible directions.",
+      "Run an ablation study removing one component of the method."
+    ],
+    "id": "b8563cf4-04af-4a02-a4ed-400e96929944",
+    "source_paper_ids": [
+      "arxiv:2604.06290v1",
+      "arxiv:2604.09307v1",
+      "arxiv:2604.03024v1",
+      "arxiv:2604.06709v1",
+      "arxiv:2604.05006v1",
+      "arxiv:2604.04047v2",
+      "arxiv:2604.02077v1"
+    ]
+  },
+  {
+    "gap_id": "163b111e-13e4-473a-99c4-cf4d3ca95dd8",
+    "topic": "Cryptography & Security",
+    "title": "Promising direction for integrating lightweight",
+    "description": "promising direction for integrating lightweight, invisible identifiers into client side security architectures.",
+    "evidence_paper_ids": [
+      "arxiv:2604.12178v1",
+      "arxiv:2604.07386v1",
+      "arxiv:2604.07532v1",
+      "arxiv:2604.13289v1",
+      "arxiv:2604.14330v1",
+      "arxiv:2604.14957v1",
+      "arxiv:2604.06411v1"
+    ],
+    "gap_type": "explicit",
+    "confidence": 0.8,
+    "starter_idea": "Reproduce the paper's baseline experiment.",
+    "frequency": 7,
+    "suggested_projects": [
+      "Reproduce the paper's baseline experiment.",
+      "Apply the method to a new domain dataset.",
+      "Write a blog post explaining the gap and possible directions.",
+      "Run an ablation study removing one component of the method."
+    ],
+    "id": "163b111e-13e4-473a-99c4-cf4d3ca95dd8",
+    "source_paper_ids": [
+      "arxiv:2604.12178v1",
+      "arxiv:2604.07386v1",
+      "arxiv:2604.07532v1",
+      "arxiv:2604.13289v1",
+      "arxiv:2604.14330v1",
+      "arxiv:2604.14957v1",
+      "arxiv:2604.06411v1"
+    ]
+  },
+  {
+    "gap_id": "f7015f70-2050-4118-b746-a2182f40aadd",
+    "topic": "IR",
+    "title": "Open challenge in IR",
+    "description": "difficult to generalize well to other ranking metrics of interest.",
+    "evidence_paper_ids": [
+      "arxiv:2604.15101v1",
+      "openreview:Yacmpz84TH",
+      "acl:2023.emnlp-main.83",
+      "arxiv:2604.08693v1",
+      "arxiv:2604.00411v1",
+      "arxiv:2604.00731v1"
     ],
     "gap_type": "explicit",
     "confidence": 0.8,
@@ -8348,18 +8376,18 @@
       "Write a blog post explaining the gap and possible directions.",
       "Run an ablation study removing one component of the method."
     ],
-    "id": "4e3bc49e-7061-453e-b6dc-d672a249e61c",
+    "id": "f7015f70-2050-4118-b746-a2182f40aadd",
     "source_paper_ids": [
-      "arxiv:2604.09307v1",
-      "arxiv:2604.03024v1",
-      "arxiv:2604.06709v1",
-      "arxiv:2604.05006v1",
-      "arxiv:2604.04047v2",
-      "arxiv:2604.02077v1"
+      "arxiv:2604.15101v1",
+      "openreview:Yacmpz84TH",
+      "acl:2023.emnlp-main.83",
+      "arxiv:2604.08693v1",
+      "arxiv:2604.00411v1",
+      "arxiv:2604.00731v1"
     ]
   },
   {
-    "gap_id": "ac170a75-82e7-43fc-b25e-8de3125655b2",
+    "gap_id": "32c63bbc-96d8-4e0d-8306-bc599586847c",
     "topic": "Structured Data",
     "title": "Difficult to obtain in practice and is not sufficiently compact",
     "description": "difficult to obtain in practice and is not sufficiently compact, especially when the data are in high-dimensional spaces.",
@@ -8380,7 +8408,7 @@
       "Write a blog post explaining the gap and possible directions.",
       "Run an ablation study removing one component of the method."
     ],
-    "id": "ac170a75-82e7-43fc-b25e-8de3125655b2",
+    "id": "32c63bbc-96d8-4e0d-8306-bc599586847c",
     "source_paper_ids": [
       "openreview:cJs4oE4m9Q",
       "acl:2024.findings-emnlp.355",
@@ -8390,7 +8418,7 @@
     ]
   },
   {
-    "gap_id": "3e978742-df96-41bc-aa0f-b31c502750fd",
+    "gap_id": "ec0f605e-5e04-494c-b11e-46a74e1b68a9",
     "topic": "General AI",
     "title": "Future work in modelling long and complex sketches",
     "description": "future work in modelling long and complex sketches.",
@@ -8411,7 +8439,7 @@
       "Write a blog post explaining the gap and possible directions.",
       "Run an ablation study removing one component of the method."
     ],
-    "id": "3e978742-df96-41bc-aa0f-b31c502750fd",
+    "id": "ec0f605e-5e04-494c-b11e-46a74e1b68a9",
     "source_paper_ids": [
       "cvf:Bandyopadhyay_SketchINR_A_First_Look_into_Sketches_as_Implicit_Neural_Representations_CVPR_2024_paper.html",
       "cvf:Fan_Unpaired_Multi-domain_Attribute_Translation_of_3D_Facial_Shapes_with_a_ICCV_2023_paper.html",
@@ -8421,38 +8449,7 @@
     ]
   },
   {
-    "gap_id": "d69d0a6b-4627-47e1-b68a-c5e11c347ff7",
-    "topic": "Cryptography & Security",
-    "title": "Promising direction for integrating lightweight",
-    "description": "promising direction for integrating lightweight, invisible identifiers into client side security architectures.",
-    "evidence_paper_ids": [
-      "arxiv:2604.12178v1",
-      "arxiv:2604.07532v1",
-      "arxiv:2604.13289v1",
-      "arxiv:2604.14330v1",
-      "arxiv:2604.14957v1"
-    ],
-    "gap_type": "explicit",
-    "confidence": 0.8,
-    "starter_idea": "Reproduce the paper's baseline experiment.",
-    "frequency": 5,
-    "suggested_projects": [
-      "Reproduce the paper's baseline experiment.",
-      "Apply the method to a new domain dataset.",
-      "Write a blog post explaining the gap and possible directions.",
-      "Run an ablation study removing one component of the method."
-    ],
-    "id": "d69d0a6b-4627-47e1-b68a-c5e11c347ff7",
-    "source_paper_ids": [
-      "arxiv:2604.12178v1",
-      "arxiv:2604.07532v1",
-      "arxiv:2604.13289v1",
-      "arxiv:2604.14330v1",
-      "arxiv:2604.14957v1"
-    ]
-  },
-  {
-    "gap_id": "3edd2907-1375-4170-8b46-3b0457817774",
+    "gap_id": "5af8a73e-0a5d-4a7a-bc33-00585f7e2b88",
     "topic": "TTS",
     "title": "Open challenge in TTS",
     "description": "limitations when dealing with Persian texts due to the complexity of Persian transcription.",
@@ -8472,7 +8469,7 @@
       "Write a blog post explaining the gap and possible directions.",
       "Run an ablation study removing one component of the method."
     ],
-    "id": "3edd2907-1375-4170-8b46-3b0457817774",
+    "id": "5af8a73e-0a5d-4a7a-bc33-00585f7e2b88",
     "source_paper_ids": [
       "acl:2024.findings-emnlp.196",
       "acl:2025.emnlp-main.180",
@@ -8481,7 +8478,7 @@
     ]
   },
   {
-    "gap_id": "8e8e1286-f8f7-485f-a2a1-645b3ce00745",
+    "gap_id": "679049fb-cea9-43ee-a371-57d7fc1bf0eb",
     "topic": "Classification",
     "title": "Limitation by using real query data from google trends",
     "description": "limitation by using real query data from Google Trends and can be used with both supervised and unsupervised KE approaches.",
@@ -8501,7 +8498,7 @@
       "Write a blog post explaining the gap and possible directions.",
       "Run an ablation study removing one component of the method."
     ],
-    "id": "8e8e1286-f8f7-485f-a2a1-645b3ce00745",
+    "id": "679049fb-cea9-43ee-a371-57d7fc1bf0eb",
     "source_paper_ids": [
       "acl:2025.coling-main.133",
       "acl:2022.coling-1.95",
@@ -8510,38 +8507,12 @@
     ]
   },
   {
-    "gap_id": "7e154333-5a1e-4b75-8fae-caffd5d8fb29",
-    "topic": "Databases",
-    "title": "Limitation",
-    "description": "limitation, we propose MV-HNSW, the first native hierarchical graph index designed for multi-vector data.",
-    "evidence_paper_ids": [
-      "arxiv:2604.02815v1",
-      "arxiv:2604.13034v1",
-      "arxiv:2604.06290v1"
-    ],
-    "gap_type": "explicit",
-    "confidence": 0.8,
-    "starter_idea": "Reproduce the paper's baseline experiment.",
-    "frequency": 3,
-    "suggested_projects": [
-      "Reproduce the paper's baseline experiment.",
-      "Apply the method to a new domain dataset.",
-      "Write a blog post explaining the gap and possible directions.",
-      "Run an ablation study removing one component of the method."
-    ],
-    "id": "7e154333-5a1e-4b75-8fae-caffd5d8fb29",
-    "source_paper_ids": [
-      "arxiv:2604.02815v1",
-      "arxiv:2604.13034v1",
-      "arxiv:2604.06290v1"
-    ]
-  },
-  {
-    "gap_id": "9bff6f25-e1eb-4b4f-a5e4-d12623f9b6f7",
+    "gap_id": "d3705e31-79f5-4847-9c97-eabb6b506741",
     "topic": "Distributed Computing",
-    "title": "Struggle with the fuzziness of laundering patterns",
-    "description": "struggle with the fuzziness of laundering patterns, which exhibit structural and temporal variations.",
+    "title": "Limitations of the previous static round-robin method",
+    "description": "limitations of the previous static round-robin method.",
     "evidence_paper_ids": [
+      "arxiv:2604.13034v1",
       "arxiv:2604.12241v1",
       "arxiv:2604.11977v1",
       "arxiv:2604.11432v1"
@@ -8549,22 +8520,52 @@
     "gap_type": "explicit",
     "confidence": 0.8,
     "starter_idea": "Reproduce the paper's baseline experiment.",
-    "frequency": 3,
+    "frequency": 4,
     "suggested_projects": [
       "Reproduce the paper's baseline experiment.",
       "Apply the method to a new domain dataset.",
       "Write a blog post explaining the gap and possible directions.",
       "Run an ablation study removing one component of the method."
     ],
-    "id": "9bff6f25-e1eb-4b4f-a5e4-d12623f9b6f7",
+    "id": "d3705e31-79f5-4847-9c97-eabb6b506741",
     "source_paper_ids": [
+      "arxiv:2604.13034v1",
       "arxiv:2604.12241v1",
       "arxiv:2604.11977v1",
       "arxiv:2604.11432v1"
     ]
   },
   {
-    "gap_id": "428d40fe-9cf1-45be-b962-94a9d3b93b85",
+    "gap_id": "ec6b4fed-221b-4c5a-9c74-74fae0897fb2",
+    "topic": "Optimization",
+    "title": "Fail to do so within one hour",
+    "description": "fail to do so within one hour.",
+    "evidence_paper_ids": [
+      "arxiv:2604.11584v1",
+      "arxiv:2604.06525v1",
+      "arxiv:2604.03566v1",
+      "arxiv:2604.01173v1"
+    ],
+    "gap_type": "explicit",
+    "confidence": 0.8,
+    "starter_idea": "Reproduce the paper's baseline experiment.",
+    "frequency": 4,
+    "suggested_projects": [
+      "Reproduce the paper's baseline experiment.",
+      "Apply the method to a new domain dataset.",
+      "Write a blog post explaining the gap and possible directions.",
+      "Run an ablation study removing one component of the method."
+    ],
+    "id": "ec6b4fed-221b-4c5a-9c74-74fae0897fb2",
+    "source_paper_ids": [
+      "arxiv:2604.11584v1",
+      "arxiv:2604.06525v1",
+      "arxiv:2604.03566v1",
+      "arxiv:2604.01173v1"
+    ]
+  },
+  {
+    "gap_id": "4c085501-1c3a-4ced-8ead-43b61754e701",
     "topic": "Information Retrieval",
     "title": "Fails to capture",
     "description": "fails to capture.",
@@ -8583,7 +8584,7 @@
       "Write a blog post explaining the gap and possible directions.",
       "Run an ablation study removing one component of the method."
     ],
-    "id": "428d40fe-9cf1-45be-b962-94a9d3b93b85",
+    "id": "4c085501-1c3a-4ced-8ead-43b61754e701",
     "source_paper_ids": [
       "arxiv:2604.04038v1",
       "arxiv:2604.07930v2",
