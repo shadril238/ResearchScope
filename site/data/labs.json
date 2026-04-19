@@ -5890,8 +5890,8 @@
       "LLMs",
       "Reasoning",
       "AI Agents",
-      "Reasoning & Chain-of-Thought",
-      "Language Model Agents"
+      "Language Model Agents",
+      "Reasoning & Chain-of-Thought"
     ],
     "avg_paper_score": 0.0,
     "momentum_score": 10.0,
@@ -8143,8 +8143,8 @@
       "Fine-Tuning",
       "AI Agents",
       "Evaluation",
-      "Skill expansion",
       "skill composition",
+      "Skill expansion",
       "RL",
       "Interpretability",
       "Generalization",
@@ -8160,8 +8160,8 @@
       "Fine-Tuning",
       "AI Agents",
       "Evaluation",
-      "Skill expansion",
-      "skill composition"
+      "skill composition",
+      "Skill expansion"
     ]
   },
   {
@@ -8519,8 +8519,8 @@
       "Fine-Tuning",
       "Code Generation",
       "Evaluation",
-      "Benchmarking & Evaluation",
       "Instruction Fine-tuning",
+      "Benchmarking & Evaluation",
       "Object Detection",
       "Object Detection & Segmentation",
       "NLP",
@@ -8536,8 +8536,8 @@
       "Fine-Tuning",
       "Code Generation",
       "Evaluation",
-      "Benchmarking & Evaluation",
-      "Instruction Fine-tuning"
+      "Instruction Fine-tuning",
+      "Benchmarking & Evaluation"
     ]
   },
   {
@@ -8904,8 +8904,8 @@
     "topics": [
       "Hallucination",
       "Self-Supervised",
-      "video",
       "object captioning",
+      "video",
       "Factuality & Hallucination",
       "Video AI",
       "Evaluation",
@@ -8916,13 +8916,13 @@
     "avg_paper_score": 0.0,
     "momentum_score": 10.0,
     "a_star_output": 27,
-    "summary_profile": "Google Research has 43 tracked papers, 27 at A* venues. Top topics: Hallucination, Self-Supervised, video. Momentum: 10.0/10.",
+    "summary_profile": "Google Research has 43 tracked papers, 27 at A* venues. Top topics: Hallucination, Self-Supervised, object captioning. Momentum: 10.0/10.",
     "id": "google_research",
     "top_topics": [
       "Hallucination",
       "Self-Supervised",
-      "video",
       "object captioning",
+      "video",
       "Factuality & Hallucination"
     ]
   },
@@ -9307,11 +9307,11 @@
       "LLMs",
       "NLP",
       "Large Language Models",
-      "deep learning",
-      "prototype-based neural network",
-      "interpretability",
-      "computer vision",
       "phylogeny",
+      "interpretability",
+      "deep learning",
+      "computer vision",
+      "prototype-based neural network",
       "Info Extraction",
       "Robotics"
     ],
@@ -9324,8 +9324,8 @@
       "LLMs",
       "NLP",
       "Large Language Models",
-      "deep learning",
-      "prototype-based neural network"
+      "phylogeny",
+      "interpretability"
     ]
   },
   {
@@ -9407,12 +9407,12 @@
     ],
     "topics": [
       "Transformers",
-      "Recommender System",
-      "Transformer Architectures",
       "User Interest Modeling",
+      "Transformer Architectures",
+      "Recommender System",
       "Evaluation",
-      "Artificial Intelligence",
       "Information Retrieval",
+      "Artificial Intelligence",
       "Reasoning",
       "VLMs",
       "Model Compression"
@@ -9420,13 +9420,13 @@
     "avg_paper_score": 0.0,
     "momentum_score": 5.93,
     "a_star_output": 3,
-    "summary_profile": "Tencent AI Lab has 6 tracked papers, 3 at A* venues. Top topics: Transformers, Recommender System, Transformer Architectures. Momentum: 5.9/10.",
+    "summary_profile": "Tencent AI Lab has 6 tracked papers, 3 at A* venues. Top topics: Transformers, User Interest Modeling, Transformer Architectures. Momentum: 5.9/10.",
     "id": "tencent_ai_lab",
     "top_topics": [
       "Transformers",
-      "Recommender System",
-      "Transformer Architectures",
       "User Interest Modeling",
+      "Transformer Architectures",
+      "Recommender System",
       "Evaluation"
     ]
   },
