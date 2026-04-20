@@ -38,8 +38,8 @@
       "year": 2026,
       "tags": [
         "LLMs",
-        "Artificial Intelligence",
-        "Large Language Models"
+        "Large Language Models",
+        "Artificial Intelligence"
       ],
       "paper_score": 8.6,
       "read_first_score": 4.2,
@@ -89,7 +89,7 @@
         "RLHF",
         "AI Agents",
         "Summarization",
-        "Artificial Intelligence"
+        "Reinforcement Learning"
       ],
       "paper_score": 8.15,
       "read_first_score": 5.35,
@@ -160,11 +160,11 @@
     "topic_id": "llms",
     "name": "LLMs",
     "trend_score": 10.0,
-    "paper_count": 5467,
+    "paper_count": 5463,
     "gap_summary": "No explicit gaps extracted yet for LLMs."
   },
   "research_gap": {
-    "gap_id": "2c20d022-07e8-47eb-bef3-ee49b74aa874",
+    "gap_id": "e143ea0c-5f7f-45db-abee-4c4dbc834f2b",
     "topic": "LLMs",
     "title": "Fail to explicitly capture the intercorrelations among them",
     "description": "fail to explicitly capture the intercorrelations among them.",
