@@ -1,10 +1,10 @@
 {
-  "total_papers": 16417,
-  "total_authors": 59170,
-  "total_topics": 5334,
-  "total_gaps": 98,
+  "total_papers": 16559,
+  "total_authors": 59678,
+  "total_topics": 5336,
+  "total_gaps": 99,
   "total_labs": 13,
-  "total_universities": 23,
+  "total_universities": 25,
   "papers_by_venue": {
     "ICLR": 2635,
     "EMNLP": 1520,
@@ -20,47 +20,52 @@
     "NAACL": 527,
     "TACL": 43,
     "IJCAI": 27,
-    "arXiv": 6417
+    "arXiv": 6527,
+    "CHI": 32
   },
   "papers_by_source": {
     "openreview": 4424,
     "acl_anthology": 5320,
-    "semantic_scholar": 60,
+    "semantic_scholar": 92,
     "cvf": 196,
-    "arxiv": 6417
+    "arxiv": 6527
   },
   "difficulty_distribution": {
-    "L4": 1287,
-    "L3": 4173,
-    "L1": 5590,
-    "L2": 5367
+    "L4": 1293,
+    "L3": 4216,
+    "L1": 5630,
+    "L2": 5420
   },
   "paper_type_distribution": {
-    "methods": 8170,
-    "benchmark": 2976,
-    "dataset": 2965,
-    "systems": 1300,
-    "theory": 537,
-    "position": 164,
-    "empirical": 57,
-    "negative_result": 113,
-    "survey": 122,
+    "methods": 8243,
+    "benchmark": 3001,
+    "dataset": 2986,
+    "systems": 1312,
+    "theory": 540,
+    "position": 166,
+    "empirical": 58,
+    "negative_result": 115,
+    "survey": 125,
     "replication": 9,
     "tutorial": 4
   },
   "papers_by_year": {
-    "2020": 58,
-    "2021": 161,
-    "2022": 417,
-    "2023": 1442,
-    "2024": 2986,
-    "2025": 4626,
-    "2026": 6727
+    "1981": 1,
+    "2010": 1,
+    "2016": 1,
+    "2018": 1,
+    "2020": 61,
+    "2021": 166,
+    "2022": 418,
+    "2023": 1448,
+    "2024": 2995,
+    "2025": 4630,
+    "2026": 6837
   },
   "gaps_by_type": {
     "starter": 34,
     "pattern": 10,
-    "explicit": 54
+    "explicit": 55
   },
-  "generated_at": "2026-04-19T07:22:32.011332+00:00"
+  "generated_at": "2026-04-20T05:10:02.554955+00:00"
 }

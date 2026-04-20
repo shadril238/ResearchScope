@@ -3851,6 +3851,17 @@
       "Junyoung Jung",
       "Seokwon Kim",
       "Jung Uk Kim",
+      "Giacomo Bernardi",
+      "Ratul Mahajan",
+      "C. Seshadhri",
+      "Enrico Carlesso",
+      "Chinchu Merine Joseph",
+      "Saurabh Kumar",
+      "Pavan Manikonda",
+      "Luiza Popa",
+      "Randy Ram",
+      "Steven Robinson",
+      "Elizabeth Tennent",
       "Victor Quach",
       "Adam Yala",
       "Jae Ho Sohn",
@@ -4376,17 +4387,6 @@
       "Zhang, Chen",
       "Lai, Yuxuan",
       "Feng, Yansong",
-      "Giacomo Bernardi",
-      "Ratul Mahajan",
-      "C. Seshadhri",
-      "Enrico Carlesso",
-      "Chinchu Merine Joseph",
-      "Saurabh Kumar",
-      "Pavan Manikonda",
-      "Luiza Popa",
-      "Randy Ram",
-      "Steven Robinson",
-      "Elizabeth Tennent",
       "Maria Lomeli",
       "Margaret Li",
       "Xi Victoria Lin",
@@ -4973,6 +4973,9 @@
       "Hongshuai Wang",
       "Zhifeng Gao",
       "Jun Cheng",
+      "Ayoub Hammal",
+      "Pierre Zweigenbaum",
+      "Caio Corro",
       "Aurek Chattopadhyay",
       "Nan Niu",
       "Arina Kharlamova",
@@ -4982,6 +4985,11 @@
       "Yanxun Xu",
       "Simona-Vasilica Oprea",
       "Adela Bâra",
+      "Suifang Zhou",
+      "L. Hendra",
+      "Qinshi Zhang",
+      "Jussi Holopainen",
+      "Ray Lc",
       "Zeguan Xiao",
       "Siqing Li",
       "Xuetao Wei",
@@ -5357,6 +5365,12 @@
       "Isabelle Lee",
       "Lindia Tjuatja",
       "Jen-tse Huang",
+      "Guande Wu",
+      "Jing Qian",
+      "Sonia Castelo Quispe",
+      "Shaoyu Chen",
+      "J. Rulff",
+      "Claudio Silva",
       "Shay Snyder",
       "Andrew Capodieci",
       "David Gorsich",
@@ -6203,6 +6217,9 @@
       "Reza Khoshkangini",
       "Thomas Ebner",
       "Aditi De",
+      "Karin Yu",
+      "Eleni Chatzi",
+      "Georgios Kissas",
       "Nurullah Eymen Özdemir",
       "Erhan Oztop",
       "Tobias Falke",
@@ -6470,7 +6487,18 @@
       "Melanie Segado",
       "Rohan Goyal",
       "Venkatesan Guruswami",
-      "Jun-Ting Hsieh"
+      "Jun-Ting Hsieh",
+      "Aswathi Mundayatt",
+      "Jaya Sreevalsan-Nair",
+      "J. Bassen",
+      "Bharathan Balaji",
+      "Michael Schaarschmidt",
+      "Candace Thille",
+      "Jay Painter",
+      "D. Zimmaro",
+      "A. Games",
+      "Ethan Fast",
+      "John C. Mitchell"
     ],
     "papers": [
       "openreview:9ca9eHNrdH",
@@ -7228,6 +7256,7 @@
       "arxiv:2604.10937v1",
       "arxiv:2604.05620v1",
       "arxiv:2604.01646v2",
+      "arxiv:2604.15261v1",
       "openreview:pzUhfQ74c5",
       "openreview:FwxOHl0BEl",
       "acl:2021.naacl-main.261",
@@ -7346,7 +7375,6 @@
       "acl:2021.findings-emnlp.144",
       "acl:2021.findings-emnlp.214",
       "acl:2021.findings-emnlp.255",
-      "arxiv:2604.15261v1",
       "openreview:LXVswInHOo",
       "openreview:oLLZhbBSOU",
       "openreview:pjtIEgscE3",
@@ -7460,10 +7488,12 @@
       "arxiv:2604.00385v1",
       "arxiv:2604.10604v1",
       "arxiv:2604.10452v1",
+      "arxiv:2604.16146v1",
       "arxiv:2604.01393v1",
       "arxiv:2604.00927v1",
       "arxiv:2604.02678v1",
       "arxiv:2604.01312v1",
+      "s2:5be12fbe5b57b17718aca5f82f3dc4190b3601e0",
       "arxiv:2604.14808v1",
       "arxiv:2604.14734v1",
       "arxiv:2604.14644v1",
@@ -7536,6 +7566,7 @@
       "arxiv:2604.02230v1",
       "arxiv:2604.01893v1",
       "arxiv:2604.08510v1",
+      "s2:01862572235051b098919631af5b9b7d63093392",
       "arxiv:2604.15121v1",
       "arxiv:2604.14881v1",
       "arxiv:2604.15113v1",
@@ -7736,6 +7767,7 @@
       "arxiv:2604.13278v1",
       "arxiv:2604.13217v1",
       "arxiv:2604.14332v1",
+      "arxiv:2604.16232v1",
       "arxiv:2604.08931v1",
       "arxiv:2604.07030v1",
       "arxiv:2604.03986v1",
@@ -7803,18 +7835,20 @@
       "arxiv:2604.12016v1",
       "arxiv:2604.14433v1",
       "arxiv:2604.14419v1",
-      "arxiv:2604.15218v1"
+      "arxiv:2604.15218v1",
+      "arxiv:2604.16265v1",
+      "s2:7435412a56e550f2e007340e6760453609e300dd"
     ],
     "topics": [
       "Interpretability",
-      "mechanistic interpretability",
       "Interpretability & Explainability",
+      "mechanistic interpretability",
       "sparse autoencoders",
       "Multimodal",
       "Evaluation",
-      "Meta Learning; Deep Learning Architecture; General Machine Learning",
-      "Benchmarking & Evaluation",
       "Multimodal Learning",
+      "Benchmarking & Evaluation",
+      "Meta Learning; Deep Learning Architecture; General Machine Learning",
       "AI Safety"
     ],
     "momentum_score": 8.37,
@@ -7831,11 +7865,12 @@
       "COLING": 25,
       "CVPR": 8,
       "ICCV": 3,
-      "arXiv": 413,
+      "arXiv": 416,
       "COLM": 2,
-      "IJCAI": 2
+      "IJCAI": 2,
+      "CHI": 3
     },
-    "summary_profile": "Université de Montréal / MILA has 1331 tracked papers from 6467 tracked authors. Top topics: Interpretability, mechanistic interpretability, Interpretability & Explainability."
+    "summary_profile": "Université de Montréal / MILA has 1337 tracked papers from 6495 tracked authors. Top topics: Interpretability, Interpretability & Explainability, mechanistic interpretability."
   },
   {
     "university_id": "mit",
@@ -8958,6 +8993,8 @@
       "Lei, Shuo",
       "Lu, Chang-Tien",
       "Chen, Feng",
+      "Anzhou Wen",
+      "Praneeth Chakravarthula",
       "Joey Hejna",
       "Rafael Rafailov",
       "Harshit Sikchi",
@@ -9275,6 +9312,9 @@
       "Zheng Guo",
       "Ruyi Ji",
       "Xinyu Wang",
+      "Ana-Andreea Stoica",
+      "Celestine Mendler-Duenner",
+      "Moritz Hardt",
       "Kiran Purohit",
       "Ramasuri Narayanam",
       "Soumyabrata Pal",
@@ -9587,6 +9627,7 @@
       "Dirk Geeraerts",
       "Stefano De Pascale",
       "Dirk Speelmana",
+      "Ulrich Tan",
       "Jon-Paul Cacioli",
       "O. Abla",
       "M. J. Neves",
@@ -9926,6 +9967,7 @@
       "acl:2022.acl-long.183",
       "acl:2022.acl-short.22",
       "acl:2024.findings-naacl.180",
+      "arxiv:2604.16237v1",
       "openreview:iX1RjVQODj",
       "openreview:c2LZyTyddi",
       "acl:2023.findings-emnlp.37",
@@ -9987,6 +10029,7 @@
       "arxiv:2604.11868v1",
       "arxiv:2604.13327v1",
       "arxiv:2604.13290v1",
+      "arxiv:2604.15962v1",
       "arxiv:2604.15244v1",
       "arxiv:2604.15149v1",
       "arxiv:2604.14791v1",
@@ -10070,6 +10113,7 @@
       "arxiv:2604.11746v1",
       "arxiv:2604.12041v1",
       "arxiv:2604.13232v1",
+      "arxiv:2604.16052v1",
       "arxiv:2604.11011v1",
       "arxiv:2604.09500v1",
       "arxiv:2604.09491v1",
@@ -10124,14 +10168,14 @@
       "overparametrization",
       "VLMs"
     ],
-    "momentum_score": 8.65,
+    "momentum_score": 8.66,
     "conference_output": {
       "EMNLP": 31,
       "ICLR": 48,
       "AAAI": 2,
       "Findings": 22,
       "ACL": 29,
-      "arXiv": 182,
+      "arXiv": 185,
       "NeurIPS": 39,
       "NAACL": 8,
       "EACL": 7,
@@ -10140,7 +10184,7 @@
       "COLING": 10,
       "COLM": 1
     },
-    "summary_profile": "MIT has 386 tracked papers from 1881 tracked authors. Top topics: Fine-Tuning, Self-Supervised, Legal AI."
+    "summary_profile": "MIT has 389 tracked papers from 1887 tracked authors. Top topics: Fine-Tuning, Self-Supervised, Legal AI."
   },
   {
     "university_id": "nus",
@@ -10276,6 +10320,11 @@
       "Qorib, Muhammad Reza",
       "Moon, Geonsik",
       "Ng, Hwee Tou",
+      "Danqing Shi",
+      "Yao Wang",
+      "Yunpeng Bai",
+      "Andreas Bulling",
+      "Antti Oulasvirta",
       "Baran Hashemi",
       "Roderic Guigo Corominas",
       "Alessandro Giacchetto",
@@ -10313,6 +10362,12 @@
       "Tho Tran Huu",
       "An Nguyen The",
       "Tan Minh Nguyen",
+      "Aleksi Ikkala",
+      "A. Oulasvirta",
+      "Shengdong Zhao",
+      "Lucia Wang",
+      "Pengzhi Yang",
+      "Peisen Xu",
       "Panagiotis Sapoutzoglou",
       "George Terzakis",
       "Maria Pateraki",
@@ -10335,6 +10390,21 @@
       "Wei Lin",
       "Yong Liu",
       "Rui Yan",
+      "Yuanchang Zhou",
+      "Hongyu Wang",
+      "Yiming Du",
+      "Yan Wang",
+      "Mingzhen Li",
+      "Siyu Hu",
+      "Xiangyu Zhang",
+      "Weijian Liu",
+      "Chen Wang",
+      "Zhuoqiang Guo",
+      "Long Wang",
+      "Jingde Bu",
+      "Yutong Lu",
+      "Guangming Tan",
+      "Weile Jia",
       "Sebastian Cajas",
       "Ashaba Judith",
       "Rahul Gorijavolu",
@@ -10385,16 +10455,19 @@
       "openreview:9x6yrFAPnx",
       "openreview:2lDQLiH1W4",
       "acl:2023.eacl-demo.32",
+      "s2:fd68cc30656415b9d100ef4a6a4a07e7dfe4690e",
       "openreview:4X9RpKH4Ls",
       "openreview:uq9TLFT7tF",
       "openreview:CjwERcAU7w",
       "acl:2020.acl-main.135",
       "openreview:rQYyWGYuzK",
+      "s2:8dadcaddea05ab11cbf794a04caef2cc2cdbd653",
       "arxiv:2604.01894v1",
       "arxiv:2604.14677v1",
       "arxiv:2604.06296v1",
       "arxiv:2604.13871v1",
       "arxiv:2604.10425v1",
+      "arxiv:2604.15821v1",
       "arxiv:2604.12152v1",
       "arxiv:2604.09199v1",
       "arxiv:2604.04321v1",
@@ -10403,26 +10476,27 @@
     "topics": [
       "Info Extraction",
       "Evaluation",
-      "NLP",
       "Benchmarking & Evaluation",
       "Information Extraction",
+      "NLP",
       "Fairness & Ethics",
-      "Bias, Fairness & Ethics",
       "causal inference",
+      "Bias, Fairness & Ethics",
       "Multimodal",
       "Self-Supervised"
     ],
-    "momentum_score": 8.21,
+    "momentum_score": 8.33,
     "conference_output": {
       "EMNLP": 6,
       "ICLR": 13,
       "NeurIPS": 8,
       "Findings": 1,
       "EACL": 1,
+      "CHI": 2,
       "ACL": 1,
-      "arXiv": 9
+      "arXiv": 10
     },
-    "summary_profile": "NUS has 39 tracked papers from 211 tracked authors. Top topics: Info Extraction, Evaluation, NLP."
+    "summary_profile": "NUS has 42 tracked papers from 237 tracked authors. Top topics: Info Extraction, Evaluation, Benchmarking & Evaluation."
   },
   {
     "university_id": "peking_university",
@@ -10551,7 +10625,11 @@
       "Zhengbo Zhang",
       "Jingyu Pan",
       "Zhiyu Lin",
-      "Zhigang Tu"
+      "Zhigang Tu",
+      "Yutong Gao",
+      "Qinglin Meng",
+      "Yuan Zhou",
+      "Liangming Pan"
     ],
     "papers": [
       "cvf:Cui_Learning_Continual_Compatible_Representation_for_Re-indexing_Free_Lifelong_Person_Re-identification_CVPR_2024_paper.html",
@@ -10580,7 +10658,8 @@
       "acl:2023.findings-acl.803",
       "acl:2024.findings-naacl.292",
       "openreview:BQA7wR2KBF",
-      "arxiv:2604.09063v1"
+      "arxiv:2604.09063v1",
+      "arxiv:2604.16042v1"
     ],
     "topics": [
       "Info Extraction",
@@ -10588,22 +10667,22 @@
       "Information Extraction",
       "Benchmarking & Evaluation",
       "Fairness & Ethics",
-      "Interventional fairness",
-      "Causal effect",
       "Bias, Fairness & Ethics",
       "PDAG",
+      "Interventional fairness",
+      "Causal effect",
       "LLMs"
     ],
-    "momentum_score": 9.26,
+    "momentum_score": 9.29,
     "conference_output": {
       "CVPR": 1,
       "NeurIPS": 5,
       "ICLR": 14,
       "Findings": 4,
       "ACL": 2,
-      "arXiv": 1
+      "arXiv": 2
     },
-    "summary_profile": "Peking University has 27 tracked papers from 123 tracked authors. Top topics: Info Extraction, Evaluation, Information Extraction."
+    "summary_profile": "Peking University has 28 tracked papers from 127 tracked authors. Top topics: Info Extraction, Evaluation, Information Extraction."
   },
   {
     "university_id": "carnegie_mellon_university",
@@ -10766,16 +10845,16 @@
       "acl:2020.acl-main.214"
     ],
     "topics": [
-      "Multi-agent System",
       "Neural Relational Inference",
+      "Multi-agent System",
       "Online Learning",
       "Reasoning",
       "Multimodal",
       "Sentiment Analysis",
       "Self-Supervised",
       "Evaluation",
-      "NLP",
-      "Benchmarking & Evaluation"
+      "Benchmarking & Evaluation",
+      "NLP"
     ],
     "momentum_score": 5.42,
     "conference_output": {
@@ -10789,7 +10868,7 @@
       "NAACL": 1,
       "TACL": 1
     },
-    "summary_profile": "Carnegie Mellon University has 24 tracked papers from 128 tracked authors. Top topics: Multi-agent System, Neural Relational Inference, Online Learning."
+    "summary_profile": "Carnegie Mellon University has 24 tracked papers from 128 tracked authors. Top topics: Neural Relational Inference, Multi-agent System, Online Learning."
   },
   {
     "university_id": "stanford_university",
@@ -10928,12 +11007,12 @@
       "VLMs",
       "Interpretability",
       "Vision-Language Models",
-      "Interpretability & Explainability",
       "NLP",
+      "Interpretability & Explainability",
       "Info Extraction",
       "Fairness & Ethics",
-      "fourier feature encodings",
       "neural tangent kernel",
+      "fourier feature encodings",
       "scientific computing"
     ],
     "momentum_score": 6.96,
@@ -11209,8 +11288,8 @@
     "topics": [
       "Fine-Tuning",
       "Evaluation",
-      "Fine-Tuning & PEFT",
       "Benchmarking & Evaluation",
+      "Fine-Tuning & PEFT",
       "Diffusion",
       "Info Extraction",
       "Self-Supervised",
@@ -11231,7 +11310,7 @@
       "EMNLP": 1,
       "arXiv": 3
     },
-    "summary_profile": "UC Berkeley has 16 tracked papers from 109 tracked authors. Top topics: Fine-Tuning, Evaluation, Fine-Tuning & PEFT."
+    "summary_profile": "UC Berkeley has 16 tracked papers from 109 tracked authors. Top topics: Fine-Tuning, Evaluation, Benchmarking & Evaluation."
   },
   {
     "university_id": "new_york_university",
@@ -11425,15 +11504,15 @@
     ],
     "topics": [
       "AI Safety",
-      "camera localization",
       "cross-view",
+      "camera localization",
       "Optical flow",
       "AI Safety & Alignment",
       "Object Detection",
       "Transformers",
+      "Scatter Network",
       "Spectral Transformer",
-      "Channel Mixing",
-      "Scatter Network"
+      "Channel Mixing"
     ],
     "momentum_score": 6.36,
     "conference_output": {
@@ -11444,7 +11523,7 @@
       "ACL": 2,
       "arXiv": 3
     },
-    "summary_profile": "University of Oxford has 11 tracked papers from 54 tracked authors. Top topics: AI Safety, camera localization, cross-view."
+    "summary_profile": "University of Oxford has 11 tracked papers from 54 tracked authors. Top topics: AI Safety, cross-view, camera localization."
   },
   {
     "university_id": "university_of_cambridge",
@@ -11487,14 +11566,14 @@
     "topics": [
       "QA",
       "Transformers",
-      "Question Answering",
       "Transformer Architectures",
+      "Question Answering",
       "NLP",
       "AI Agents",
       "Adversarial",
       "Evaluation",
-      "Adversarial Robustness",
-      "Benchmarking & Evaluation"
+      "Benchmarking & Evaluation",
+      "Adversarial Robustness"
     ],
     "momentum_score": 7.14,
     "conference_output": {
@@ -11503,7 +11582,7 @@
       "EMNLP": 3,
       "arXiv": 1
     },
-    "summary_profile": "University of Cambridge has 7 tracked papers from 23 tracked authors. Top topics: QA, Transformers, Question Answering."
+    "summary_profile": "University of Cambridge has 7 tracked papers from 23 tracked authors. Top topics: QA, Transformers, Transformer Architectures."
   },
   {
     "university_id": "university_of_southern_california",
@@ -11553,8 +11632,8 @@
       "Transformers",
       "Evaluation",
       "Transformer Architectures",
-      "NLP",
       "Benchmarking & Evaluation",
+      "NLP",
       "AI Safety",
       "Model Compression",
       "Self-Supervised",
@@ -11620,13 +11699,13 @@
     "topics": [
       "LLMs",
       "Resolution",
-      "Large Language Models",
       "Satellite Imagery",
+      "Large Language Models",
       "Reasoning",
       "RL",
       "Evaluation",
-      "Benchmarking & Evaluation",
       "Reasoning & Chain-of-Thought",
+      "Benchmarking & Evaluation",
       "Model Compression"
     ],
     "momentum_score": 5.0,
@@ -11636,7 +11715,7 @@
       "NeurIPS": 1,
       "EMNLP": 1
     },
-    "summary_profile": "Cornell University has 6 tracked papers from 31 tracked authors. Top topics: LLMs, Resolution, Large Language Models."
+    "summary_profile": "Cornell University has 6 tracked papers from 31 tracked authors. Top topics: LLMs, Resolution, Satellite Imagery."
   },
   {
     "university_id": "harvard_university",
@@ -11682,14 +11761,14 @@
     "topics": [
       "Biomedical AI",
       "Fairness & Ethics",
-      "Deep Learning",
-      "Medical Segmentation",
       "Health Equity",
+      "Medical Segmentation",
+      "Deep Learning",
       "Diffusion",
       "Transformers",
-      "Diffusion Models",
       "Transformer Architectures",
-      "diffusion"
+      "diffusion",
+      "Diffusion Models"
     ],
     "momentum_score": 8.0,
     "conference_output": {
@@ -11698,7 +11777,7 @@
       "EMNLP": 1,
       "arXiv": 1
     },
-    "summary_profile": "Harvard University has 5 tracked papers from 28 tracked authors. Top topics: Biomedical AI, Fairness & Ethics, Deep Learning."
+    "summary_profile": "Harvard University has 5 tracked papers from 28 tracked authors. Top topics: Biomedical AI, Fairness & Ethics, Health Equity."
   },
   {
     "university_id": "princeton_university",
@@ -11732,14 +11811,14 @@
     ],
     "topics": [
       "Evaluation",
-      "Visual Odometry",
       "SLAM",
-      "Benchmarking & Evaluation",
       "Structure from motion",
+      "Benchmarking & Evaluation",
+      "Visual Odometry",
       "LLMs",
       "Reasoning",
-      "general problem solving",
       "Reasoning & Chain-of-Thought",
+      "general problem solving",
       "heuristic search"
     ],
     "momentum_score": 2.5,
@@ -11748,7 +11827,7 @@
       "ICCV": 1,
       "arXiv": 1
     },
-    "summary_profile": "Princeton University has 4 tracked papers from 18 tracked authors. Top topics: Evaluation, Visual Odometry, SLAM."
+    "summary_profile": "Princeton University has 4 tracked papers from 18 tracked authors. Top topics: Evaluation, SLAM, Structure from motion."
   },
   {
     "university_id": "yale_university",
@@ -11867,8 +11946,8 @@
       "Reasoning",
       "Multimodal",
       "Evaluation",
-      "Benchmarking & Evaluation",
-      "Reasoning & Chain-of-Thought"
+      "Reasoning & Chain-of-Thought",
+      "Benchmarking & Evaluation"
     ],
     "momentum_score": 10.0,
     "conference_output": {
@@ -11901,8 +11980,8 @@
       "Multimodal",
       "Biomedical AI",
       "Interpretability",
-      "NLP",
       "Multimodal Learning",
+      "NLP",
       "Evaluation",
       "Benchmarking & Evaluation",
       "Fine-Tuning",
@@ -11950,11 +12029,11 @@
       "Fine-Tuning",
       "Mixture of Experts",
       "NLP",
-      "Relational Verification",
-      "Neural Network Verification",
-      "Optimization",
       "Robustness",
-      "UAP verification"
+      "Optimization",
+      "Relational Verification",
+      "UAP verification",
+      "Neural Network Verification"
     ],
     "momentum_score": 10.0,
     "conference_output": {
@@ -12008,9 +12087,9 @@
       "Dialogue",
       "NLP",
       "LLMs",
-      "Human-Computer Interaction",
       "Dialogue Systems",
-      "Large Language Models"
+      "Large Language Models",
+      "Human-Computer Interaction"
     ],
     "momentum_score": 10.0,
     "conference_output": {
@@ -12045,8 +12124,8 @@
     "topics": [
       "Model Compression",
       "Self-Supervised",
-      "dataset distillation",
       "self-supervised learning",
+      "dataset distillation",
       "Self-Supervised & Contrastive Learning"
     ],
     "momentum_score": 5.0,
@@ -12054,7 +12133,7 @@
       "ICLR": 1,
       "CVPR": 1
     },
-    "summary_profile": "UCLA has 2 tracked papers from 13 tracked authors. Top topics: Model Compression, Self-Supervised, dataset distillation."
+    "summary_profile": "UCLA has 2 tracked papers from 13 tracked authors. Top topics: Model Compression, Self-Supervised, self-supervised learning."
   },
   {
     "university_id": "uc_san_diego",
@@ -12099,15 +12178,66 @@
     ],
     "topics": [
       "Multimodal",
-      "neural differential equations",
-      "markov bases",
+      "contingency tables",
       "Multimodal Learning",
-      "contingency tables"
+      "neural differential equations",
+      "markov bases"
     ],
     "momentum_score": 10.0,
     "conference_output": {
       "NeurIPS": 1
     },
-    "summary_profile": "University of Washington has 1 tracked paper from 3 tracked authors. Top topics: Multimodal, neural differential equations, markov bases."
+    "summary_profile": "University of Washington has 1 tracked paper from 3 tracked authors. Top topics: Multimodal, contingency tables, Multimodal Learning."
+  },
+  {
+    "university_id": "stony_brook_university",
+    "name": "Stony Brook University",
+    "aliases": [],
+    "authors": [
+      "Zhi Li",
+      "Maozheng Zhao",
+      "Dibyendu Das",
+      "Hang Zhao",
+      "Yan Ma",
+      "Wanyu Liu",
+      "M. Beaudouin-Lafon",
+      "Fusheng Wang",
+      "I. Ramakrishnan",
+      "Xiaojun Bi"
+    ],
+    "papers": [
+      "s2:9f7a3cbf0c63f07db08f0cb55fe71ff2ddd7003b"
+    ],
+    "topics": [
+      "RL",
+      "Computer Science"
+    ],
+    "momentum_score": 0.0,
+    "conference_output": {
+      "CHI": 1
+    },
+    "summary_profile": "Stony Brook University has 1 tracked paper from 10 tracked authors. Top topics: RL, Computer Science."
+  },
+  {
+    "university_id": "university_of_edinburgh",
+    "name": "University of Edinburgh",
+    "aliases": [],
+    "authors": [
+      "Ari Schlesinger",
+      "Kenton P. O'Hara",
+      "Alex S Taylor"
+    ],
+    "papers": [
+      "s2:f34c73c75a640f59c11472bf6c9786aeb774856a"
+    ],
+    "topics": [
+      "Dialogue",
+      "Computer Science"
+    ],
+    "momentum_score": 0.0,
+    "conference_output": {
+      "CHI": 1
+    },
+    "summary_profile": "University of Edinburgh has 1 tracked paper from 3 tracked authors. Top topics: Dialogue, Computer Science."
   }
 ]
