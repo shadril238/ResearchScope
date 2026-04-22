@@ -109,8 +109,8 @@
       "tags": [
         "Fine-Tuning",
         "Adversarial",
-        "Computer Vision",
-        "Cryptography & Security"
+        "Cryptography & Security",
+        "Computer Vision"
       ],
       "paper_score": 8.15,
       "read_first_score": 4.75,
@@ -146,7 +146,7 @@
     "lab_id": "meta_ai__fair",
     "name": "Meta AI (FAIR)",
     "momentum_score": 10.0,
-    "paper_count": 937,
+    "paper_count": 929,
     "topics": [
       "Fine-Tuning",
       "Info Extraction",
@@ -157,15 +157,15 @@
     "topic_id": "llms",
     "name": "LLMs",
     "trend_score": 10.0,
-    "paper_count": 5862,
+    "paper_count": 5789,
     "gap_summary": "No explicit gaps extracted yet for LLMs."
   },
   "research_gap": {
-    "gap_id": "7b7f07bb-418d-477d-9317-01a37ecaaceb",
+    "gap_id": "d0e2e866-ac19-469a-a8af-82daddb57c1e",
     "topic": "LLMs",
     "title": "Fail to explicitly capture the intercorrelations among them",
     "description": "fail to explicitly capture the intercorrelations among them.",
-    "frequency": 1350,
+    "frequency": 1331,
     "starter_idea": "Fine-tune an open-source LLM on a domain-specific dataset and evaluate factuality.",
     "gap_type": "explicit"
   }

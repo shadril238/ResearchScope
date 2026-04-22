@@ -1,71 +1,66 @@
 {
-  "total_papers": 17803,
-  "total_authors": 63719,
-  "total_topics": 5336,
-  "total_gaps": 101,
+  "total_papers": 17520,
+  "total_authors": 62610,
+  "total_topics": 5334,
+  "total_gaps": 98,
   "total_labs": 14,
-  "total_universities": 24,
+  "total_universities": 23,
   "papers_by_venue": {
     "ICLR": 2635,
     "EMNLP": 1520,
     "ACL": 1448,
-    "AAAI": 49,
+    "AAAI": 39,
     "Findings": 1328,
     "COLING": 203,
-    "NeurIPS": 1723,
-    "COLM": 65,
+    "NeurIPS": 1718,
+    "COLM": 64,
     "CVPR": 147,
     "EACL": 244,
     "ICCV": 49,
     "NAACL": 526,
     "TACL": 43,
     "IJCAI": 36,
-    "arXiv": 7771,
-    "CHI": 16
+    "arXiv": 7520
   },
   "papers_by_source": {
-    "openreview": 4423,
+    "openreview": 4417,
     "acl_anthology": 5312,
-    "semantic_scholar": 101,
+    "semantic_scholar": 75,
     "cvf": 196,
-    "arxiv": 7771
+    "arxiv": 7520
   },
   "difficulty_distribution": {
-    "L4": 1411,
-    "L3": 4515,
-    "L1": 5977,
-    "L2": 5900
+    "L4": 1387,
+    "L3": 4475,
+    "L1": 5903,
+    "L2": 5755
   },
   "paper_type_distribution": {
-    "methods": 8853,
-    "benchmark": 3197,
-    "dataset": 3170,
-    "systems": 1468,
-    "theory": 584,
-    "position": 184,
+    "methods": 8703,
+    "benchmark": 3171,
+    "dataset": 3134,
+    "systems": 1443,
+    "theory": 576,
+    "position": 178,
     "empirical": 64,
-    "negative_result": 123,
-    "survey": 141,
-    "replication": 12,
-    "tutorial": 7
+    "negative_result": 122,
+    "survey": 116,
+    "replication": 7,
+    "tutorial": 6
   },
   "papers_by_year": {
-    "1981": 1,
-    "2015": 1,
-    "2017": 2,
-    "2018": 1,
-    "2020": 59,
-    "2021": 162,
+    "2020": 58,
+    "2021": 161,
     "2022": 417,
-    "2023": 1446,
-    "2024": 2992,
-    "2025": 4641,
-    "2026": 8081
+    "2023": 1442,
+    "2024": 2979,
+    "2025": 4633,
+    "2026": 7830
   },
   "gaps_by_type": {
     "starter": 34,
     "pattern": 10,
-    "explicit": 57
+    "explicit": 54
   },
-  "generated_at": "2026-04-22T04:59:31.546515+00:00"
+  "generated_at": "2026-04-22T07:45:21.508083+00:00"
 }
