@@ -1,5 +1,5 @@
 {
-  "date": "2026-04-21",
+  "date": "2026-04-22",
   "top_papers": [
     {
       "id": "arxiv:2604.17260v1",
@@ -146,7 +146,7 @@
     "lab_id": "meta_ai__fair",
     "name": "Meta AI (FAIR)",
     "momentum_score": 10.0,
-    "paper_count": 922,
+    "paper_count": 937,
     "topics": [
       "Fine-Tuning",
       "Info Extraction",
@@ -157,15 +157,15 @@
     "topic_id": "llms",
     "name": "LLMs",
     "trend_score": 10.0,
-    "paper_count": 5706,
+    "paper_count": 5862,
     "gap_summary": "No explicit gaps extracted yet for LLMs."
   },
   "research_gap": {
-    "gap_id": "e05860c4-5140-4e8b-95e1-834eb7bb2598",
+    "gap_id": "7b7f07bb-418d-477d-9317-01a37ecaaceb",
     "topic": "LLMs",
     "title": "Fail to explicitly capture the intercorrelations among them",
     "description": "fail to explicitly capture the intercorrelations among them.",
-    "frequency": 1317,
+    "frequency": 1350,
     "starter_idea": "Fine-tune an open-source LLM on a domain-specific dataset and evaluate factuality.",
     "gap_type": "explicit"
   }
