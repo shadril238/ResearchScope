@@ -4191,12 +4191,12 @@
       "Uroš Seljak",
       "Ihsan Ullah",
       "Yulei Zhang",
+      "Run Hao",
+      "Zhuoran Tan",
       "Milan De Koning",
       "Ali Asgari",
       "Pouria Derakhshanfar",
       "Annibale Panichella",
-      "Run Hao",
-      "Zhuoran Tan",
       "Tatsuhito Hasegawa",
       "Travis LaCroix",
       "Fintan Mallory",
@@ -4557,13 +4557,7 @@
       "Christopher Kurz",
       "George Dedes",
       "Guillaume Landry",
-      "Adrian Thummerer",
-      "Michelle Seng Ah Lee",
-      "Kirtan Padh",
-      "David Watson",
-      "Niki Kilbertus",
-      "Jatinder Singh",
-      "Takao Inoué"
+      "Adrian Thummerer"
     ],
     "paper_ids": [
       "openreview:7nyJBVCTGQ",
@@ -5430,8 +5424,8 @@
       "arxiv:2604.18721v1",
       "arxiv:2604.11261v1",
       "arxiv:2604.14451v1",
-      "arxiv:2604.21579v1",
       "arxiv:2604.21477v1",
+      "arxiv:2604.21579v1",
       "arxiv:2604.21369v1",
       "arxiv:2604.21043v1",
       "arxiv:2604.20669v1",
@@ -5509,9 +5503,7 @@
       "arxiv:2604.14843v1",
       "arxiv:2604.13600v1",
       "arxiv:2604.12793v1",
-      "arxiv:2604.12778v1",
-      "arxiv:2604.21711v1",
-      "arxiv:2604.21172v1"
+      "arxiv:2604.12778v1"
     ],
     "recent_papers": [
       "openreview:7nyJBVCTGQ",
@@ -6150,8 +6142,8 @@
       "arxiv:2604.18721v1",
       "arxiv:2604.11261v1",
       "arxiv:2604.14451v1",
-      "arxiv:2604.21579v1",
       "arxiv:2604.21477v1",
+      "arxiv:2604.21579v1",
       "arxiv:2604.21369v1",
       "arxiv:2604.21043v1",
       "arxiv:2604.20669v1",
@@ -6229,16 +6221,14 @@
       "arxiv:2604.14843v1",
       "arxiv:2604.13600v1",
       "arxiv:2604.12793v1",
-      "arxiv:2604.12778v1",
-      "arxiv:2604.21711v1",
-      "arxiv:2604.21172v1"
+      "arxiv:2604.12778v1"
     ],
     "topics": [
       "Fine-Tuning",
       "Info Extraction",
       "Evaluation",
-      "meta learning",
       "Benchmarking & Evaluation",
+      "meta learning",
       "LLMs",
       "Reasoning",
       "AI Agents",
@@ -6248,14 +6238,14 @@
     "avg_paper_score": 0.0,
     "momentum_score": 10.0,
     "a_star_output": 494,
-    "summary_profile": "Meta AI (FAIR) has 946 tracked papers, 494 at A* venues. Top topics: Fine-Tuning, Info Extraction, Evaluation. Momentum: 10.0/10.",
+    "summary_profile": "Meta AI (FAIR) has 944 tracked papers, 494 at A* venues. Top topics: Fine-Tuning, Info Extraction, Evaluation. Momentum: 10.0/10.",
     "id": "meta_ai__fair",
     "top_topics": [
       "Fine-Tuning",
       "Info Extraction",
       "Evaluation",
-      "meta learning",
-      "Benchmarking & Evaluation"
+      "Benchmarking & Evaluation",
+      "meta learning"
     ]
   },
   {
@@ -7726,8 +7716,8 @@
       "Benchmarking & Evaluation",
       "Fine-Tuning",
       "Code Generation",
-      "Large Language Models",
       "NLP",
+      "Large Language Models",
       "Interpretability"
     ],
     "avg_paper_score": 0.0,
@@ -8521,12 +8511,12 @@
       "Fine-Tuning",
       "Code Generation",
       "Evaluation",
-      "Benchmarking & Evaluation",
       "Instruction Fine-tuning",
+      "Benchmarking & Evaluation",
       "Object Detection",
       "Object Detection & Segmentation",
-      "Code Generation & Synthesis",
       "NLP",
+      "Code Generation & Synthesis",
       "LLMs"
     ],
     "avg_paper_score": 0.0,
@@ -8538,8 +8528,8 @@
       "Fine-Tuning",
       "Code Generation",
       "Evaluation",
-      "Benchmarking & Evaluation",
-      "Instruction Fine-tuning"
+      "Instruction Fine-tuning",
+      "Benchmarking & Evaluation"
     ]
   },
   {
@@ -8929,12 +8919,12 @@
       "Fine-Tuning",
       "AI Agents",
       "Evaluation",
-      "Skill expansion",
       "skill composition",
+      "Skill expansion",
       "RL",
       "Interpretability",
-      "Generalization",
       "Benchmarking & Evaluation",
+      "Generalization",
       "Diffusion"
     ],
     "avg_paper_score": 0.0,
@@ -8946,8 +8936,8 @@
       "Fine-Tuning",
       "AI Agents",
       "Evaluation",
-      "Skill expansion",
-      "skill composition"
+      "skill composition",
+      "Skill expansion"
     ]
   },
   {
@@ -9327,8 +9317,8 @@
       "video",
       "Video AI",
       "Evaluation",
-      "Video Understanding & Generation",
       "Benchmarking & Evaluation",
+      "Video Understanding & Generation",
       "RL"
     ],
     "avg_paper_score": 0.0,
@@ -9746,10 +9736,10 @@
       "LLMs",
       "Large Language Models",
       "NLP",
-      "phylogeny",
-      "computer vision",
-      "deep learning",
       "interpretability",
+      "phylogeny",
+      "deep learning",
+      "computer vision",
       "prototype-based neural network",
       "Info Extraction",
       "Robotics"
@@ -9763,8 +9753,8 @@
       "LLMs",
       "Large Language Models",
       "NLP",
-      "phylogeny",
-      "computer vision"
+      "interpretability",
+      "phylogeny"
     ]
   },
   {
@@ -9912,11 +9902,11 @@
     "topics": [
       "Transformers",
       "User Interest Modeling",
-      "Recommender System",
       "Transformer Architectures",
+      "Recommender System",
       "Evaluation",
-      "Artificial Intelligence",
       "Information Retrieval",
+      "Artificial Intelligence",
       "Reasoning",
       "VLMs",
       "Model Compression"
@@ -9924,13 +9914,13 @@
     "avg_paper_score": 0.0,
     "momentum_score": 5.14,
     "a_star_output": 2,
-    "summary_profile": "Tencent AI Lab has 5 tracked papers, 2 at A* venues. Top topics: Transformers, User Interest Modeling, Recommender System. Momentum: 5.1/10.",
+    "summary_profile": "Tencent AI Lab has 5 tracked papers, 2 at A* venues. Top topics: Transformers, User Interest Modeling, Transformer Architectures. Momentum: 5.1/10.",
     "id": "tencent_ai_lab",
     "top_topics": [
       "Transformers",
       "User Interest Modeling",
-      "Recommender System",
       "Transformer Architectures",
+      "Recommender System",
       "Evaluation"
     ]
   },
